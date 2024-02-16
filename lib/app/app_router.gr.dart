@@ -10,6 +10,7 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i3;
 import 'package:flutter/material.dart' as _i4;
+import 'package:madagascar_constitution/core/constitution_language.dart' as _i5;
 import 'package:madagascar_constitution/view/pages/content_page.dart' as _i1;
 import 'package:madagascar_constitution/view/pages/home_page.dart' as _i2;
 
@@ -42,7 +43,7 @@ abstract class $AppRouter extends _i3.RootStackRouter {
 class ContentRoute extends _i3.PageRouteInfo<ContentRouteArgs> {
   ContentRoute({
     _i4.Key? key,
-    required String language,
+    required _i5.ConstitutionLanguage language,
     List<_i3.PageRouteInfo>? children,
   }) : super(
           ContentRoute.name,
@@ -67,7 +68,7 @@ class ContentRouteArgs {
 
   final _i4.Key? key;
 
-  final String language;
+  final _i5.ConstitutionLanguage language;
 
   @override
   String toString() {
