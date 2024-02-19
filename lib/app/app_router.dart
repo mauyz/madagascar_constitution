@@ -24,5 +24,9 @@ class AppRouter extends $AppRouter {
             ),
           ],
         ),
+        AutoRoute(
+          path: "/preamble",
+          page: PreambleContentRoute.page,
+        ),
       ];
 }
