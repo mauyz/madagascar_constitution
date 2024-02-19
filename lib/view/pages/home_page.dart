@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:madagascar_constitution/app/app_router.gr.dart';
 import 'package:madagascar_constitution/core/constitution_language.dart';
 import 'package:madagascar_constitution/source/repository.dart';
@@ -60,22 +61,25 @@ class HomePage extends StatelessWidget {
                   bottomNavigationBar: BottomNavigationBar(
                     currentIndex: tabsRouter.activeIndex,
                     onTap: tabsRouter.setActiveIndex,
-                    items: const [
+                    items: [
                       BottomNavigationBarItem(
-                        icon: Icon(
-                          Icons.person,
+                        icon: SvgPicture.asset(
+                          'assets/mg.svg',
+                          height: 24,
                         ),
                         label: "Malagasy",
                       ),
                       BottomNavigationBarItem(
-                        icon: Icon(
-                          Icons.person,
+                        icon: SvgPicture.asset(
+                          'assets/fr.svg',
+                          height: 24,
                         ),
                         label: "Français",
                       ),
                       BottomNavigationBarItem(
-                        icon: Icon(
-                          Icons.person,
+                        icon: SvgPicture.asset(
+                          'assets/gb.svg',
+                          height: 24,
                         ),
                         label: "English",
                       ),
