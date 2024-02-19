@@ -15,4 +15,7 @@ class Article {
         'title': title,
         'content': content,
       };
+
+  String get shortTitle =>
+      '${title.substring(0, 3)}. ${title.replaceAll(RegExp(r'[^0-9]'), '')}';
 }

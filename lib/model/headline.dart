@@ -38,4 +38,17 @@ class Headline {
             .toList(),
         'subtitles': subtitles.map((e) => e.toJson()).toList(),
       };
+
+  List<Article> get allArticles {
+    final allArticles = [...articles];
+    for (final subtitle in subtitles) {
+      allArticles.addAll(subtitle.articles);
+      for (final chapiter in subtitle.chapiters) {
+        allArticles.addAll(chapiter.articles);
+      }
+    }
+    return allArticles;
+  }
+
+  String get formattedRange => range.replaceAll('-', ' - ');
 }
