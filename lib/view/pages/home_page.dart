@@ -50,6 +50,7 @@ class HomePage extends StatelessWidget {
                     title: const AppTitle(),
                     elevation: 5,
                   ),
+                  drawer: const Drawer(),
                   body: PageView.builder(
                     physics: const AlwaysScrollableScrollPhysics(),
                     itemCount: tabsRouter.pageCount,

@@ -26,18 +26,22 @@ class HeadlineList extends StatelessWidget {
       language: language,
       content: constitution.preamble,
     );
-    return ListView.builder(
-      itemCount: constitution.headlines.length + 1,
-      itemBuilder: (_, index) {
-        if (index == 0) {
-          return PreambleTitle(
-            preamble: preamble,
+    return Padding(
+      padding: const EdgeInsets.only(top: 8.0),
+      child: ListView.builder(
+        shrinkWrap: true,
+        itemCount: constitution.headlines.length + 1,
+        itemBuilder: (_, index) {
+          if (index == 0) {
+            return PreambleTitle(
+              preamble: preamble,
+            );
+          }
+          return HeadlineTitle(
+            headline: constitution.headlines[index - 1],
           );
-        }
-        return HeadlineTitle(
-          headline: constitution.headlines[index - 1],
-        );
-      },
+        },
+      ),
     );
   }
 }

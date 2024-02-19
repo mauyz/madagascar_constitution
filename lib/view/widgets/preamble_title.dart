@@ -10,8 +10,18 @@ class PreambleTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(preamble.title),
+    return InkWell(
+      onTap: () {},
+      child: Card(
+        child: ListTile(
+          title: Text(
+            preamble.title.toUpperCase(),
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
