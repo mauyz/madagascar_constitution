@@ -1,4 +1,6 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:madagascar_constitution/app/app_router.gr.dart';
 import 'package:madagascar_constitution/model/preamble.dart';
 
 class PreambleTitle extends StatelessWidget {
@@ -11,7 +13,13 @@ class PreambleTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        context.router.push(
+          PreambleContentRoute(
+            preamble: preamble,
+          ),
+        );
+      },
       child: Card(
         child: ListTile(
           title: Text(
