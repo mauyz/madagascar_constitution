@@ -21,12 +21,10 @@ class HeadlineTitle extends StatelessWidget {
               padding: const EdgeInsets.all(15.0),
               child: Wrap(
                 children: [
-                  Flexible(
-                    child: Text(
-                      headline.title,
-                      style: const TextStyle(
-                        fontWeight: FontWeight.w600,
-                      ),
+                  Text(
+                    headline.title,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                   Text(
