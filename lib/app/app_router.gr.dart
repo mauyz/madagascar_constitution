@@ -11,10 +11,10 @@
 import 'package:auto_route/auto_route.dart' as _i4;
 import 'package:flutter/material.dart' as _i5;
 import 'package:madagascar_constitution/core/constitution_language.dart' as _i7;
-import 'package:madagascar_constitution/model/preamble.dart' as _i6;
-import 'package:madagascar_constitution/view/pages/home_page.dart' as _i1;
-import 'package:madagascar_constitution/view/pages/preamble_content_page.dart'
-    as _i2;
+import 'package:madagascar_constitution/model/constitution.dart' as _i6;
+import 'package:madagascar_constitution/view/pages/constitution_pagination_page.dart'
+    as _i1;
+import 'package:madagascar_constitution/view/pages/home_page.dart' as _i2;
 import 'package:madagascar_constitution/view/pages/tab_content_page.dart'
     as _i3;
 
@@ -23,20 +23,21 @@ abstract class $AppRouter extends _i4.RootStackRouter {
 
   @override
   final Map<String, _i4.PageFactory> pagesMap = {
+    ConstitutionPaginationRoute.name: (routeData) {
+      final args = routeData.argsAs<ConstitutionPaginationRouteArgs>();
+      return _i4.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: _i1.ConstitutionPaginationPage(
+          key: args.key,
+          initialPage: args.initialPage,
+          constitution: args.constitution,
+        ),
+      );
+    },
     HomeRoute.name: (routeData) {
       return _i4.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i1.HomePage(),
-      );
-    },
-    PreambleContentRoute.name: (routeData) {
-      final args = routeData.argsAs<PreambleContentRouteArgs>();
-      return _i4.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: _i2.PreambleContentPage(
-          key: args.key,
-          preamble: args.preamble,
-        ),
+        child: const _i2.HomePage(),
       );
     },
     TabContentRoute.name: (routeData) {
@@ -53,7 +54,51 @@ abstract class $AppRouter extends _i4.RootStackRouter {
 }
 
 /// generated route for
-/// [_i1.HomePage]
+/// [_i1.ConstitutionPaginationPage]
+class ConstitutionPaginationRoute
+    extends _i4.PageRouteInfo<ConstitutionPaginationRouteArgs> {
+  ConstitutionPaginationRoute({
+    _i5.Key? key,
+    required int initialPage,
+    required _i6.Constitution constitution,
+    List<_i4.PageRouteInfo>? children,
+  }) : super(
+          ConstitutionPaginationRoute.name,
+          args: ConstitutionPaginationRouteArgs(
+            key: key,
+            initialPage: initialPage,
+            constitution: constitution,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'ConstitutionPaginationRoute';
+
+  static const _i4.PageInfo<ConstitutionPaginationRouteArgs> page =
+      _i4.PageInfo<ConstitutionPaginationRouteArgs>(name);
+}
+
+class ConstitutionPaginationRouteArgs {
+  const ConstitutionPaginationRouteArgs({
+    this.key,
+    required this.initialPage,
+    required this.constitution,
+  });
+
+  final _i5.Key? key;
+
+  final int initialPage;
+
+  final _i6.Constitution constitution;
+
+  @override
+  String toString() {
+    return 'ConstitutionPaginationRouteArgs{key: $key, initialPage: $initialPage, constitution: $constitution}';
+  }
+}
+
+/// generated route for
+/// [_i2.HomePage]
 class HomeRoute extends _i4.PageRouteInfo<void> {
   const HomeRoute({List<_i4.PageRouteInfo>? children})
       : super(
@@ -64,44 +109,6 @@ class HomeRoute extends _i4.PageRouteInfo<void> {
   static const String name = 'HomeRoute';
 
   static const _i4.PageInfo<void> page = _i4.PageInfo<void>(name);
-}
-
-/// generated route for
-/// [_i2.PreambleContentPage]
-class PreambleContentRoute extends _i4.PageRouteInfo<PreambleContentRouteArgs> {
-  PreambleContentRoute({
-    _i5.Key? key,
-    required _i6.Preamble preamble,
-    List<_i4.PageRouteInfo>? children,
-  }) : super(
-          PreambleContentRoute.name,
-          args: PreambleContentRouteArgs(
-            key: key,
-            preamble: preamble,
-          ),
-          initialChildren: children,
-        );
-
-  static const String name = 'PreambleContentRoute';
-
-  static const _i4.PageInfo<PreambleContentRouteArgs> page =
-      _i4.PageInfo<PreambleContentRouteArgs>(name);
-}
-
-class PreambleContentRouteArgs {
-  const PreambleContentRouteArgs({
-    this.key,
-    required this.preamble,
-  });
-
-  final _i5.Key? key;
-
-  final _i6.Preamble preamble;
-
-  @override
-  String toString() {
-    return 'PreambleContentRouteArgs{key: $key, preamble: $preamble}';
-  }
 }
 
 /// generated route for
