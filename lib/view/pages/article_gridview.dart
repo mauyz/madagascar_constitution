@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:madagascar_constitution/model/article.dart';
-import 'package:madagascar_constitution/view/widgets/article_content.dart';
+import 'package:madagascar_constitution/view/widgets/article_card.dart';
 
 class ArticleGridview extends StatelessWidget {
   final List<Article> articles;
@@ -18,7 +18,7 @@ class ArticleGridview extends StatelessWidget {
       crossAxisCount: crossAxisCount,
       children: articles.map(
         (article) {
-          return ArticleContent(
+          return ArticleCard(
             article: article,
           );
         },

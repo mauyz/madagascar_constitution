@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:madagascar_constitution/model/article.dart';
 
-class ArticleContent extends StatelessWidget {
+class ArticleCard extends StatelessWidget {
   final Article article;
-  const ArticleContent({
+  const ArticleCard({
     super.key,
     required this.article,
   });
