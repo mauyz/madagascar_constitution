@@ -28,5 +28,9 @@ class AppRouter extends $AppRouter {
           path: "/page",
           page: ConstitutionPaginationRoute.page,
         ),
+        AutoRoute(
+          path: "/article",
+          page: ArticleContentRoute.page,
+        ),
       ];
 }

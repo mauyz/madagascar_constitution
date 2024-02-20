@@ -66,7 +66,13 @@ class HeadlineTitle extends StatelessWidget {
                           horizontal: 4.0,
                         ),
                         child: FilledButton.tonal(
-                          onPressed: () {},
+                          onPressed: () {
+                            context.router.push(
+                              ArticleContentRoute(
+                                article: article,
+                              ),
+                            );
+                          },
                           child: Text(
                             article.shortTitle,
                           ),
