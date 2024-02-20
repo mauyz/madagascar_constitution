@@ -12,15 +12,15 @@ class AppRouter extends $AppRouter {
           children: [
             AutoRoute(
               path: 'mg',
-              page: ContentRoute.page,
+              page: TabContentRoute.page,
             ),
             AutoRoute(
               path: 'fr',
-              page: ContentRoute.page,
+              page: TabContentRoute.page,
             ),
             AutoRoute(
               path: 'en',
-              page: ContentRoute.page,
+              page: TabContentRoute.page,
             ),
           ],
         ),

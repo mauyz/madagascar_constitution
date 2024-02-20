@@ -10,11 +10,12 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i4;
 import 'package:flutter/material.dart' as _i5;
-import 'package:madagascar_constitution/core/constitution_language.dart' as _i6;
-import 'package:madagascar_constitution/model/preamble.dart' as _i7;
-import 'package:madagascar_constitution/view/pages/content_page.dart' as _i1;
-import 'package:madagascar_constitution/view/pages/home_page.dart' as _i2;
+import 'package:madagascar_constitution/core/constitution_language.dart' as _i7;
+import 'package:madagascar_constitution/model/preamble.dart' as _i6;
+import 'package:madagascar_constitution/view/pages/home_page.dart' as _i1;
 import 'package:madagascar_constitution/view/pages/preamble_content_page.dart'
+    as _i2;
+import 'package:madagascar_constitution/view/pages/tab_content_page.dart'
     as _i3;
 
 abstract class $AppRouter extends _i4.RootStackRouter {
@@ -22,29 +23,29 @@ abstract class $AppRouter extends _i4.RootStackRouter {
 
   @override
   final Map<String, _i4.PageFactory> pagesMap = {
-    ContentRoute.name: (routeData) {
-      final args = routeData.argsAs<ContentRouteArgs>();
-      return _i4.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: _i1.ContentPage(
-          key: args.key,
-          language: args.language,
-        ),
-      );
-    },
     HomeRoute.name: (routeData) {
       return _i4.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.HomePage(),
+        child: const _i1.HomePage(),
       );
     },
     PreambleContentRoute.name: (routeData) {
       final args = routeData.argsAs<PreambleContentRouteArgs>();
       return _i4.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i3.PreambleContentPage(
+        child: _i2.PreambleContentPage(
           key: args.key,
           preamble: args.preamble,
+        ),
+      );
+    },
+    TabContentRoute.name: (routeData) {
+      final args = routeData.argsAs<TabContentRouteArgs>();
+      return _i4.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: _i3.TabContentPage(
+          key: args.key,
+          language: args.language,
         ),
       );
     },
@@ -52,45 +53,7 @@ abstract class $AppRouter extends _i4.RootStackRouter {
 }
 
 /// generated route for
-/// [_i1.ContentPage]
-class ContentRoute extends _i4.PageRouteInfo<ContentRouteArgs> {
-  ContentRoute({
-    _i5.Key? key,
-    required _i6.ConstitutionLanguage language,
-    List<_i4.PageRouteInfo>? children,
-  }) : super(
-          ContentRoute.name,
-          args: ContentRouteArgs(
-            key: key,
-            language: language,
-          ),
-          initialChildren: children,
-        );
-
-  static const String name = 'ContentRoute';
-
-  static const _i4.PageInfo<ContentRouteArgs> page =
-      _i4.PageInfo<ContentRouteArgs>(name);
-}
-
-class ContentRouteArgs {
-  const ContentRouteArgs({
-    this.key,
-    required this.language,
-  });
-
-  final _i5.Key? key;
-
-  final _i6.ConstitutionLanguage language;
-
-  @override
-  String toString() {
-    return 'ContentRouteArgs{key: $key, language: $language}';
-  }
-}
-
-/// generated route for
-/// [_i2.HomePage]
+/// [_i1.HomePage]
 class HomeRoute extends _i4.PageRouteInfo<void> {
   const HomeRoute({List<_i4.PageRouteInfo>? children})
       : super(
@@ -104,11 +67,11 @@ class HomeRoute extends _i4.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i3.PreambleContentPage]
+/// [_i2.PreambleContentPage]
 class PreambleContentRoute extends _i4.PageRouteInfo<PreambleContentRouteArgs> {
   PreambleContentRoute({
     _i5.Key? key,
-    required _i7.Preamble preamble,
+    required _i6.Preamble preamble,
     List<_i4.PageRouteInfo>? children,
   }) : super(
           PreambleContentRoute.name,
@@ -133,10 +96,48 @@ class PreambleContentRouteArgs {
 
   final _i5.Key? key;
 
-  final _i7.Preamble preamble;
+  final _i6.Preamble preamble;
 
   @override
   String toString() {
     return 'PreambleContentRouteArgs{key: $key, preamble: $preamble}';
+  }
+}
+
+/// generated route for
+/// [_i3.TabContentPage]
+class TabContentRoute extends _i4.PageRouteInfo<TabContentRouteArgs> {
+  TabContentRoute({
+    _i5.Key? key,
+    required _i7.ConstitutionLanguage language,
+    List<_i4.PageRouteInfo>? children,
+  }) : super(
+          TabContentRoute.name,
+          args: TabContentRouteArgs(
+            key: key,
+            language: language,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'TabContentRoute';
+
+  static const _i4.PageInfo<TabContentRouteArgs> page =
+      _i4.PageInfo<TabContentRouteArgs>(name);
+}
+
+class TabContentRouteArgs {
+  const TabContentRouteArgs({
+    this.key,
+    required this.language,
+  });
+
+  final _i5.Key? key;
+
+  final _i7.ConstitutionLanguage language;
+
+  @override
+  String toString() {
+    return 'TabContentRouteArgs{key: $key, language: $language}';
   }
 }

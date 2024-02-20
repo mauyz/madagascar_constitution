@@ -8,9 +8,9 @@ import 'package:madagascar_constitution/viewmodel/mg_view_model.dart';
 import 'package:provider/provider.dart';
 
 @RoutePage()
-class ContentPage extends StatelessWidget {
+class TabContentPage extends StatelessWidget {
   final ConstitutionLanguage language;
-  const ContentPage({
+  const TabContentPage({
     super.key,
     required this.language,
   });

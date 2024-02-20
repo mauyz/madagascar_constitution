@@ -40,9 +40,9 @@ class HomePage extends StatelessWidget {
             ],
             child: AutoTabsRouter(
               routes: [
-                ContentRoute(language: ConstitutionLanguage.mg),
-                ContentRoute(language: ConstitutionLanguage.fr),
-                ContentRoute(language: ConstitutionLanguage.en),
+                TabContentRoute(language: ConstitutionLanguage.mg),
+                TabContentRoute(language: ConstitutionLanguage.fr),
+                TabContentRoute(language: ConstitutionLanguage.en),
               ],
               builder: (buildContext, child) {
                 final tabsRouter = AutoTabsRouter.of(buildContext);
