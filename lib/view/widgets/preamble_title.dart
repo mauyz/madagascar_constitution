@@ -1,31 +1,37 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:madagascar_constitution/app/app_router.gr.dart';
-import 'package:madagascar_constitution/model/preamble.dart';
+import 'package:madagascar_constitution/model/constitution.dart';
 
 class PreambleTitle extends StatelessWidget {
-  final Preamble preamble;
+  final Constitution constitution;
   const PreambleTitle({
     super.key,
-    required this.preamble,
+    required this.constitution,
   });
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        context.router.push(
-          PreambleContentRoute(
-            preamble: preamble,
-          ),
-        );
-      },
-      child: Card(
-        child: ListTile(
-          title: Text(
-            preamble.title.toUpperCase(),
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
+    final preamble = constitution.preamble;
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 5.0),
+      child: Material(
+        elevation: 5.0,
+        child: InkWell(
+          onTap: () {
+            context.router.push(
+              ConstitutionPaginationRoute(
+                initialPage: -1,
+                constitution: constitution,
+              ),
+            );
+          },
+          child: ListTile(
+            title: Text(
+              preamble.title.toUpperCase(),
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ),
