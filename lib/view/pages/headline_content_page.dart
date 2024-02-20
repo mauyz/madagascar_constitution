@@ -27,6 +27,7 @@ class HeadlineContentPage extends StatelessWidget {
               final subtitleChapiters = subtitle.chapiters;
               return Card(
                 color: Theme.of(context).secondaryHeaderColor,
+                elevation: 1.0,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
@@ -54,6 +55,7 @@ class HeadlineContentPage extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child: Card(
                             color: Theme.of(context).focusColor,
+                            elevation: 1.0,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisSize: MainAxisSize.min,

@@ -6,8 +6,10 @@ import 'package:madagascar_constitution/model/preamble.dart';
 import 'package:madagascar_constitution/view/pages/headline_content_page.dart';
 import 'package:madagascar_constitution/view/pages/preamble_content_page.dart';
 import 'package:madagascar_constitution/view/widgets/pagination_buttons.dart';
+import 'package:madagascar_constitution/viewmodel/article_list_type_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/pagination_view_model.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 @RoutePage()
 class ConstitutionPaginationPage extends StatelessWidget {
@@ -21,10 +23,20 @@ class ConstitutionPaginationPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListenableProvider<PaginationViewModel>(
-      create: (_) => PaginationViewModel(
-        initialPage: initialPage,
-      ),
+    final sharedPreferences = context.read<SharedPreferences>();
+    return MultiProvider(
+      providers: [
+        ListenableProvider<PaginationViewModel>(
+          create: (_) => PaginationViewModel(
+            initialPage: initialPage,
+          ),
+        ),
+        ListenableProvider<ArticleListTypeViewModel>(
+          create: (_) => ArticleListTypeViewModel(
+            isGrid: sharedPreferences.getBool("typeView"),
+          ),
+        ),
+      ],
       child: Consumer<PaginationViewModel>(
         builder: (_, paginationViewModel, __) {
           final currentPage = paginationViewModel.page;
@@ -34,6 +46,7 @@ class ConstitutionPaginationPage extends StatelessWidget {
           final pageTitle = getPageTitle(currentContent);
           return Scaffold(
             appBar: AppBar(
+              elevation: 5,
               leading: IconButton(
                 onPressed: () {
                   context.router.pop();
@@ -43,7 +56,30 @@ class ConstitutionPaginationPage extends StatelessWidget {
                 ),
               ),
               title: Text(pageTitle),
-              elevation: 5,
+              actions: [
+                if (currentPage != -1)
+                  Padding(
+                    padding: const EdgeInsets.only(right: 5.0),
+                    child: Consumer<ArticleListTypeViewModel>(
+                      builder: (_, listTypeViewModel, __) {
+                        return IconButton.filled(
+                          onPressed: () {
+                            listTypeViewModel.toogleType();
+                            sharedPreferences.setBool(
+                              "typeView",
+                              listTypeViewModel.isGrid,
+                            );
+                          },
+                          icon: Icon(
+                            listTypeViewModel.isGrid
+                                ? Icons.list
+                                : Icons.grid_view,
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+              ],
             ),
             body: Column(
               mainAxisSize: MainAxisSize.min,
