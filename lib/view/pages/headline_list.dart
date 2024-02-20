@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:madagascar_constitution/core/constitution_language.dart';
-import 'package:madagascar_constitution/model/preamble.dart';
 import 'package:madagascar_constitution/view/widgets/headline_title.dart';
 import 'package:madagascar_constitution/view/widgets/preamble_title.dart';
 import 'package:madagascar_constitution/viewmodel/data_view_model.dart';
@@ -22,10 +21,6 @@ class HeadlineList extends StatelessWidget {
       );
     }
     final constitution = dataModel.getConstitution()!;
-    final preamble = Preamble(
-      language: language,
-      content: constitution.preamble,
-    );
     return Padding(
       padding: const EdgeInsets.only(top: 8.0),
       child: ListView.builder(
@@ -34,11 +29,12 @@ class HeadlineList extends StatelessWidget {
         itemBuilder: (_, index) {
           if (index == 0) {
             return PreambleTitle(
-              preamble: preamble,
+              constitution: constitution,
             );
           }
           return HeadlineTitle(
-            headline: constitution.headlines[index - 1],
+            constitution: constitution,
+            index: index - 1,
           );
         },
       ),
