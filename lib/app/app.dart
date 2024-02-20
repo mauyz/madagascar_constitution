@@ -1,31 +1,40 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:madagascar_constitution/app/app_router.dart';
+import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class App extends StatelessWidget {
-  const App({super.key});
+  final SharedPreferences sharedPreferences;
+  const App({
+    super.key,
+    required this.sharedPreferences,
+  });
 
   @override
   Widget build(BuildContext context) {
     final appRouter = AppRouter();
-    return MaterialApp.router(
-      scrollBehavior: AppScrollBehavior(),
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.green,
-          background: Colors.white,
-          error: Colors.red,
-          onTertiary: Colors.orange,
+    return Provider.value(
+      value: sharedPreferences,
+      child: MaterialApp.router(
+        scrollBehavior: AppScrollBehavior(),
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.green,
+            background: Colors.white,
+            error: Colors.red,
+            onTertiary: Colors.orange,
+          ),
+          appBarTheme: const AppBarTheme(
+            color: Colors.green,
+            shadowColor: Colors.red,
+            elevation: 5,
+            foregroundColor: Colors.white,
+          ),
         ),
-        appBarTheme: const AppBarTheme(
-          color: Colors.green,
-          shadowColor: Colors.red,
-          elevation: 5,
-          foregroundColor: Colors.white,
-        ),
+        routerConfig: appRouter.config(),
+        debugShowCheckedModeBanner: false,
       ),
-      routerConfig: appRouter.config(),
-      debugShowCheckedModeBanner: false,
     );
   }
 }
