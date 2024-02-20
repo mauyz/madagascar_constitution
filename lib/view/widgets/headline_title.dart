@@ -37,13 +37,13 @@ class HeadlineTitle extends StatelessWidget {
                 child: Wrap(
                   children: [
                     Text(
-                      headline.title,
+                      '${headline.title} ',
                       style: const TextStyle(
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                     Text(
-                      ' (${headline.formattedRange})',
+                      '(${headline.formattedRange})',
                       style: const TextStyle(
                         fontWeight: FontWeight.w400,
                       ),

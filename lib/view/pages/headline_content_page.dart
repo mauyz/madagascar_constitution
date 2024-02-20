@@ -23,8 +23,8 @@ class HeadlineContentPage extends StatelessWidget {
             ),
           ...subtitles.map(
             (subtitle) {
-              final subtittleArticles = subtitle.articles;
-              final subtitleChapiters = subtitle.chapiters;
+              final subtitleArticles = subtitle.articles;
+              final subtitleChapters = subtitle.chapiters;
               return Card(
                 color: Theme.of(context).secondaryHeaderColor,
                 elevation: 1.0,
@@ -42,15 +42,15 @@ class HeadlineContentPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    if (subtittleArticles.isNotEmpty)
+                    if (subtitleArticles.isNotEmpty)
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: ArticleGridview(
-                          articles: subtittleArticles,
+                          articles: subtitleArticles,
                         ),
                       ),
-                    ...subtitleChapiters.map(
-                      (chapiter) {
+                    ...subtitleChapters.map(
+                      (chapter) {
                         return Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Card(
@@ -66,7 +66,7 @@ class HeadlineContentPage extends StatelessWidget {
                                     vertical: 10.0,
                                   ),
                                   child: Text(
-                                    chapiter.title,
+                                    chapter.title,
                                     style: const TextStyle(
                                       fontWeight: FontWeight.w700,
                                       fontSize: 15.0,
@@ -80,7 +80,7 @@ class HeadlineContentPage extends StatelessWidget {
                                     bottom: 10.0,
                                   ),
                                   child: ArticleGridview(
-                                    articles: chapiter.articles,
+                                    articles: chapter.articles,
                                   ),
                                 ),
                               ],

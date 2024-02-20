@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:madagascar_constitution/model/constitution.dart';
 import 'package:madagascar_constitution/model/headline.dart';
@@ -55,9 +56,13 @@ class ConstitutionPaginationPage extends StatelessWidget {
                   Icons.arrow_back,
                 ),
               ),
-              title: Text(pageTitle),
+              title: AutoSizeText(
+                pageTitle,
+                maxLines: 2,
+              ),
               actions: [
-                if (currentPage != -1)
+                if (currentPage != -1 &&
+                    MediaQuery.sizeOf(context).width >= 600)
                   Padding(
                     padding: const EdgeInsets.only(right: 5.0),
                     child: Consumer<ArticleListTypeViewModel>(
