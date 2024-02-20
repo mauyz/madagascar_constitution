@@ -1,7 +1,8 @@
 import 'package:madagascar_constitution/model/headline.dart';
+import 'package:madagascar_constitution/model/preamble.dart';
 
 class Constitution {
-  final String preamble;
+  final Preamble preamble;
   final List<Headline> headlines;
 
   Constitution({
@@ -10,7 +11,7 @@ class Constitution {
   });
 
   Constitution.fromJson(Map<String, dynamic> json)
-      : preamble = json['preamble'] as String,
+      : preamble = Preamble.fromJson(json['preamble']),
         headlines = (json['headlines'] as List<dynamic>)
             .map(
               (e) => Headline.fromJson(e),
@@ -18,7 +19,7 @@ class Constitution {
             .toList();
 
   Map<String, dynamic> toJson() => {
-        'preamble': preamble,
+        'preamble': preamble.toJson(),
         'headlines': headlines
             .map(
               (e) => e.toJson(),
