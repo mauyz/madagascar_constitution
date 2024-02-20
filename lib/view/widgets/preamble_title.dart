@@ -26,8 +26,9 @@ class PreambleTitle extends StatelessWidget {
               ),
             );
           },
-          child: ListTile(
-            title: Text(
+          child: Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Text(
               preamble.title.toUpperCase(),
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
