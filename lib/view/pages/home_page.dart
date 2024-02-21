@@ -18,8 +18,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Provider<Repository>(
       create: (_) => Repository(),
-      child: Consumer<Repository>(
-        builder: (_, repository, __) {
+      child: Builder(
+        builder: (context) {
+          final repository = context.read<Repository>();
           return MultiProvider(
             providers: [
               ListenableProvider<MgViewModel>(
@@ -51,7 +52,20 @@ class HomePage extends StatelessWidget {
                     title: const AppTitle(),
                     elevation: 5,
                   ),
-                  drawer: const Drawer(),
+                  drawer: Drawer(
+                    child: ListView(
+                      children: [
+                        DrawerHeader(
+                          decoration: BoxDecoration(
+                            color: Theme.of(context).highlightColor,
+                          ),
+                          child: const Text(
+                            "Constitution de IVe République de Madagascar",
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
                   body: PageView.builder(
                     physics: const AlwaysScrollableScrollPhysics(),
                     itemCount: tabsRouter.pageCount,
