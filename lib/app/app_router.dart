@@ -32,5 +32,9 @@ class AppRouter extends $AppRouter {
           path: "/article",
           page: ArticleContentRoute.page,
         ),
+        AutoRoute(
+          path: "/search",
+          page: SearchContentRoute.page,
+        ),
       ];
 }
