@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:madagascar_constitution/app/app_router.dart';
+import 'package:madagascar_constitution/source/repository.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -14,8 +15,15 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appRouter = AppRouter();
-    return Provider.value(
-      value: sharedPreferences,
+    return MultiProvider(
+      providers: [
+        Provider.value(
+          value: sharedPreferences,
+        ),
+        Provider<Repository>(
+          create: (_) => Repository(),
+        ),
+      ],
       child: MaterialApp.router(
         scrollBehavior: AppScrollBehavior(),
         theme: ThemeData(
