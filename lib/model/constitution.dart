@@ -1,3 +1,4 @@
+import 'package:madagascar_constitution/model/article.dart';
 import 'package:madagascar_constitution/model/headline.dart';
 import 'package:madagascar_constitution/model/preamble.dart';
 
@@ -26,4 +27,12 @@ class Constitution {
             )
             .toList(),
       };
+
+  List<Article> get allArticles {
+    final allArticles = <Article>[];
+    for (final headline in headlines) {
+      allArticles.addAll(headline.allArticles);
+    }
+    return allArticles;
+  }
 }
