@@ -52,7 +52,10 @@ class SearchContentPage extends StatelessWidget {
                     ),
                     hintText: "Rechercher",
                     suffixIcon: IconButton(
-                      onPressed: () => searchController.clear(),
+                      onPressed: () {
+                        searchController.clear();
+                        context.read<SearchViewModel>().searchText('');
+                      },
                       icon: const Icon(
                         Icons.close,
                       ),
