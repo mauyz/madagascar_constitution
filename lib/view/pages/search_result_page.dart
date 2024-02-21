@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:madagascar_constitution/model/article.dart';
-import 'package:madagascar_constitution/view/widgets/article_card.dart';
+import 'package:madagascar_constitution/view/widgets/searched_article_card.dart';
 
 class SearchResultPage extends StatelessWidget {
   final String text;
@@ -16,8 +16,9 @@ class SearchResultPage extends StatelessWidget {
     return ListView.builder(
       itemCount: articles.length,
       itemBuilder: (_, index) {
-        return ArticleCard(
+        return SeearchedArticleCard(
           article: articles[index],
+          text: text,
         );
       },
     );
