@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:madagascar_constitution/app/app_router.gr.dart';
 import 'package:madagascar_constitution/core/constitution_language.dart';
 import 'package:madagascar_constitution/source/repository.dart';
+import 'package:madagascar_constitution/view/pages/tab_content_page.dart';
 import 'package:madagascar_constitution/view/widgets/app_title.dart';
 import 'package:madagascar_constitution/view/widgets/tab_navigation_item.dart';
 import 'package:madagascar_constitution/viewmodel/en_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/fr_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/mg_view_model.dart';
+import 'package:madagascar_constitution/viewmodel/tab_search_view_model.dart';
 import 'package:provider/provider.dart';
 
 @RoutePage()
@@ -17,6 +19,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final repository = context.read<Repository>();
+    final pageController = PageController(
+      initialPage: 0,
+    );
     return MultiProvider(
       providers: [
         ListenableProvider<MgViewModel>(
@@ -34,68 +39,88 @@ class HomePage extends StatelessWidget {
             repository: repository,
           )..loadConstitution(),
         ),
+        ListenableProvider<TabSearchViewModel>(
+          create: (_) => TabSearchViewModel(),
+        ),
       ],
-      child: AutoTabsRouter(
-        routes: [
-          TabContentRoute(language: ConstitutionLanguage.mg),
-          TabContentRoute(language: ConstitutionLanguage.fr),
-          TabContentRoute(language: ConstitutionLanguage.en),
-        ],
-        builder: (buildContext, child) {
-          final tabsRouter = AutoTabsRouter.of(buildContext);
-          return Scaffold(
-            appBar: AppBar(
-              title: const AppTitle(),
-              elevation: 5,
-              actions: [
-                IconButton(
-                  onPressed: () => context.router.push(
-                    const SearchContentRoute(),
+      builder: (context, _) {
+        return Scaffold(
+          appBar: AppBar(
+            title: const AppTitle(),
+            elevation: 5,
+            actions: [
+              IconButton(
+                onPressed: () => context.router.push(
+                  const SearchContentRoute(),
+                ),
+                icon: const Icon(
+                  Icons.search,
+                ),
+              )
+            ],
+          ),
+          drawer: Drawer(
+            child: ListView(
+              children: [
+                DrawerHeader(
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).highlightColor,
                   ),
-                  icon: const Icon(
-                    Icons.search,
+                  child: const Text(
+                    "CONSTITUTION DE LA QUATRIEME REPUBLIQUE",
                   ),
                 )
               ],
             ),
-            drawer: Drawer(
-              child: ListView(
-                children: [
-                  DrawerHeader(
-                    decoration: BoxDecoration(
-                      color: Theme.of(context).highlightColor,
-                    ),
-                    child: const Text(
-                      "Constitution de IVe République de Madagascar",
-                    ),
-                  )
-                ],
+          ),
+          body: PageView(
+            controller: pageController,
+            physics: const AlwaysScrollableScrollPhysics(),
+            onPageChanged: context.read<TabSearchViewModel>().goTo,
+            children: const [
+              TabContentPage(
+                key: PageStorageKey<String>('mg'),
+                language: ConstitutionLanguage.mg,
               ),
-            ),
-            body: PageView.builder(
-              physics: const AlwaysScrollableScrollPhysics(),
-              itemCount: tabsRouter.pageCount,
-              onPageChanged: tabsRouter.setActiveIndex,
-              itemBuilder: (_, __) => child,
-            ),
-            bottomNavigationBar: BottomNavigationBar(
-              currentIndex: tabsRouter.activeIndex,
-              onTap: tabsRouter.setActiveIndex,
-              items: [
-                TabNavigationItem(
-                  language: ConstitutionLanguage.mg,
-                ),
-                TabNavigationItem(
-                  language: ConstitutionLanguage.fr,
-                ),
-                TabNavigationItem(
-                  language: ConstitutionLanguage.en,
-                ),
-              ],
-            ),
-          );
-        },
-      ),
+              TabContentPage(
+                key: PageStorageKey<String>('fr'),
+                language: ConstitutionLanguage.fr,
+              ),
+              TabContentPage(
+                key: PageStorageKey<String>('en'),
+                language: ConstitutionLanguage.en,
+              ),
+            ],
+          ),
+          bottomNavigationBar: Consumer<TabSearchViewModel>(
+            builder: (_, tabViewModel, __) {
+              return BottomNavigationBar(
+                currentIndex: tabViewModel.selected,
+                onTap: (index) {
+                  if (tabViewModel.selected != index) {
+                    pageController.animateToPage(
+                      index,
+                      duration: const Duration(milliseconds: 500),
+                      curve: Curves.ease,
+                    );
+                  }
+                },
+                items: [
+                  TabNavigationItem(
+                    language: ConstitutionLanguage.mg,
+                  ),
+                  TabNavigationItem(
+                    language: ConstitutionLanguage.fr,
+                  ),
+                  TabNavigationItem(
+                    language: ConstitutionLanguage.en,
+                  ),
+                ],
+              );
+            },
+          ),
+        );
+      },
     );
   }
 }

@@ -102,12 +102,11 @@ class SearchContentPage extends StatelessWidget {
                 create: (_) => TabSearchViewModel(),
                 builder: (context, _) {
                   return Scaffold(
-                    body: PageView.builder(
+                    body: PageView(
                       physics: const AlwaysScrollableScrollPhysics(),
                       controller: pageController,
-                      itemCount: tabs.length,
                       onPageChanged: context.read<TabSearchViewModel>().goTo,
-                      itemBuilder: (_, index) => tabs[index],
+                      children: tabs,
                     ),
                     bottomNavigationBar: tabs.length == 1
                         ? Material(
@@ -144,9 +143,8 @@ class SearchContentPage extends StatelessWidget {
                                   if (tabViewModel.selected != index) {
                                     pageController.animateToPage(
                                       index,
-                                      duration: const Duration(
-                                        milliseconds: 500,
-                                      ),
+                                      duration:
+                                          const Duration(milliseconds: 500),
                                       curve: Curves.ease,
                                     );
                                   }

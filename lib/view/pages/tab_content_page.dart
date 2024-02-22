@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:madagascar_constitution/core/constitution_language.dart';
 import 'package:madagascar_constitution/view/pages/headline_list.dart';
@@ -7,7 +6,6 @@ import 'package:madagascar_constitution/viewmodel/fr_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/mg_view_model.dart';
 import 'package:provider/provider.dart';
 
-@RoutePage()
 class TabContentPage extends StatelessWidget {
   final ConstitutionLanguage language;
   const TabContentPage({
