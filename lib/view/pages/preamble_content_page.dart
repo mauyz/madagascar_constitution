@@ -13,7 +13,7 @@ class PreambleContentPage extends StatelessWidget {
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.all(15.0),
-        child: Text(
+        child: SelectableText(
           preamble.content,
           style: const TextStyle(
             fontWeight: FontWeight.w500,

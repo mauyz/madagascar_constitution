@@ -27,7 +27,7 @@ class ArticleContentPage extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
-        child: Text(
+        child: SelectableText(
           article.content,
           style: const TextStyle(
             fontWeight: FontWeight.w500,
