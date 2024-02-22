@@ -61,19 +61,30 @@ class SearchContentPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  onChanged: context.read<SearchViewModel>().searchText,
+                  onChanged: (value) {
+                    if (value.length > 1) {
+                      context.read<SearchViewModel>().searchText(value);
+                    } else {
+                      context.read<SearchViewModel>().searchText('');
+                    }
+                  },
                 ),
               ),
             ),
           ),
           body: Consumer<SearchViewModel>(
             builder: (_, searchViewModel, __) {
-              if (searchController.text.isEmpty) {
+              if (searchController.text.length < 2) {
                 return const SizedBox.shrink();
+              }
+              if (searchViewModel.isLoading) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
               }
               if (searchViewModel.data.isEmpty) {
                 return const Center(
-                  child: Text('Auncun résultat'),
+                  child: Text('Aucun résultat'),
                 );
               }
               final tabs = searchViewModel.data.values
