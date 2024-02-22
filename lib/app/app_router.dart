@@ -9,20 +9,6 @@ class AppRouter extends $AppRouter {
           page: HomeRoute.page,
           initial: true,
           path: "/",
-          children: [
-            AutoRoute(
-              path: 'mg',
-              page: TabContentRoute.page,
-            ),
-            AutoRoute(
-              path: 'fr',
-              page: TabContentRoute.page,
-            ),
-            AutoRoute(
-              path: 'en',
-              page: TabContentRoute.page,
-            ),
-          ],
         ),
         AutoRoute(
           path: "/page",
