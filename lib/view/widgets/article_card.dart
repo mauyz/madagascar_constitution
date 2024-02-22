@@ -13,7 +13,8 @@ class ArticleCard extends StatelessWidget {
     return Card(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        mainAxisSize: MainAxisSize.max,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisSize: MainAxisSize.min,
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(
@@ -21,6 +22,7 @@ class ArticleCard extends StatelessWidget {
             ),
             child: Text(
               article.title,
+              textAlign: TextAlign.center,
               style: const TextStyle(
                 fontWeight: FontWeight.w500,
               ),
@@ -28,7 +30,7 @@ class ArticleCard extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Text(article.content),
+            child: SelectableText(article.content),
           ),
         ],
       ),

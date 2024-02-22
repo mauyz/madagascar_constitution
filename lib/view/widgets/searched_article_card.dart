@@ -16,7 +16,8 @@ class SeearchedArticleCard extends StatelessWidget {
     return Card(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        mainAxisSize: MainAxisSize.max,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisSize: MainAxisSize.min,
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(
@@ -24,6 +25,7 @@ class SeearchedArticleCard extends StatelessWidget {
             ),
             child: Text(
               article.title,
+              textAlign: TextAlign.center,
               style: const TextStyle(
                 fontWeight: FontWeight.w500,
               ),
@@ -31,19 +33,21 @@ class SeearchedArticleCard extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(10.0),
-            child: TextHighlight(
-              text: article.content,
-              words: {
-                text: HighlightedWord(
-                  textStyle: const TextStyle(
-                    color: Colors.red,
+            child: SelectionArea(
+              child: TextHighlight(
+                text: article.content,
+                words: {
+                  text: HighlightedWord(
+                    textStyle: const TextStyle(
+                      color: Colors.red,
+                    ),
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).highlightColor,
+                    ),
                   ),
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).highlightColor,
-                  ),
-                ),
-              },
-              matchCase: false,
+                },
+                matchCase: false,
+              ),
             ),
           ),
         ],
