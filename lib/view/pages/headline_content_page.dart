@@ -13,44 +13,49 @@ class HeadlineContentPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final articles = headline.articles;
     final subtitles = headline.subtitles;
-    return SingleChildScrollView(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          if (articles.isNotEmpty)
-            ArticleGridview(
-              articles: articles,
-            ),
-          ...subtitles.map(
-            (subtitle) {
-              final subtitleArticles = subtitle.articles;
-              final subtitleChapters = subtitle.chapiters;
-              return Card(
-                color: Theme.of(context).secondaryHeaderColor,
-                elevation: 1.0,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Text(
-                        subtitle.title,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.w900,
-                          fontSize: 16.0,
-                        ),
-                      ),
+    return ListView.builder(
+      itemCount: getListItemsCount(headline),
+      itemBuilder: (_, index) {
+        if (index == 0 && articles.isNotEmpty) {
+          return ArticleGridview(
+            articles: articles,
+          );
+        } else {
+          final subtitle = subtitles[articles.isEmpty ? index : index - 1];
+          final subtitleArticles = subtitle.articles;
+          final subtitleChapters = subtitle.chapiters;
+          return Card(
+            color: Theme.of(context).secondaryHeaderColor,
+            elevation: 1.0,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Text(
+                    subtitle.title,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w900,
+                      fontSize: 16.0,
                     ),
-                    if (subtitleArticles.isNotEmpty)
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: ArticleGridview(
-                          articles: subtitleArticles,
-                        ),
-                      ),
-                    ...subtitleChapters.map(
-                      (chapter) {
+                  ),
+                ),
+                if (subtitleArticles.isNotEmpty)
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ArticleGridview(
+                      articles: subtitleArticles,
+                    ),
+                  ),
+                if (subtitleChapters.isNotEmpty)
+                  Flexible(
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemCount: subtitleChapters.length,
+                      itemBuilder: (_, indexItem) {
+                        final chapter = subtitleChapters[indexItem];
                         return Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Card(
@@ -89,13 +94,20 @@ class HeadlineContentPage extends StatelessWidget {
                         );
                       },
                     ),
-                  ],
-                ),
-              );
-            },
-          ),
-        ],
-      ),
+                  ),
+              ],
+            ),
+          );
+        }
+      },
     );
+  }
+
+  int getListItemsCount(Headline headline) {
+    int total = 0;
+    if (headline.articles.isNotEmpty) {
+      total++;
+    }
+    return total + headline.subtitles.length;
   }
 }
