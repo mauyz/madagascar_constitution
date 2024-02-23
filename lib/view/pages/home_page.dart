@@ -1,5 +1,7 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:madagascar_constitution/app/app_router.gr.dart';
 import 'package:madagascar_constitution/core/constitution_language.dart';
 import 'package:madagascar_constitution/source/repository.dart';
@@ -19,6 +21,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final repository = context.read<Repository>();
+    final languages = [
+      "Malagasy",
+      "Français",
+      "Anglais",
+    ];
     final pageController = PageController(
       initialPage: 0,
     );
@@ -94,8 +101,10 @@ class HomePage extends StatelessWidget {
           ),
           bottomNavigationBar: Consumer<TabSearchViewModel>(
             builder: (_, tabViewModel, __) {
-              return BottomNavigationBar(
-                currentIndex: tabViewModel.selected,
+              return CurvedNavigationBar(
+                buttonBackgroundColor: Colors.amberAccent,
+                height: 75,
+                index: tabViewModel.selected,
                 onTap: (index) {
                   if (tabViewModel.selected != index) {
                     pageController.animateToPage(
@@ -105,17 +114,23 @@ class HomePage extends StatelessWidget {
                     );
                   }
                 },
-                items: [
-                  TabNavigationItem(
-                    language: ConstitutionLanguage.mg,
-                  ),
-                  TabNavigationItem(
-                    language: ConstitutionLanguage.fr,
-                  ),
-                  TabNavigationItem(
-                    language: ConstitutionLanguage.en,
-                  ),
-                ],
+                items: ConstitutionLanguage.values
+                    .map(
+                      (e) => Column(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SvgPicture.asset(
+                            'assets/${e.name}.svg',
+                            height: 20,
+                          ),
+                          Text(
+                            languages[tabViewModel.selected],
+                          )
+                        ],
+                      ),
+                    )
+                    .toList(),
               );
             },
           ),
