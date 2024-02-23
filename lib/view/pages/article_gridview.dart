@@ -15,17 +15,10 @@ class ArticleGridview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<ArticleListTypeViewModel>(
-      builder: (_, listTypeViewModel, __) {
-        final crossAxisCount = getCrossAxisCount(MediaQuery.sizeOf(context));
-        if (!listTypeViewModel.isGrid || crossAxisCount == 1) {
-          return ListView.builder(
-            shrinkWrap: true,
-            itemCount: articles.length,
-            itemBuilder: (_, index) => ArticleCard(
-              article: articles[index],
-            ),
-          );
-        }
+      builder: (buildContext, listTypeViewModel, __) {
+        final crossAxisCount = listTypeViewModel.isGrid
+            ? getCrossAxisCount(MediaQuery.sizeOf(buildContext))
+            : 1;
         return StaggeredGrid.count(
           crossAxisCount: crossAxisCount,
           children: articles.map(
