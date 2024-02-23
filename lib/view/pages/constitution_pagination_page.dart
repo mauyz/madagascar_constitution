@@ -25,6 +25,7 @@ class ConstitutionPaginationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final sharedPreferences = context.read<SharedPreferences>();
+    final pageController = PageController(initialPage: initialPage + 1);
     return MultiProvider(
       providers: [
         ListenableProvider<PaginationViewModel>(
@@ -38,83 +39,100 @@ class ConstitutionPaginationPage extends StatelessWidget {
           ),
         ),
       ],
-      child: Consumer<PaginationViewModel>(
-        builder: (_, paginationViewModel, __) {
-          final currentPage = paginationViewModel.page;
-          dynamic currentContent = (currentPage == -1)
-              ? constitution.preamble
-              : constitution.headlines[currentPage];
-          final pageTitle = getPageTitle(currentContent);
-          return Scaffold(
-            appBar: AppBar(
-              elevation: 5,
-              leading: IconButton(
-                onPressed: () {
-                  context.router.pop();
-                },
-                icon: const Icon(
-                  Icons.arrow_back,
-                ),
-              ),
-              title: AutoSizeText(
+      child: Scaffold(
+        appBar: AppBar(
+          elevation: 5,
+          leading: IconButton(
+            onPressed: () {
+              context.router.pop();
+            },
+            icon: const Icon(
+              Icons.arrow_back,
+            ),
+          ),
+          title: Consumer<PaginationViewModel>(
+            builder: (_, paginationViewModel, __) {
+              final pageTitle = paginationViewModel.page == -1
+                  ? constitution.preamble.title
+                  : constitution.headlines[paginationViewModel.page].title;
+              return AutoSizeText(
                 pageTitle,
                 maxLines: 2,
-              ),
-              actions: [
-                if (currentPage != -1 &&
-                    MediaQuery.sizeOf(context).width >= 600)
-                  Padding(
-                    padding: const EdgeInsets.only(right: 5.0),
-                    child: Consumer<ArticleListTypeViewModel>(
-                      builder: (_, listTypeViewModel, __) {
-                        return IconButton.filled(
-                          onPressed: () {
-                            listTypeViewModel.toogleType();
-                            sharedPreferences.setBool(
-                              "typeView",
-                              listTypeViewModel.isGrid,
+              );
+            },
+          ),
+          actions: [
+            Consumer<PaginationViewModel>(
+              builder: (buildContext, paginationViewModel, __) {
+                return (paginationViewModel.page != -1 &&
+                        MediaQuery.sizeOf(buildContext).width >= 600)
+                    ? Padding(
+                        padding: const EdgeInsets.only(right: 5.0),
+                        child: Consumer<ArticleListTypeViewModel>(
+                          builder: (_, listTypeViewModel, __) {
+                            return IconButton.filled(
+                              onPressed: () {
+                                listTypeViewModel.toogleType();
+                                sharedPreferences.setBool(
+                                  "typeView",
+                                  listTypeViewModel.isGrid,
+                                );
+                              },
+                              icon: Icon(
+                                listTypeViewModel.isGrid
+                                    ? Icons.list
+                                    : Icons.grid_view,
+                              ),
                             );
                           },
-                          icon: Icon(
-                            listTypeViewModel.isGrid
-                                ? Icons.list
-                                : Icons.grid_view,
-                          ),
-                        );
+                        ),
+                      )
+                    : const SizedBox.shrink();
+              },
+            ),
+          ],
+        ),
+        body: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Builder(
+                  builder: (context) {
+                    return PageView.builder(
+                      physics: const AlwaysScrollableScrollPhysics(),
+                      controller: pageController,
+                      itemCount: constitution.headlines.length + 1,
+                      onPageChanged: (index) => context
+                          .read<PaginationViewModel>()
+                          .goToPage(index - 1),
+                      itemBuilder: (_, index) {
+                        final currentContent = (index == 0)
+                            ? constitution.preamble
+                            : constitution.headlines[index - 1];
+                        return currentContent is Preamble
+                            ? PreambleContentPage(preamble: currentContent)
+                            : HeadlineContentPage(
+                                headline: currentContent as Headline,
+                              );
                       },
-                    ),
-                  ),
-              ],
-            ),
-            body: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: currentContent is Preamble
-                        ? PreambleContentPage(preamble: currentContent)
-                        : HeadlineContentPage(headline: currentContent),
-                  ),
+                    );
+                  },
                 ),
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: PaginationButtons(
-                    paginationViewModel: paginationViewModel,
-                  ),
-                )
-              ],
+              ),
             ),
-          );
-        },
+            Consumer<PaginationViewModel>(
+              builder: (_, paginationViewModel, __) {
+                return PaginationButtons(
+                  pageController: pageController,
+                  paginationViewModel: paginationViewModel,
+                );
+              },
+            )
+          ],
+        ),
       ),
     );
-  }
-
-  String getPageTitle(dynamic content) {
-    if (content is Preamble) {
-      return content.title;
-    }
-    return (content as Headline).title;
   }
 }

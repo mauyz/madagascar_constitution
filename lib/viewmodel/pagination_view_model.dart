@@ -5,12 +5,15 @@ class PaginationViewModel extends ChangeNotifier {
   PaginationViewModel({required int initialPage}) : _page = initialPage;
 
   void previousPage() {
-    _page--;
-    notifyListeners();
+    goToPage(_page--);
   }
 
   void nextPage() {
-    _page++;
+    goToPage(_page++);
+  }
+
+  void goToPage(int page) {
+    _page = page;
     notifyListeners();
   }
 

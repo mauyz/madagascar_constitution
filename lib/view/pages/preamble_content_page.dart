@@ -11,7 +11,7 @@ class PreambleContentPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Padding(
+      child: Container(
         padding: const EdgeInsets.all(15.0),
         child: SelectableText(
           preamble.content,
