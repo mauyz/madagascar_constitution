@@ -15,6 +15,7 @@ class HeadlineList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ScrollController controller = ScrollController();
     if (dataModel.getConstitution() == null) {
       return const Center(
         child: CircularProgressIndicator(),
@@ -23,20 +24,24 @@ class HeadlineList extends StatelessWidget {
     final constitution = dataModel.getConstitution()!;
     return Padding(
       padding: const EdgeInsets.only(top: 8.0),
-      child: ListView.builder(
-        shrinkWrap: true,
-        itemCount: constitution.headlines.length + 1,
-        itemBuilder: (_, index) {
-          if (index == 0) {
-            return PreambleTitle(
+      child: Scrollbar(
+        controller: controller,
+        child: ListView.builder(
+          controller: controller,
+          shrinkWrap: true,
+          itemCount: constitution.headlines.length + 1,
+          itemBuilder: (_, index) {
+            if (index == 0) {
+              return PreambleTitle(
+                constitution: constitution,
+              );
+            }
+            return HeadlineTitle(
               constitution: constitution,
+              index: index - 1,
             );
-          }
-          return HeadlineTitle(
-            constitution: constitution,
-            index: index - 1,
-          );
-        },
+          },
+        ),
       ),
     );
   }
