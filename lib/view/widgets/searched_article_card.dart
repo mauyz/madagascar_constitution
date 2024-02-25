@@ -33,20 +33,23 @@ class SeearchedArticleCard extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(10.0),
-            child: SelectionArea(
-              child: TextHighlight(
-                text: article.content,
-                words: {
-                  text: HighlightedWord(
-                    textStyle: const TextStyle(
-                      color: Colors.red,
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: SelectionArea(
+                child: TextHighlight(
+                  text: article.content,
+                  words: {
+                    text: HighlightedWord(
+                      textStyle: const TextStyle(
+                        color: Colors.red,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).highlightColor,
+                      ),
                     ),
-                    decoration: BoxDecoration(
-                      color: Theme.of(context).highlightColor,
-                    ),
-                  ),
-                },
-                matchCase: false,
+                  },
+                  matchCase: false,
+                ),
               ),
             ),
           ),

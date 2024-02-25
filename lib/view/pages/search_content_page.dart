@@ -70,6 +70,8 @@ class SearchContentPage extends StatelessWidget {
                       context.read<SearchViewModel>().searchText('');
                     }
                   },
+                  onTapOutside: (event) =>
+                      FocusManager.instance.primaryFocus?.unfocus(),
                 ),
               ),
             ),
