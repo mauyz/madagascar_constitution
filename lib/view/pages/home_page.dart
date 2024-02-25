@@ -1,15 +1,18 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:madagascar_constitution/app/app_router.gr.dart';
 import 'package:madagascar_constitution/core/constitution_language.dart';
 import 'package:madagascar_constitution/source/repository.dart';
 import 'package:madagascar_constitution/view/pages/tab_content_page.dart';
 import 'package:madagascar_constitution/view/widgets/app_title.dart';
-import 'package:madagascar_constitution/view/widgets/tab_navigation_item.dart';
+import 'package:madagascar_constitution/view/widgets/bottom_nav_bar.dart';
+import 'package:madagascar_constitution/view/widgets/bottom_nav_bar_item.dart';
 import 'package:madagascar_constitution/viewmodel/en_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/fr_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/mg_view_model.dart';
-import 'package:madagascar_constitution/viewmodel/tab_search_view_model.dart';
+import 'package:madagascar_constitution/viewmodel/opacity_view_model.dart';
+import 'package:madagascar_constitution/viewmodel/tab_navigation_view_model.dart';
 import 'package:provider/provider.dart';
 
 @RoutePage()
@@ -39,8 +42,11 @@ class HomePage extends StatelessWidget {
             repository: repository,
           )..loadConstitution(),
         ),
-        ListenableProvider<TabSearchViewModel>(
-          create: (_) => TabSearchViewModel(),
+        ListenableProvider<TabNavigationViewModel>(
+          create: (_) => TabNavigationViewModel(),
+        ),
+        ListenableProvider<OpacityViewModel>(
+          create: (_) => OpacityViewModel(),
         ),
       ],
       builder: (context, _) {
@@ -76,7 +82,7 @@ class HomePage extends StatelessWidget {
           body: PageView(
             controller: pageController,
             physics: const AlwaysScrollableScrollPhysics(),
-            onPageChanged: context.read<TabSearchViewModel>().goTo,
+            onPageChanged: context.read<TabNavigationViewModel>().goTo,
             children: const [
               TabContentPage(
                 key: PageStorageKey<String>('mg'),
@@ -92,10 +98,10 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
-          bottomNavigationBar: Consumer<TabSearchViewModel>(
+          bottomNavigationBar: Consumer<TabNavigationViewModel>(
             builder: (_, tabViewModel, __) {
-              return BottomNavigationBar(
-                currentIndex: tabViewModel.selected,
+              return BottomNavBar(
+                currentItem: tabViewModel.selected,
                 onTap: (index) {
                   if (tabViewModel.selected != index) {
                     pageController.animateToPage(
@@ -105,17 +111,22 @@ class HomePage extends StatelessWidget {
                     );
                   }
                 },
-                items: [
-                  TabNavigationItem(
-                    language: ConstitutionLanguage.mg,
-                  ),
-                  TabNavigationItem(
-                    language: ConstitutionLanguage.fr,
-                  ),
-                  TabNavigationItem(
-                    language: ConstitutionLanguage.en,
-                  ),
-                ],
+                items: ConstitutionLanguage.values.indexed.map(
+                  (e) {
+                    return BottomNavBarItem(
+                      icon: SvgPicture.asset(
+                        'assets/${e.$2.name}.svg',
+                        height: 20,
+                        width: 20,
+                      ),
+                      label: switch (e.$2) {
+                        ConstitutionLanguage.mg => "Malagasy",
+                        ConstitutionLanguage.fr => "Français",
+                        ConstitutionLanguage.en => "Anglais",
+                      },
+                    );
+                  },
+                ).toList(),
               );
             },
           ),

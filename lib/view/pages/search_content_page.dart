@@ -4,9 +4,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:madagascar_constitution/core/constitution_language.dart';
 import 'package:madagascar_constitution/source/repository.dart';
 import 'package:madagascar_constitution/view/pages/search_result_page.dart';
-import 'package:madagascar_constitution/view/widgets/tab_navigation_item.dart';
+import 'package:madagascar_constitution/view/widgets/bottom_nav_bar.dart';
+import 'package:madagascar_constitution/view/widgets/bottom_nav_bar_item.dart';
+import 'package:madagascar_constitution/viewmodel/opacity_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/search_view_model.dart';
-import 'package:madagascar_constitution/viewmodel/tab_search_view_model.dart';
+import 'package:madagascar_constitution/viewmodel/tab_navigation_view_model.dart';
 import 'package:provider/provider.dart';
 
 @RoutePage()
@@ -98,67 +100,56 @@ class SearchContentPage extends StatelessWidget {
               final pageController = PageController(
                 initialPage: 0,
               );
-              return ListenableProvider<TabSearchViewModel>(
-                create: (_) => TabSearchViewModel(),
+              return MultiProvider(
+                providers: [
+                  ListenableProvider<OpacityViewModel>(
+                    create: (_) => OpacityViewModel(),
+                  ),
+                  ListenableProvider<TabNavigationViewModel>(
+                    create: (_) => TabNavigationViewModel(),
+                  ),
+                ],
                 builder: (context, _) {
                   return Scaffold(
                     body: PageView(
                       physics: const AlwaysScrollableScrollPhysics(),
                       controller: pageController,
-                      onPageChanged: context.read<TabSearchViewModel>().goTo,
+                      onPageChanged:
+                          context.read<TabNavigationViewModel>().goTo,
                       children: tabs,
                     ),
-                    bottomNavigationBar: tabs.length == 1
-                        ? Material(
-                            elevation: 3.0,
-                            color: Theme.of(context).bottomAppBarTheme.color,
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(
-                                vertical: 8.0,
-                              ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  SvgPicture.asset(
-                                    'assets/${searchViewModel.data.keys.first.name}.svg',
-                                    height: 24,
-                                  ),
-                                  Text(
-                                    switch (searchViewModel.data.keys.first) {
-                                      ConstitutionLanguage.mg => "Malagasy",
-                                      ConstitutionLanguage.fr => "Français",
-                                      ConstitutionLanguage.en => "Anglais",
-                                    },
-                                  ),
-                                ],
-                              ),
-                            ),
-                          )
-                        : Consumer<TabSearchViewModel>(
-                            builder: (_, tabViewModel, __) {
-                              return BottomNavigationBar(
-                                currentIndex: tabViewModel.selected,
-                                onTap: (index) {
-                                  if (tabViewModel.selected != index) {
-                                    pageController.animateToPage(
-                                      index,
-                                      duration:
-                                          const Duration(milliseconds: 500),
-                                      curve: Curves.ease,
-                                    );
-                                  }
-                                },
-                                items: searchViewModel.data.keys
-                                    .map(
-                                      (e) => TabNavigationItem(
-                                        language: e,
-                                      ),
-                                    )
-                                    .toList(),
+                    bottomNavigationBar: Consumer<TabNavigationViewModel>(
+                      builder: (_, tabViewModel, __) {
+                        return BottomNavBar(
+                          currentItem: tabViewModel.selected,
+                          onTap: (index) {
+                            if (tabViewModel.selected != index) {
+                              pageController.animateToPage(
+                                index,
+                                duration: const Duration(milliseconds: 500),
+                                curve: Curves.ease,
                               );
-                            },
-                          ),
+                            }
+                          },
+                          items: searchViewModel.data.keys.indexed
+                              .map(
+                                (e) => BottomNavBarItem(
+                                  icon: SvgPicture.asset(
+                                    'assets/${e.$2.name}.svg',
+                                    height: 20,
+                                    width: 20,
+                                  ),
+                                  label: switch (e.$2) {
+                                    ConstitutionLanguage.mg => "Malagasy",
+                                    ConstitutionLanguage.fr => "Français",
+                                    ConstitutionLanguage.en => "Anglais",
+                                  },
+                                ),
+                              )
+                              .toList(),
+                        );
+                      },
+                    ),
                   );
                 },
               );

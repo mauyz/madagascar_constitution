@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class TabSearchViewModel extends ChangeNotifier {
+class TabNavigationViewModel extends ChangeNotifier {
   int _selected = 0;
 
-  TabSearchViewModel();
+  TabNavigationViewModel();
 
   int get selected => _selected;
 
