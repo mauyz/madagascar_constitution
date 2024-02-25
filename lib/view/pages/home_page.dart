@@ -8,6 +8,8 @@ import 'package:madagascar_constitution/view/pages/tab_content_page.dart';
 import 'package:madagascar_constitution/view/widgets/app_title.dart';
 import 'package:madagascar_constitution/view/widgets/bottom_nav_bar.dart';
 import 'package:madagascar_constitution/view/widgets/bottom_nav_bar_item.dart';
+import 'package:madagascar_constitution/view/widgets/custom_about.dart';
+import 'package:madagascar_constitution/view/widgets/drawer_item.dart';
 import 'package:madagascar_constitution/viewmodel/en_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/fr_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/mg_view_model.dart';
@@ -69,13 +71,86 @@ class HomePage extends StatelessWidget {
             child: ListView(
               children: [
                 DrawerHeader(
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).highlightColor,
+                  padding: EdgeInsets.zero,
+                  child: Stack(
+                    children: [
+                      SvgPicture.asset(
+                        "assets/mg.svg",
+                        fit: BoxFit.fill,
+                      ),
+                      Container(
+                        color: Theme.of(context).primaryColor.withOpacity(0.9),
+                        alignment: Alignment.center,
+                        child: const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            "Constitution de la quatrième république de Madagascar",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                  child: const Text(
-                    "CONSTITUTION DE LA QUATRIEME REPUBLIQUE",
+                ),
+                DrawerItem(
+                  icon: const Icon(
+                    Icons.share,
+                    size: 20,
                   ),
-                )
+                  title: "Partager l'application",
+                  onTap: () {},
+                ),
+                DrawerItem(
+                  icon: const Icon(
+                    Icons.mail,
+                    size: 20,
+                  ),
+                  title: "Contacter les développeurs",
+                  onTap: () {},
+                ),
+                DrawerItem(
+                  icon: const Icon(
+                    Icons.star,
+                    size: 20,
+                  ),
+                  title: "Noter l'application",
+                  onTap: () {},
+                ),
+                DrawerItem(
+                  icon: const Icon(
+                    Icons.info,
+                    size: 20,
+                  ),
+                  title: "A propos",
+                  onTap: () {
+                    showCustomAboutDialog(
+                      context: context,
+                      applicationName: "Constitution de Madagascar",
+                      applicationVersion: "v1.0.3",
+                      applicationIcon: CircleAvatar(
+                        child: Padding(
+                          padding: const EdgeInsets.all(2.0),
+                          child: SvgPicture.asset(
+                            'assets/mg.svg',
+                            height: 20,
+                          ),
+                        ),
+                      ),
+                      applicationLegalese:
+                          "Constitution de la 4e république de Madagascar"
+                          " APRES LE REFERENDUM DU 17 NOVEMBRE 2010,\narrêtés"
+                          " par la Haute Cour Constitutionnelle le 6 décembre 2010"
+                          " [version publiée par l'Assemblée Nationale le 7 mai 2014].\n"
+                          "Source 1: https://www.assemblee-nationale.mg/wp-content/uploads/2019/08/Constitution-4eme-R%C3%A9publique_mg.pdf\n"
+                          "Source 2: http://www.mondemalgache.org/bins/lalampanorenana",
+                      copyright:
+                          "Copyright Baroov, Mauyz ${DateTime.now().year}",
+                    );
+                  },
+                ),
               ],
             ),
           ),
