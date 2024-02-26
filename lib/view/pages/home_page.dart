@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:madagascar_constitution/app/app_router.gr.dart';
+import 'package:madagascar_constitution/core/app_constants.dart';
 import 'package:madagascar_constitution/core/constitution_language.dart';
 import 'package:madagascar_constitution/source/repository.dart';
 import 'package:madagascar_constitution/view/pages/tab_content_page.dart';
@@ -84,7 +85,7 @@ class HomePage extends StatelessWidget {
                         child: const Padding(
                           padding: EdgeInsets.all(8.0),
                           child: Text(
-                            "Constitution de la quatrième république de Madagascar",
+                            "Constitution de la quatrième République de Madagascar",
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w800,
@@ -128,8 +129,8 @@ class HomePage extends StatelessWidget {
                   onTap: () {
                     showCustomAboutDialog(
                       context: context,
-                      applicationName: "Constitution de Madagascar",
-                      applicationVersion: "v1.0.3",
+                      applicationName: AppConstants.appTitle,
+                      applicationVersion: AppConstants.appVersion,
                       applicationIcon: CircleAvatar(
                         child: Padding(
                           padding: const EdgeInsets.all(2.0),
@@ -139,15 +140,8 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      applicationLegalese:
-                          "Constitution de la 4e république de Madagascar"
-                          " APRES LE REFERENDUM DU 17 NOVEMBRE 2010,\narrêtés"
-                          " par la Haute Cour Constitutionnelle le 6 décembre 2010"
-                          " [version publiée par l'Assemblée Nationale le 7 mai 2014].\n"
-                          "Source 1: https://www.assemblee-nationale.mg/wp-content/uploads/2019/08/Constitution-4eme-R%C3%A9publique_mg.pdf\n"
-                          "Source 2: http://www.mondemalgache.org/bins/lalampanorenana",
-                      copyright:
-                          "Copyright Baroov, Mauyz ${DateTime.now().year}",
+                      applicationLegalese: AppConstants.aboutApp,
+                      copyright: AppConstants.copyright,
                     );
                   },
                 ),
