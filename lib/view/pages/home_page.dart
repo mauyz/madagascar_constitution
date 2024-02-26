@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:madagascar_constitution/app/app_router.gr.dart';
 import 'package:madagascar_constitution/core/app_constants.dart';
@@ -11,12 +14,16 @@ import 'package:madagascar_constitution/view/widgets/bottom_nav_bar.dart';
 import 'package:madagascar_constitution/view/widgets/bottom_nav_bar_item.dart';
 import 'package:madagascar_constitution/view/widgets/custom_about.dart';
 import 'package:madagascar_constitution/view/widgets/drawer_item.dart';
+import 'package:madagascar_constitution/viewmodel/drawer_nav_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/en_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/fr_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/mg_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/opacity_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/tab_navigation_view_model.dart';
+import 'package:open_store/open_store.dart';
 import 'package:provider/provider.dart';
+import 'package:share_plus/share_plus.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 @RoutePage()
 class HomePage extends StatelessWidget {
@@ -51,6 +58,9 @@ class HomePage extends StatelessWidget {
         ListenableProvider<OpacityViewModel>(
           create: (_) => OpacityViewModel(),
         ),
+        ListenableProvider<DrawerNavViewModel>(
+          create: (_) => DrawerNavViewModel(),
+        ),
       ],
       builder: (context, _) {
         return Scaffold(
@@ -69,83 +79,89 @@ class HomePage extends StatelessWidget {
             ],
           ),
           drawer: Drawer(
-            child: ListView(
-              children: [
-                DrawerHeader(
-                  padding: EdgeInsets.zero,
-                  child: Stack(
-                    children: [
-                      SvgPicture.asset(
-                        "assets/mg.svg",
-                        fit: BoxFit.fill,
-                      ),
-                      Container(
-                        color: Theme.of(context).primaryColor.withOpacity(0.9),
-                        alignment: Alignment.center,
-                        child: const Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text(
-                            "Constitution de la quatrième République de Madagascar",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w800,
+            child: Consumer<DrawerNavViewModel>(
+              builder: (context, drawerNavViewModel, _) {
+                int selected = context.read<DrawerNavViewModel>().selected;
+                return ListView(
+                  children: [
+                    DrawerHeader(
+                      padding: EdgeInsets.zero,
+                      child: Stack(
+                        children: [
+                          SvgPicture.asset(
+                            "assets/mg.svg",
+                            fit: BoxFit.fill,
+                          ),
+                          Container(
+                            color:
+                                Theme.of(context).primaryColor.withOpacity(0.9),
+                            alignment: Alignment.center,
+                            child: const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Text(
+                                "Constitution de la quatrième République de Madagascar",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              ),
                             ),
                           ),
-                        ),
+                        ],
                       ),
-                    ],
-                  ),
-                ),
-                DrawerItem(
-                  icon: const Icon(
-                    Icons.share,
-                    size: 20,
-                  ),
-                  title: "Partager l'application",
-                  onTap: () {},
-                ),
-                DrawerItem(
-                  icon: const Icon(
-                    Icons.mail,
-                    size: 20,
-                  ),
-                  title: "Contacter les développeurs",
-                  onTap: () {},
-                ),
-                DrawerItem(
-                  icon: const Icon(
-                    Icons.star,
-                    size: 20,
-                  ),
-                  title: "Noter l'application",
-                  onTap: () {},
-                ),
-                DrawerItem(
-                  icon: const Icon(
-                    Icons.info,
-                    size: 20,
-                  ),
-                  title: "A propos",
-                  onTap: () {
-                    showCustomAboutDialog(
-                      context: context,
-                      applicationName: AppConstants.appTitle,
-                      applicationVersion: AppConstants.appVersion,
-                      applicationIcon: CircleAvatar(
-                        child: Padding(
-                          padding: const EdgeInsets.all(2.0),
-                          child: SvgPicture.asset(
-                            'assets/mg.svg',
-                            height: 20,
-                          ),
-                        ),
+                    ),
+                    DrawerItem(
+                      selected: selected == 0,
+                      icon: const Icon(
+                        Icons.share,
+                        size: 20,
                       ),
-                      applicationLegalese: AppConstants.aboutApp,
-                      copyright: AppConstants.copyright,
-                    );
-                  },
-                ),
-              ],
+                      title: "Partager l'application",
+                      onTap: () {
+                        _onDrawerItemTapped(drawerNavViewModel, 0);
+                        _shareApp();
+                      },
+                    ),
+                    DrawerItem(
+                      selected: selected == 1,
+                      icon: const Icon(
+                        Icons.mail,
+                        size: 20,
+                      ),
+                      title: "Contacter les développeurs",
+                      onTap: () {
+                        _onDrawerItemTapped(drawerNavViewModel, 1);
+                        _sendReport();
+                      },
+                    ),
+                    if (!Platform.isLinux)
+                      DrawerItem(
+                        selected: selected == 2,
+                        icon: const Icon(
+                          Icons.star,
+                          size: 20,
+                        ),
+                        title: "Noter l'application",
+                        onTap: () {
+                          _onDrawerItemTapped(drawerNavViewModel, 2);
+                          _openStore(context);
+                        },
+                      ),
+                    DrawerItem(
+                      selected: selected == 3,
+                      icon: const Icon(
+                        Icons.info,
+                        size: 20,
+                      ),
+                      title: "A propos",
+                      onTap: () {
+                        _onDrawerItemTapped(drawerNavViewModel, 3);
+                        _showAbout(context);
+                      },
+                    ),
+                  ],
+                );
+              },
             ),
           ),
           body: PageView(
@@ -201,6 +217,99 @@ class HomePage extends StatelessWidget {
           ),
         );
       },
+    );
+  }
+
+  void _onDrawerItemTapped(DrawerNavViewModel drawerNavViewModel, int item) {
+    drawerNavViewModel.navigateTo(item);
+  }
+
+  void _shareApp() async {
+    await Share.share(_getAppLink());
+  }
+
+  String _getAppLink() {
+    if (Platform.isIOS) {
+      ///TODO
+    }
+    if (Platform.isLinux) {
+      ///TODO
+    }
+    if (Platform.isWindows) {
+      ///TODO
+    }
+    if (Platform.isMacOS) {
+      ///TODO
+    }
+    return AppConstants.playStoreLink;
+  }
+
+  void _sendReport() async {
+    final email = Email(recipients: [
+      AppConstants.mauyzEmail,
+    ], cc: [
+      AppConstants.baroovEmail,
+    ]);
+    try {
+      await FlutterEmailSender.send(email);
+    } catch (_) {
+      final uri = Uri(
+        scheme: 'mailto',
+        path: AppConstants.mauyzEmail,
+      );
+      launchUrlString(uri.toString());
+    }
+  }
+
+  void _openStore(BuildContext context) async {
+    try {
+      await OpenStore.instance.open(
+        androidAppBundleId: AppConstants.androidId,
+      );
+    } catch (_) {
+      if (context.mounted) {
+        showDialog(
+          context: context,
+          builder: (buildContext) {
+            return AlertDialog(
+              actionsAlignment: MainAxisAlignment.center,
+              content: const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text(
+                  "L'application n'est pas encore disponible pour cette plateforme !",
+                ),
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(buildContext);
+                  },
+                  child: const Text("Fermer"),
+                ),
+              ],
+            );
+          },
+        );
+      }
+    }
+  }
+
+  void _showAbout(BuildContext context) {
+    showCustomAboutDialog(
+      context: context,
+      applicationName: AppConstants.appTitle,
+      applicationVersion: AppConstants.appVersion,
+      applicationIcon: CircleAvatar(
+        child: Padding(
+          padding: const EdgeInsets.all(2.0),
+          child: SvgPicture.asset(
+            'assets/mg.svg',
+            height: 20,
+          ),
+        ),
+      ),
+      applicationLegalese: AppConstants.aboutApp,
+      copyright: AppConstants.copyright,
     );
   }
 }

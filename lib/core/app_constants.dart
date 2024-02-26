@@ -14,4 +14,8 @@ class AppConstants {
       "https://play.google.com/store/apps/details?id=com.eightgroup.baroov.constitution";
   static const baroovEmail = "barouvheritiana@gmail.com";
   static const mauyzEmail = "tsiorymauyz@gmail.com";
+  static const androidId = "com.eightgroup.baroov.constitution";
+  static const iosId = "";
+  static const windowsId = "";
+  static const macOsId = "";
 }

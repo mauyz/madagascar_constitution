@@ -10,18 +10,10 @@ void showCustomAboutDialog({
   required String applicationLegalese,
   required String copyright,
   bool barrierDismissible = true,
-  Color? barrierColor,
-  String? barrierLabel,
-  bool useRootNavigator = true,
-  RouteSettings? routeSettings,
-  Offset? anchorPoint,
 }) {
   showDialog<void>(
     context: context,
     barrierDismissible: barrierDismissible,
-    barrierColor: barrierColor,
-    barrierLabel: barrierLabel,
-    useRootNavigator: useRootNavigator,
     builder: (BuildContext context) {
       return CustomAboutDialog(
         applicationName: applicationName,
@@ -31,8 +23,6 @@ void showCustomAboutDialog({
         copyright: copyright,
       );
     },
-    routeSettings: routeSettings,
-    anchorPoint: anchorPoint,
   );
 }
 
