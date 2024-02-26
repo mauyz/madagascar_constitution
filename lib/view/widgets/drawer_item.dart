@@ -15,14 +15,37 @@ class DrawerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      selected: selected,
-      titleAlignment: ListTileTitleAlignment.center,
-      leading: icon,
-      title: Text(
-        title,
+    return Container(
+      decoration: selected
+          ? BoxDecoration(
+              color: Theme.of(context)
+                  .appBarTheme
+                  .backgroundColor
+                  ?.withOpacity(0.5),
+              borderRadius: const BorderRadius.horizontal(
+                right: Radius.circular(
+                  100,
+                ),
+              ),
+            )
+          : null,
+      child: ListTile(
+        selected: selected,
+        titleAlignment: ListTileTitleAlignment.center,
+        leading: Padding(
+          padding: const EdgeInsets.all(2.0),
+          child: icon,
+        ),
+        title: Text(
+          title,
+        ),
+        onTap: onTap,
+        trailing: const Icon(
+          Icons.arrow_forward_ios_sharp,
+          color: Colors.grey,
+          size: 17,
+        ),
       ),
-      onTap: onTap,
     );
   }
 }

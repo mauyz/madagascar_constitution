@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -78,90 +79,104 @@ class HomePage extends StatelessWidget {
               )
             ],
           ),
+          onDrawerChanged: (isOpened) {
+            if (!isOpened) {
+              context.read<DrawerNavViewModel>().navigateTo(-1);
+            }
+          },
           drawer: Drawer(
-            child: Consumer<DrawerNavViewModel>(
-              builder: (context, drawerNavViewModel, _) {
-                int selected = context.read<DrawerNavViewModel>().selected;
-                return ListView(
-                  children: [
-                    DrawerHeader(
-                      padding: EdgeInsets.zero,
-                      child: Stack(
-                        children: [
-                          SvgPicture.asset(
-                            "assets/mg.svg",
-                            fit: BoxFit.fill,
-                          ),
-                          Container(
-                            color:
-                                Theme.of(context).primaryColor.withOpacity(0.9),
-                            alignment: Alignment.center,
-                            child: const Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Text(
-                                "Constitution de la quatrième République de Madagascar",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w800,
-                                ),
-                              ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                DrawerHeader(
+                  padding: EdgeInsets.zero,
+                  child: Stack(
+                    children: [
+                      SvgPicture.asset(
+                        "assets/mg.svg",
+                        fit: BoxFit.fill,
+                      ),
+                      Container(
+                        color: Theme.of(context).primaryColor.withOpacity(0.5),
+                        alignment: Alignment.center,
+                        child: const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            "Constitution de la quatrième République de Madagascar",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w800,
                             ),
                           ),
-                        ],
-                      ),
-                    ),
-                    DrawerItem(
-                      selected: selected == 0,
-                      icon: const Icon(
-                        Icons.share,
-                        size: 20,
-                      ),
-                      title: "Partager l'application",
-                      onTap: () {
-                        _onDrawerItemTapped(drawerNavViewModel, 0);
-                        _shareApp();
-                      },
-                    ),
-                    DrawerItem(
-                      selected: selected == 1,
-                      icon: const Icon(
-                        Icons.mail,
-                        size: 20,
-                      ),
-                      title: "Contacter les développeurs",
-                      onTap: () {
-                        _onDrawerItemTapped(drawerNavViewModel, 1);
-                        _sendReport();
-                      },
-                    ),
-                    if (!Platform.isLinux)
-                      DrawerItem(
-                        selected: selected == 2,
-                        icon: const Icon(
-                          Icons.star,
-                          size: 20,
                         ),
-                        title: "Noter l'application",
-                        onTap: () {
-                          _onDrawerItemTapped(drawerNavViewModel, 2);
-                          _openStore(context);
-                        },
                       ),
-                    DrawerItem(
-                      selected: selected == 3,
-                      icon: const Icon(
-                        Icons.info,
-                        size: 20,
-                      ),
-                      title: "A propos",
-                      onTap: () {
-                        _onDrawerItemTapped(drawerNavViewModel, 3);
-                        _showAbout(context);
-                      },
-                    ),
-                  ],
-                );
-              },
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Consumer<DrawerNavViewModel>(
+                    builder: (context, drawerNavViewModel, _) {
+                      int selected = drawerNavViewModel.selected;
+                      return ListView(
+                        padding: const EdgeInsets.all(2.0),
+                        shrinkWrap: true,
+                        children: [
+                          if (!kIsWeb)
+                            DrawerItem(
+                              selected: selected == 0,
+                              icon: const Icon(
+                                Icons.share,
+                                size: 20,
+                              ),
+                              title: "Partager l'application",
+                              onTap: () {
+                                _onDrawerItemTapped(drawerNavViewModel, 0);
+                                _shareApp();
+                              },
+                            ),
+                          DrawerItem(
+                            selected: selected == 1,
+                            icon: const Icon(
+                              Icons.mail,
+                              size: 20,
+                            ),
+                            title: "Contacter les développeurs",
+                            onTap: () {
+                              _onDrawerItemTapped(drawerNavViewModel, 1);
+                              _sendReport();
+                            },
+                          ),
+                          if (!kIsWeb && !Platform.isLinux)
+                            DrawerItem(
+                              selected: selected == 2,
+                              icon: const Icon(
+                                Icons.star,
+                                size: 20,
+                              ),
+                              title: "Noter l'application",
+                              onTap: () {
+                                _onDrawerItemTapped(drawerNavViewModel, 2);
+                                _openStore(context);
+                              },
+                            ),
+                          DrawerItem(
+                            selected: selected == 3,
+                            icon: const Icon(
+                              Icons.info,
+                              size: 20,
+                            ),
+                            title: "A propos",
+                            onTap: () {
+                              _onDrawerItemTapped(drawerNavViewModel, 3);
+                              _showAbout(context);
+                            },
+                          ),
+                        ],
+                      );
+                    },
+                  ),
+                ),
+              ],
             ),
           ),
           body: PageView(
@@ -221,7 +236,9 @@ class HomePage extends StatelessWidget {
   }
 
   void _onDrawerItemTapped(DrawerNavViewModel drawerNavViewModel, int item) {
-    drawerNavViewModel.navigateTo(item);
+    if (drawerNavViewModel.selected != item) {
+      drawerNavViewModel.navigateTo(item);
+    }
   }
 
   void _shareApp() async {
@@ -230,7 +247,7 @@ class HomePage extends StatelessWidget {
 
   String _getAppLink() {
     if (Platform.isIOS) {
-      ///TODO
+      //TODO
     }
     if (Platform.isLinux) {
       ///TODO
