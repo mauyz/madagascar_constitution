@@ -27,19 +27,30 @@ class App extends StatelessWidget {
       child: MaterialApp.router(
         scrollBehavior: AppScrollBehavior(),
         theme: ThemeData(
+          useMaterial3: true,
           colorScheme: ColorScheme.fromSeed(
             seedColor: Colors.green,
-            background: Colors.white,
-            error: Colors.red,
-            onTertiary: Colors.orange,
+            brightness: Brightness.light,
+            shadow: Colors.red,
           ),
           appBarTheme: const AppBarTheme(
-            color: Colors.green,
             shadowColor: Colors.red,
             elevation: 5,
-            foregroundColor: Colors.white,
           ),
         ),
+        darkTheme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.green,
+            brightness: Brightness.dark,
+            shadow: Colors.red,
+          ),
+          appBarTheme: const AppBarTheme(
+            shadowColor: Colors.red,
+            elevation: 5,
+          ),
+        ),
+        themeMode: ThemeMode.light,
         routerConfig: appRouter.config(),
         debugShowCheckedModeBanner: false,
       ),
