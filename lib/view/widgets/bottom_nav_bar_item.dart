@@ -24,6 +24,9 @@ class BottomNavBarItem extends StatelessWidget {
             child: Text(
               label!,
               maxLines: 1,
+              style: const TextStyle(
+                fontWeight: FontWeight.w400,
+              ),
             ),
           )
       ],
