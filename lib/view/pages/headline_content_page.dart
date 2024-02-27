@@ -59,7 +59,7 @@ class HeadlineContentPage extends StatelessWidget {
                         return Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Card(
-                            color: Theme.of(context).focusColor,
+                            color: Colors.green.withOpacity(0.5),
                             elevation: 1.0,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
