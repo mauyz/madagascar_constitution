@@ -21,31 +21,34 @@ class ThemeRadio<T> extends StatelessWidget {
           onChanged(value);
         }
       },
-      child: Row(
-        children: [
-          Flexible(
-            child: Padding(
-              padding: const EdgeInsets.only(
-                right: 8.0,
-              ),
-              child: Radio<T>(
-                value: value,
-                groupValue: groupValue,
-                onChanged: (value) {
-                  if (value != null && value != groupValue) {
-                    onChanged(value);
-                  }
-                },
+      child: Padding(
+        padding: const EdgeInsets.all(4.0),
+        child: Row(
+          children: [
+            Flexible(
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  right: 8.0,
+                ),
+                child: Radio<T>(
+                  value: value,
+                  groupValue: groupValue,
+                  onChanged: (value) {
+                    if (value != null && value != groupValue) {
+                      onChanged(value);
+                    }
+                  },
+                ),
               ),
             ),
-          ),
-          Flexible(
-            flex: 3,
-            child: Text(
-              title,
+            Flexible(
+              flex: 3,
+              child: Text(
+                title,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

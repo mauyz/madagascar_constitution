@@ -258,11 +258,11 @@ class HomePage extends StatelessWidget {
           contentPadding: const EdgeInsets.all(20.0),
           content: SingleChildScrollView(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+              crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  "Changer le mode",
+                  "Changer le thème",
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
@@ -275,17 +275,11 @@ class HomePage extends StatelessWidget {
                   title: "Système",
                   onChanged: updateTheme,
                 ),
-                const SizedBox(
-                  height: 5,
-                ),
                 ThemeRadio<int>(
                   value: 1,
                   groupValue: groupValue,
                   title: "Clair",
                   onChanged: updateTheme,
-                ),
-                const SizedBox(
-                  height: 5,
                 ),
                 ThemeRadio<int>(
                   value: 2,
@@ -293,8 +287,14 @@ class HomePage extends StatelessWidget {
                   title: "Sombre",
                   onChanged: updateTheme,
                 ),
-                const SizedBox(
-                  height: 20,
+                Padding(
+                  padding: const EdgeInsets.only(top: 20.0),
+                  child: TextButton(
+                    onPressed: () => Navigator.of(context).pop(),
+                    child: const Text(
+                      'Fermer',
+                    ),
+                  ),
                 ),
               ],
             ),
