@@ -15,14 +15,17 @@ import 'package:madagascar_constitution/view/widgets/bottom_nav_bar.dart';
 import 'package:madagascar_constitution/view/widgets/bottom_nav_bar_item.dart';
 import 'package:madagascar_constitution/view/widgets/custom_about.dart';
 import 'package:madagascar_constitution/view/widgets/drawer_item.dart';
+import 'package:madagascar_constitution/view/widgets/theme_radio.dart';
 import 'package:madagascar_constitution/viewmodel/en_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/fr_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/mg_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/opacity_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/tab_navigation_view_model.dart';
+import 'package:madagascar_constitution/viewmodel/theme_notifier.dart';
 import 'package:open_store/open_store.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 @RoutePage()
@@ -112,6 +115,17 @@ class HomePage extends StatelessWidget {
                       padding: const EdgeInsets.all(2.0),
                       shrinkWrap: true,
                       children: [
+                        DrawerItem(
+                          icon: const Icon(
+                            Icons.dark_mode,
+                            size: 20,
+                          ),
+                          title: "Changer le thème",
+                          onTap: () {
+                            Navigator.of(context).pop();
+                            _changeTheme(context);
+                          },
+                        ),
                         if (!kIsWeb)
                           DrawerItem(
                             icon: const Icon(
@@ -214,6 +228,75 @@ class HomePage extends StatelessWidget {
                   ).toList(),
                 );
               },
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  void _changeTheme(BuildContext context) async {
+    final sharedPreferences = context.read<SharedPreferences>();
+    updateTheme(int value) {
+      sharedPreferences
+          .setInt(
+            "theme",
+            value,
+          )
+          .then(
+            (value) => context.read<ThemeNotifier>().notify(),
+          );
+    }
+
+    showDialog(
+      context: context,
+      builder: (context) {
+        final groupValue = sharedPreferences.getInt("theme") ?? 0;
+
+        return AlertDialog(
+          alignment: Alignment.center,
+          contentPadding: const EdgeInsets.all(20.0),
+          content: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  "Changer le mode",
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                ThemeRadio<int>(
+                  value: 0,
+                  groupValue: groupValue,
+                  title: "Système",
+                  onChanged: updateTheme,
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                ThemeRadio<int>(
+                  value: 1,
+                  groupValue: groupValue,
+                  title: "Clair",
+                  onChanged: updateTheme,
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                ThemeRadio<int>(
+                  value: 2,
+                  groupValue: groupValue,
+                  title: "Sombre",
+                  onChanged: updateTheme,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+              ],
             ),
           ),
         );
