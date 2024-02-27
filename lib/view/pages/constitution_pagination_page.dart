@@ -58,6 +58,9 @@ class ConstitutionPaginationPage extends StatelessWidget {
               return AutoSizeText(
                 pageTitle,
                 maxLines: 2,
+                style: const TextStyle(
+                  fontWeight: FontWeight.w400,
+                ),
               );
             },
           ),

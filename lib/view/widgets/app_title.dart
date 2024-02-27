@@ -9,6 +9,9 @@ class AppTitle extends StatelessWidget {
     return const AutoSizeText(
       "Constitution de Madagascar",
       maxLines: 2,
+      style: TextStyle(
+        fontWeight: FontWeight.w400,
+      ),
     );
   }
 }
