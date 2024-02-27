@@ -15,7 +15,6 @@ import 'package:madagascar_constitution/view/widgets/bottom_nav_bar.dart';
 import 'package:madagascar_constitution/view/widgets/bottom_nav_bar_item.dart';
 import 'package:madagascar_constitution/view/widgets/custom_about.dart';
 import 'package:madagascar_constitution/view/widgets/drawer_item.dart';
-import 'package:madagascar_constitution/viewmodel/drawer_nav_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/en_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/fr_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/mg_view_model.dart';
@@ -59,9 +58,6 @@ class HomePage extends StatelessWidget {
         ListenableProvider<OpacityViewModel>(
           create: (_) => OpacityViewModel(),
         ),
-        ListenableProvider<DrawerNavViewModel>(
-          create: (_) => DrawerNavViewModel(),
-        ),
       ],
       builder: (context, _) {
         return TooltipVisibility(
@@ -81,11 +77,6 @@ class HomePage extends StatelessWidget {
                 )
               ],
             ),
-            onDrawerChanged: (isOpened) {
-              if (!isOpened) {
-                context.read<DrawerNavViewModel>().navigateTo(-1);
-              }
-            },
             drawer: Drawer(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -117,66 +108,57 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Expanded(
-                    child: Consumer<DrawerNavViewModel>(
-                      builder: (context, drawerNavViewModel, _) {
-                        int selected = drawerNavViewModel.selected;
-                        return ListView(
-                          padding: const EdgeInsets.all(2.0),
-                          shrinkWrap: true,
-                          children: [
-                            if (!kIsWeb)
-                              DrawerItem(
-                                selected: selected == 0,
-                                icon: const Icon(
-                                  Icons.share,
-                                  size: 20,
-                                ),
-                                title: "Partager l'application",
-                                onTap: () {
-                                  _onDrawerItemTapped(drawerNavViewModel, 0);
-                                  _shareApp();
-                                },
-                              ),
-                            DrawerItem(
-                              selected: selected == 1,
-                              icon: const Icon(
-                                Icons.mail,
-                                size: 20,
-                              ),
-                              title: "Contacter les développeurs",
-                              onTap: () {
-                                _onDrawerItemTapped(drawerNavViewModel, 1);
-                                _sendReport();
-                              },
+                    child: ListView(
+                      padding: const EdgeInsets.all(2.0),
+                      shrinkWrap: true,
+                      children: [
+                        if (!kIsWeb)
+                          DrawerItem(
+                            icon: const Icon(
+                              Icons.share,
+                              size: 20,
                             ),
-                            if (!kIsWeb && !Platform.isLinux)
-                              DrawerItem(
-                                selected: selected == 2,
-                                icon: const Icon(
-                                  Icons.star,
-                                  size: 20,
-                                ),
-                                title: "Noter l'application",
-                                onTap: () {
-                                  _onDrawerItemTapped(drawerNavViewModel, 2);
-                                  _openStore(context);
-                                },
-                              ),
-                            DrawerItem(
-                              selected: selected == 3,
-                              icon: const Icon(
-                                Icons.info,
-                                size: 20,
-                              ),
-                              title: "A propos",
-                              onTap: () {
-                                _onDrawerItemTapped(drawerNavViewModel, 3);
-                                _showAbout(context);
-                              },
+                            title: "Partager l'application",
+                            onTap: () {
+                              Navigator.of(context).pop();
+                              _shareApp();
+                            },
+                          ),
+                        DrawerItem(
+                          icon: const Icon(
+                            Icons.mail,
+                            size: 20,
+                          ),
+                          title: "Contacter",
+                          onTap: () {
+                            Navigator.of(context).pop();
+                            _sendReport();
+                          },
+                        ),
+                        if (!kIsWeb && !Platform.isLinux)
+                          DrawerItem(
+                            icon: const Icon(
+                              Icons.star,
+                              size: 20,
                             ),
-                          ],
-                        );
-                      },
+                            title: "Noter l'application",
+                            onTap: () {
+                              Navigator.of(context).pop();
+                              _openStore(context);
+                            },
+                          ),
+                        DrawerItem(
+                          icon: const Icon(
+                            Icons.info,
+                            size: 20,
+                          ),
+                          title: "A propos",
+                          onTap: () {
+                            Navigator.of(context).pop();
+                            _showAbout(context);
+                          },
+                        ),
+                      ],
                     ),
                   ),
                 ],
@@ -237,12 +219,6 @@ class HomePage extends StatelessWidget {
         );
       },
     );
-  }
-
-  void _onDrawerItemTapped(DrawerNavViewModel drawerNavViewModel, int item) {
-    if (drawerNavViewModel.selected != item) {
-      drawerNavViewModel.navigateTo(item);
-    }
   }
 
   void _shareApp() async {
