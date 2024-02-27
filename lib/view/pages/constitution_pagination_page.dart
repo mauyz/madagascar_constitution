@@ -70,7 +70,7 @@ class ConstitutionPaginationPage extends StatelessWidget {
                         padding: const EdgeInsets.only(right: 5.0),
                         child: Consumer<ArticleListTypeViewModel>(
                           builder: (_, listTypeViewModel, __) {
-                            return IconButton.filled(
+                            return IconButton(
                               onPressed: () {
                                 listTypeViewModel.toogleType();
                                 sharedPreferences.setBool(
