@@ -18,10 +18,9 @@ class DrawerItem extends StatelessWidget {
     return Container(
       decoration: selected
           ? BoxDecoration(
-              color: Theme.of(context)
-                  .appBarTheme
-                  .backgroundColor
-                  ?.withOpacity(0.5),
+              color: Colors.green.withOpacity(
+                Theme.of(context).brightness == Brightness.dark ? 0.1 : 0.5,
+              ),
               borderRadius: const BorderRadius.horizontal(
                 right: Radius.circular(
                   100,
@@ -42,7 +41,6 @@ class DrawerItem extends StatelessWidget {
         onTap: onTap,
         trailing: const Icon(
           Icons.arrow_forward_ios_sharp,
-          color: Colors.grey,
           size: 17,
         ),
       ),
