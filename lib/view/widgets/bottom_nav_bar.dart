@@ -83,9 +83,11 @@ class _BottomNavBarState extends State<BottomNavBar>
                       : null,
                 ),
                 onPressed: () {
-                  widget.onTap.call(e.$1);
-                  _controller.reset();
-                  _controller.forward();
+                  if (!selected) {
+                    widget.onTap.call(e.$1);
+                    _controller.reset();
+                    _controller.forward();
+                  }
                 },
                 child: Padding(
                   padding: EdgeInsets.symmetric(
