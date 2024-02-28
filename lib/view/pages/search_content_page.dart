@@ -103,6 +103,7 @@ class SearchContentPage extends StatelessWidget {
                 initialPage: 0,
               );
               return MultiProvider(
+                key: UniqueKey(),
                 providers: [
                   ListenableProvider<OpacityViewModel>(
                     create: (_) => OpacityViewModel(),
