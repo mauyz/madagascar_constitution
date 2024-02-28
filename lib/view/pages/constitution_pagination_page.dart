@@ -59,7 +59,7 @@ class ConstitutionPaginationPage extends StatelessWidget {
                 pageTitle,
                 maxLines: 2,
                 style: const TextStyle(
-                  fontWeight: FontWeight.w400,
+                  fontWeight: FontWeight.w300,
                 ),
               );
             },

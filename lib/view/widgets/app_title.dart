@@ -10,7 +10,7 @@ class AppTitle extends StatelessWidget {
       "Constitution de Madagascar",
       maxLines: 2,
       style: TextStyle(
-        fontWeight: FontWeight.w400,
+        fontWeight: FontWeight.w300,
       ),
     );
   }

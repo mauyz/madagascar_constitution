@@ -40,6 +40,8 @@ class App extends StatelessWidget {
                 shadow: Colors.red,
               ),
               appBarTheme: const AppBarTheme(
+                backgroundColor: Colors.green,
+                foregroundColor: Colors.white,
                 shadowColor: Colors.red,
                 elevation: 5,
               ),
