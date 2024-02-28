@@ -52,64 +52,79 @@ class _BottomNavBarState extends State<BottomNavBar>
       _controller.forward();
     });
 
-    return Container(
-      margin: EdgeInsets.symmetric(
+    return Padding(
+      padding: EdgeInsets.symmetric(
         vertical: 8.0,
         horizontal: MediaQuery.sizeOf(context).width > 600 ? 30.0 : 10.0,
       ),
-      decoration: BoxDecoration(
-        color: Theme.of(context).appBarTheme.backgroundColor,
+      child: Material(
+        color: Colors.green.withOpacity(
+          Theme.of(context).brightness == Brightness.dark ? 0.3 : 0.8,
+        ),
         borderRadius: const BorderRadius.all(
           Radius.circular(
             100,
           ),
         ),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        mainAxisSize: MainAxisSize.max,
-        children: widget.items.indexed.map(
-          (e) {
-            bool selected = widget.currentItem == e.$1;
-            final child = TextButton(
-              style: TextButton.styleFrom(
-                backgroundColor: (selected && widget.items.length > 1)
-                    ? Colors.teal.withOpacity(0.9)
-                    : null,
-              ),
-              onPressed: () {
-                widget.onTap.call(e.$1);
-                _controller.reset();
-                _controller.forward();
-              },
-              child: Padding(
-                padding: EdgeInsets.symmetric(
-                  vertical: MediaQuery.sizeOf(context).width > 600 ? 10.0 : 5.0,
-                  horizontal: 10.0,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisSize: MainAxisSize.max,
+          children: widget.items.indexed.map(
+            (e) {
+              bool selected = widget.currentItem == e.$1;
+              final child = TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor: (selected && widget.items.length > 1)
+                      ? Colors.red.withOpacity(
+                          Theme.of(context).brightness == Brightness.dark
+                              ? 0.3
+                              : 0.7,
+                        )
+                      : null,
                 ),
-                child: DefaultTextStyle.merge(
-                  style: TextStyle(
-                    color: selected ? Colors.white : Colors.black,
-                    fontSize: 12,
+                onPressed: () {
+                  if (!selected) {
+                    widget.onTap.call(e.$1);
+                    _controller.reset();
+                    _controller.forward();
+                  }
+                },
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                    vertical:
+                        MediaQuery.sizeOf(context).width > 600 ? 10.0 : 5.0,
+                    horizontal: 10.0,
                   ),
-                  child: e.$2,
+                  child: DefaultTextStyle.merge(
+                    style: TextStyle(
+                      color: selected
+                          ? (Theme.of(context).brightness == Brightness.dark)
+                              ? Colors.green
+                              : Colors.white
+                          : (Theme.of(context).brightness == Brightness.dark)
+                              ? Colors.white
+                              : Colors.black,
+                      fontSize: 12,
+                    ),
+                    child: e.$2,
+                  ),
                 ),
-              ),
-            );
-            return Flexible(
-              child: selected
-                  ? Consumer<OpacityViewModel>(
-                      builder: (_, opacityModel, __) {
-                        return Opacity(
-                          opacity: opacityModel.value,
-                          child: child,
-                        );
-                      },
-                    )
-                  : child,
-            );
-          },
-        ).toList(),
+              );
+              return Flexible(
+                child: selected
+                    ? Consumer<OpacityViewModel>(
+                        builder: (_, opacityModel, __) {
+                          return Opacity(
+                            opacity: opacityModel.value,
+                            child: child,
+                          );
+                        },
+                      )
+                    : child,
+              );
+            },
+          ).toList(),
+        ),
       ),
     );
   }

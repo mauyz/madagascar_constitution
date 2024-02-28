@@ -15,15 +15,17 @@ import 'package:madagascar_constitution/view/widgets/bottom_nav_bar.dart';
 import 'package:madagascar_constitution/view/widgets/bottom_nav_bar_item.dart';
 import 'package:madagascar_constitution/view/widgets/custom_about.dart';
 import 'package:madagascar_constitution/view/widgets/drawer_item.dart';
-import 'package:madagascar_constitution/viewmodel/drawer_nav_view_model.dart';
+import 'package:madagascar_constitution/view/widgets/theme_radio.dart';
 import 'package:madagascar_constitution/viewmodel/en_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/fr_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/mg_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/opacity_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/tab_navigation_view_model.dart';
+import 'package:madagascar_constitution/viewmodel/theme_notifier.dart';
 import 'package:open_store/open_store.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 @RoutePage()
@@ -59,9 +61,6 @@ class HomePage extends StatelessWidget {
         ListenableProvider<OpacityViewModel>(
           create: (_) => OpacityViewModel(),
         ),
-        ListenableProvider<DrawerNavViewModel>(
-          create: (_) => DrawerNavViewModel(),
-        ),
       ],
       builder: (context, _) {
         return TooltipVisibility(
@@ -81,11 +80,6 @@ class HomePage extends StatelessWidget {
                 )
               ],
             ),
-            onDrawerChanged: (isOpened) {
-              if (!isOpened) {
-                context.read<DrawerNavViewModel>().navigateTo(-1);
-              }
-            },
             drawer: Drawer(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -117,66 +111,68 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Expanded(
-                    child: Consumer<DrawerNavViewModel>(
-                      builder: (context, drawerNavViewModel, _) {
-                        int selected = drawerNavViewModel.selected;
-                        return ListView(
-                          padding: const EdgeInsets.all(2.0),
-                          shrinkWrap: true,
-                          children: [
-                            if (!kIsWeb)
-                              DrawerItem(
-                                selected: selected == 0,
-                                icon: const Icon(
-                                  Icons.share,
-                                  size: 20,
-                                ),
-                                title: "Partager l'application",
-                                onTap: () {
-                                  _onDrawerItemTapped(drawerNavViewModel, 0);
-                                  _shareApp();
-                                },
-                              ),
-                            DrawerItem(
-                              selected: selected == 1,
-                              icon: const Icon(
-                                Icons.mail,
-                                size: 20,
-                              ),
-                              title: "Contacter les développeurs",
-                              onTap: () {
-                                _onDrawerItemTapped(drawerNavViewModel, 1);
-                                _sendReport();
-                              },
+                    child: ListView(
+                      padding: const EdgeInsets.all(2.0),
+                      shrinkWrap: true,
+                      children: [
+                        DrawerItem(
+                          icon: const Icon(
+                            Icons.dark_mode,
+                            size: 20,
+                          ),
+                          title: "Changer le thème",
+                          onTap: () {
+                            Navigator.of(context).pop();
+                            _changeTheme(context);
+                          },
+                        ),
+                        if (!kIsWeb)
+                          DrawerItem(
+                            icon: const Icon(
+                              Icons.share,
+                              size: 20,
                             ),
-                            if (!kIsWeb && !Platform.isLinux)
-                              DrawerItem(
-                                selected: selected == 2,
-                                icon: const Icon(
-                                  Icons.star,
-                                  size: 20,
-                                ),
-                                title: "Noter l'application",
-                                onTap: () {
-                                  _onDrawerItemTapped(drawerNavViewModel, 2);
-                                  _openStore(context);
-                                },
-                              ),
-                            DrawerItem(
-                              selected: selected == 3,
-                              icon: const Icon(
-                                Icons.info,
-                                size: 20,
-                              ),
-                              title: "A propos",
-                              onTap: () {
-                                _onDrawerItemTapped(drawerNavViewModel, 3);
-                                _showAbout(context);
-                              },
+                            title: "Partager l'application",
+                            onTap: () {
+                              Navigator.of(context).pop();
+                              _shareApp();
+                            },
+                          ),
+                        DrawerItem(
+                          icon: const Icon(
+                            Icons.mail,
+                            size: 20,
+                          ),
+                          title: "Contacter",
+                          onTap: () {
+                            Navigator.of(context).pop();
+                            _sendReport();
+                          },
+                        ),
+                        if (!kIsWeb && !Platform.isLinux)
+                          DrawerItem(
+                            icon: const Icon(
+                              Icons.star,
+                              size: 20,
                             ),
-                          ],
-                        );
-                      },
+                            title: "Noter l'application",
+                            onTap: () {
+                              Navigator.of(context).pop();
+                              _openStore(context);
+                            },
+                          ),
+                        DrawerItem(
+                          icon: const Icon(
+                            Icons.info,
+                            size: 20,
+                          ),
+                          title: "A propos",
+                          onTap: () {
+                            Navigator.of(context).pop();
+                            _showAbout(context);
+                          },
+                        ),
+                      ],
                     ),
                   ),
                 ],
@@ -239,10 +235,73 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  void _onDrawerItemTapped(DrawerNavViewModel drawerNavViewModel, int item) {
-    if (drawerNavViewModel.selected != item) {
-      drawerNavViewModel.navigateTo(item);
+  void _changeTheme(BuildContext context) async {
+    final sharedPreferences = context.read<SharedPreferences>();
+    updateTheme(int value) {
+      sharedPreferences
+          .setInt(
+            "theme",
+            value,
+          )
+          .then(
+            (value) => context.read<ThemeNotifier>().notify(),
+          );
     }
+
+    showDialog(
+      context: context,
+      builder: (context) {
+        final groupValue = sharedPreferences.getInt("theme") ?? 0;
+
+        return AlertDialog(
+          alignment: Alignment.center,
+          contentPadding: const EdgeInsets.all(20.0),
+          content: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  "Changer le thème",
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                ThemeRadio<int>(
+                  value: 0,
+                  groupValue: groupValue,
+                  title: "Système",
+                  onChanged: updateTheme,
+                ),
+                ThemeRadio<int>(
+                  value: 1,
+                  groupValue: groupValue,
+                  title: "Clair",
+                  onChanged: updateTheme,
+                ),
+                ThemeRadio<int>(
+                  value: 2,
+                  groupValue: groupValue,
+                  title: "Sombre",
+                  onChanged: updateTheme,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20.0),
+                  child: TextButton(
+                    onPressed: () => Navigator.of(context).pop(),
+                    child: const Text(
+                      'Fermer',
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
   }
 
   void _shareApp() async {

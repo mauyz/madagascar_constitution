@@ -58,6 +58,9 @@ class ConstitutionPaginationPage extends StatelessWidget {
               return AutoSizeText(
                 pageTitle,
                 maxLines: 2,
+                style: const TextStyle(
+                  fontWeight: FontWeight.w300,
+                ),
               );
             },
           ),
@@ -70,7 +73,7 @@ class ConstitutionPaginationPage extends StatelessWidget {
                         padding: const EdgeInsets.only(right: 5.0),
                         child: Consumer<ArticleListTypeViewModel>(
                           builder: (_, listTypeViewModel, __) {
-                            return IconButton.filled(
+                            return IconButton(
                               onPressed: () {
                                 listTypeViewModel.toogleType();
                                 sharedPreferences.setBool(

@@ -18,7 +18,7 @@ class HeadlineTitle extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 5.0),
       child: Material(
-        elevation: 5.0,
+        elevation: 2.0,
         child: InkWell(
           onTap: () {
             context.router.push(

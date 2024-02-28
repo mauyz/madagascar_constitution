@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:madagascar_constitution/app/app_router.dart';
 import 'package:madagascar_constitution/source/repository.dart';
+import 'package:madagascar_constitution/viewmodel/theme_notifier.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -23,25 +24,45 @@ class App extends StatelessWidget {
         Provider<Repository>(
           create: (_) => Repository(),
         ),
-      ],
-      child: MaterialApp.router(
-        scrollBehavior: AppScrollBehavior(),
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(
-            seedColor: Colors.green,
-            background: Colors.white,
-            error: Colors.red,
-            onTertiary: Colors.orange,
-          ),
-          appBarTheme: const AppBarTheme(
-            color: Colors.green,
-            shadowColor: Colors.red,
-            elevation: 5,
-            foregroundColor: Colors.white,
-          ),
+        ListenableProvider<ThemeNotifier>(
+          create: (_) => ThemeNotifier(),
         ),
-        routerConfig: appRouter.config(),
-        debugShowCheckedModeBanner: false,
+      ],
+      child: Consumer<ThemeNotifier>(
+        builder: (_, __, ___) {
+          return MaterialApp.router(
+            scrollBehavior: AppScrollBehavior(),
+            theme: ThemeData(
+              useMaterial3: true,
+              colorScheme: ColorScheme.fromSeed(
+                seedColor: Colors.green,
+                brightness: Brightness.light,
+                shadow: Colors.red,
+              ),
+              appBarTheme: const AppBarTheme(
+                backgroundColor: Colors.green,
+                foregroundColor: Colors.white,
+                shadowColor: Colors.red,
+                elevation: 5,
+              ),
+            ),
+            darkTheme: ThemeData(
+              useMaterial3: true,
+              colorScheme: ColorScheme.fromSeed(
+                seedColor: Colors.green,
+                brightness: Brightness.dark,
+                shadow: Colors.red,
+              ),
+              appBarTheme: const AppBarTheme(
+                shadowColor: Colors.red,
+                elevation: 5,
+              ),
+            ),
+            themeMode: ThemeMode.values[sharedPreferences.getInt("theme") ?? 0],
+            routerConfig: appRouter.config(),
+            debugShowCheckedModeBanner: false,
+          );
+        },
       ),
     );
   }

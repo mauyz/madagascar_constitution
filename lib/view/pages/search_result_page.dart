@@ -13,14 +13,34 @@ class SearchResultPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: articles.length,
-      itemBuilder: (_, index) {
-        return SeearchedArticleCard(
-          article: articles[index],
-          text: text,
-        );
-      },
+    final resultatText =
+        articles.length > 1 ? "articles trouvés" : "article trouvé";
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Text(
+            "${articles.length} $resultatText",
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        Expanded(
+          child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: articles.length,
+            itemBuilder: (_, index) {
+              return SeearchedArticleCard(
+                article: articles[index],
+                text: text,
+              );
+            },
+          ),
+        ),
+      ],
     );
   }
 }
