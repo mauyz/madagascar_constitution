@@ -97,7 +97,13 @@ class _BottomNavBarState extends State<BottomNavBar>
                   ),
                   child: DefaultTextStyle.merge(
                     style: TextStyle(
-                      color: selected ? Colors.white : Colors.black,
+                      color: selected
+                          ? (Theme.of(context).brightness == Brightness.dark)
+                              ? Colors.green
+                              : Colors.white
+                          : (Theme.of(context).brightness == Brightness.dark)
+                              ? Colors.white
+                              : Colors.black,
                       fontSize: 12,
                     ),
                     child: e.$2,
