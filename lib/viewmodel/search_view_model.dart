@@ -17,7 +17,7 @@ class SearchViewModel extends ChangeNotifier {
   Map<ConstitutionLanguage, List<Article>> get data => _data;
 
   void searchText(String value) async {
-    if (value.length < 2) {
+    if (value.isEmpty) {
       _data = {};
       notifyListeners();
       return;

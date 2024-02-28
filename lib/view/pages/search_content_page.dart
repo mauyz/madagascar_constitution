@@ -64,11 +64,7 @@ class SearchContentPage extends StatelessWidget {
                     ),
                   ),
                   onChanged: (value) {
-                    if (value.length > 1) {
-                      context.read<SearchViewModel>().searchText(value);
-                    } else {
-                      context.read<SearchViewModel>().searchText('');
-                    }
+                    context.read<SearchViewModel>().searchText(value);
                   },
                   onTapOutside: (event) =>
                       FocusManager.instance.primaryFocus?.unfocus(),
@@ -78,7 +74,7 @@ class SearchContentPage extends StatelessWidget {
           ),
           body: Consumer<SearchViewModel>(
             builder: (_, searchViewModel, __) {
-              if (searchController.text.length < 2) {
+              if (searchController.text.isEmpty) {
                 return const SizedBox.shrink();
               }
               if (searchViewModel.isLoading) {
