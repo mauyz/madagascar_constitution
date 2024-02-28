@@ -1,11 +1,11 @@
 {
-    "name": "madagascar_constitution",
-    "short_name": "madagascar_constitution",
+    "name": "Constitution de Madagascar",
+    "short_name": "Constitution de Madagascar",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Constitution de la 4e République de Madagascar",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

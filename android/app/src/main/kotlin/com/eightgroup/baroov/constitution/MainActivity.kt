@@ -1,4 +1,4 @@
-package com.example.madagascar_constitution
+package com.eightgroup.baroov.constitution
 
 import io.flutter.embedding.android.FlutterActivity
 
