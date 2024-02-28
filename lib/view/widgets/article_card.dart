@@ -41,7 +41,7 @@ class ArticleCard extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(12.0),
-              child: SelectableText(article.content),
+              child: Text(article.content),
             ),
           ],
         ),
