@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "EightGroup" "\0"
-            VALUE "FileDescription", "Constitution de Madagascar" "\0"
+            VALUE "FileDescription", "Constitution Malagasy" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "Constitution de Madagascar" "\0"
-            VALUE "LegalCopyright", "© Copyright Baroov & Mauyz 2024" "\0"
+            VALUE "InternalName", "Constitution Malagasy" "\0"
+            VALUE "LegalCopyright", "© Copyright Mauyz, Baroov 2024" "\0"
             VALUE "OriginalFilename", "madagascar_constitution.exe" "\0"
-            VALUE "ProductName", "Constitution de Madagascar" "\0"
+            VALUE "ProductName", "Constitution Malagasy" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

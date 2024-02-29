@@ -5,10 +5,10 @@
 // 'flutter create' template.
 
 // The application's name. By default this is also the title of the Flutter window.
-PRODUCT_NAME = Constitution de Madagascar
+PRODUCT_NAME = Constitution Malagasy
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.eightgroup.baroov.constitution
+PRODUCT_BUNDLE_IDENTIFIER = com.eightgroup.mauyz.constitution
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = © Copyright Baroov & Mauyz 2024
+PRODUCT_COPYRIGHT = © Copyright Mauyz, Baroov 2024
