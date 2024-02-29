@@ -9,7 +9,7 @@ class AppConstants {
       " [version publiée par l'Assemblée Nationale le 7 mai 2014].\n"
       "Source 1: https://www.assemblee-nationale.mg/wp-content/uploads/2019/08/Constitution-4eme-R%C3%A9publique_mg.pdf\n"
       "Source 2: https://tenymalagasy.org/bins/lalampanorenana";
-  static final copyright = "© Copyright Baroov & Mauyz ${DateTime.now().year}";
+  static final copyright = "© Copyright Mauyz, Baroov ${DateTime.now().year}";
   static const playStoreLink =
       "https://play.google.com/store/apps/details?id=com.eightgroup.baroov.constitution";
   static const baroovEmail = "barouvheritiana@gmail.com";

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DrawerItem extends StatelessWidget {
-  final Widget icon;
+  final IconData icon;
   final String title;
   final Function() onTap;
   const DrawerItem({
@@ -29,7 +29,10 @@ class DrawerItem extends StatelessWidget {
         titleAlignment: ListTileTitleAlignment.center,
         leading: Padding(
           padding: const EdgeInsets.all(2.0),
-          child: icon,
+          child: Icon(
+            icon,
+            size: 16,
+          ),
         ),
         title: Text(
           title,

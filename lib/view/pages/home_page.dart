@@ -116,10 +116,7 @@ class HomePage extends StatelessWidget {
                       shrinkWrap: true,
                       children: [
                         DrawerItem(
-                          icon: const Icon(
-                            Icons.dark_mode,
-                            size: 20,
-                          ),
+                          icon: Icons.dark_mode,
                           title: "Changer le thème",
                           onTap: () {
                             Navigator.of(context).pop();
@@ -128,10 +125,7 @@ class HomePage extends StatelessWidget {
                         ),
                         if (!kIsWeb)
                           DrawerItem(
-                            icon: const Icon(
-                              Icons.share,
-                              size: 20,
-                            ),
+                            icon: Icons.share,
                             title: "Partager l'application",
                             onTap: () {
                               Navigator.of(context).pop();
@@ -139,10 +133,7 @@ class HomePage extends StatelessWidget {
                             },
                           ),
                         DrawerItem(
-                          icon: const Icon(
-                            Icons.mail,
-                            size: 20,
-                          ),
+                          icon: Icons.mail,
                           title: "Contacter",
                           onTap: () {
                             Navigator.of(context).pop();
@@ -151,10 +142,7 @@ class HomePage extends StatelessWidget {
                         ),
                         if (!kIsWeb && !Platform.isLinux)
                           DrawerItem(
-                            icon: const Icon(
-                              Icons.star,
-                              size: 20,
-                            ),
+                            icon: Icons.rate_review,
                             title: "Noter l'application",
                             onTap: () {
                               Navigator.of(context).pop();
@@ -162,10 +150,7 @@ class HomePage extends StatelessWidget {
                             },
                           ),
                         DrawerItem(
-                          icon: const Icon(
-                            Icons.info,
-                            size: 20,
-                          ),
+                          icon: Icons.info,
                           title: "A propos",
                           onTap: () {
                             Navigator.of(context).pop();
