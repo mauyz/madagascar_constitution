@@ -20,47 +20,6 @@ import 'package:madagascar_constitution/view/pages/home_page.dart' as _i3;
 import 'package:madagascar_constitution/view/pages/search_content_page.dart'
     as _i4;
 
-abstract class $AppRouter extends _i5.RootStackRouter {
-  $AppRouter({super.navigatorKey});
-
-  @override
-  final Map<String, _i5.PageFactory> pagesMap = {
-    ArticleContentRoute.name: (routeData) {
-      final args = routeData.argsAs<ArticleContentRouteArgs>();
-      return _i5.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: _i1.ArticleContentPage(
-          key: args.key,
-          article: args.article,
-        ),
-      );
-    },
-    ConstitutionPaginationRoute.name: (routeData) {
-      final args = routeData.argsAs<ConstitutionPaginationRouteArgs>();
-      return _i5.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: _i2.ConstitutionPaginationPage(
-          key: args.key,
-          initialPage: args.initialPage,
-          constitution: args.constitution,
-        ),
-      );
-    },
-    HomeRoute.name: (routeData) {
-      return _i5.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i3.HomePage(),
-      );
-    },
-    SearchContentRoute.name: (routeData) {
-      return _i5.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i4.SearchContentPage(),
-      );
-    },
-  };
-}
-
 /// generated route for
 /// [_i1.ArticleContentPage]
 class ArticleContentRoute extends _i5.PageRouteInfo<ArticleContentRouteArgs> {
@@ -79,8 +38,16 @@ class ArticleContentRoute extends _i5.PageRouteInfo<ArticleContentRouteArgs> {
 
   static const String name = 'ArticleContentRoute';
 
-  static const _i5.PageInfo<ArticleContentRouteArgs> page =
-      _i5.PageInfo<ArticleContentRouteArgs>(name);
+  static _i5.PageInfo page = _i5.PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<ArticleContentRouteArgs>();
+      return _i1.ArticleContentPage(
+        key: args.key,
+        article: args.article,
+      );
+    },
+  );
 }
 
 class ArticleContentRouteArgs {
@@ -120,8 +87,17 @@ class ConstitutionPaginationRoute
 
   static const String name = 'ConstitutionPaginationRoute';
 
-  static const _i5.PageInfo<ConstitutionPaginationRouteArgs> page =
-      _i5.PageInfo<ConstitutionPaginationRouteArgs>(name);
+  static _i5.PageInfo page = _i5.PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<ConstitutionPaginationRouteArgs>();
+      return _i2.ConstitutionPaginationPage(
+        key: args.key,
+        initialPage: args.initialPage,
+        constitution: args.constitution,
+      );
+    },
+  );
 }
 
 class ConstitutionPaginationRouteArgs {
@@ -154,7 +130,12 @@ class HomeRoute extends _i5.PageRouteInfo<void> {
 
   static const String name = 'HomeRoute';
 
-  static const _i5.PageInfo<void> page = _i5.PageInfo<void>(name);
+  static _i5.PageInfo page = _i5.PageInfo(
+    name,
+    builder: (data) {
+      return const _i3.HomePage();
+    },
+  );
 }
 
 /// generated route for
@@ -168,5 +149,10 @@ class SearchContentRoute extends _i5.PageRouteInfo<void> {
 
   static const String name = 'SearchContentRoute';
 
-  static const _i5.PageInfo<void> page = _i5.PageInfo<void>(name);
+  static _i5.PageInfo page = _i5.PageInfo(
+    name,
+    builder: (data) {
+      return const _i4.SearchContentPage();
+    },
+  );
 }
