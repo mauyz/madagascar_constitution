@@ -27,7 +27,7 @@ class SearchContentPage extends StatelessWidget {
           appBar: AppBar(
             leading: IconButton(
               onPressed: () {
-                context.router.pop();
+                context.router.maybePop();
               },
               icon: const Icon(
                 Icons.arrow_back,

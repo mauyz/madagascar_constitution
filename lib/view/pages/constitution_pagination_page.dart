@@ -44,7 +44,7 @@ class ConstitutionPaginationPage extends StatelessWidget {
           elevation: 5,
           leading: IconButton(
             onPressed: () {
-              context.router.pop();
+              context.router.maybePop();
             },
             icon: const Icon(
               Icons.arrow_back,
