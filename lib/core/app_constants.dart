@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 class AppConstants {
   const AppConstants._();
 
@@ -5,15 +7,15 @@ class AppConstants {
   static const mauyzEmail = "tsiorymauyz@gmail.com";
 
   static const appTitle = "Constitution de Madagascar";
-  static const appVersion = "v1.0.5";
+  static const appVersion = "v1.0.6";
 
   static const aboutApp = "Constitution de la 4e République de Madagascar"
       " APRES LE REFERENDUM DU 17 NOVEMBRE 2010,\narrêtés"
-      " par la Haute Cour Constitutionnelle le 6 décembre 2010.\n"
-      "Source: https://tenymalagasy.org/bins/lalampanorenana";
+      " par la Haute Cour Constitutionnelle le 6 décembre 2010.\n\n"
+      "Source : https://tenymalagasy.org/bins/lalampanorenana";
 
-  static final copyright = "© Copyright Mauyz, Baroov ${DateTime.now().year}";
-
+  static final copyright =
+      "© copyright Moïse${kIsWeb ? '' : ", Baroov"} ${DateTime.now().year}";
 
   static const androidId = "com.eightgroup.mauyz.constitution";
   static const iosId = "";
