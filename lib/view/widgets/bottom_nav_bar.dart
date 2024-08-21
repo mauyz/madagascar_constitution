@@ -63,9 +63,9 @@ class _BottomNavBarState extends State<BottomNavBar>
           ),
         ),
       ),
-      child: Wrap(
-        runAlignment: WrapAlignment.center,
-        crossAxisAlignment: WrapCrossAlignment.center,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: widget.items.indexed.map(
           (e) {
             bool selected = widget.currentItem == e.$1;
@@ -88,7 +88,7 @@ class _BottomNavBarState extends State<BottomNavBar>
               },
               child: Padding(
                 padding: EdgeInsets.symmetric(
-                  vertical: deviceWidth > 800 ? 10.0 : 5.0,
+                  vertical: deviceWidth > 600 ? 10.0 : 2.0,
                   horizontal: 12.0,
                 ),
                 child: DefaultTextStyle.merge(
@@ -100,26 +100,27 @@ class _BottomNavBarState extends State<BottomNavBar>
                         : (Theme.of(context).brightness == Brightness.dark)
                             ? Colors.white
                             : Colors.black,
-                    fontSize: 12,
                   ),
                   child: e.$2,
                 ),
               ),
             );
-            return Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: deviceWidth > 800 ? 50.0 : 20.0,
+            return Flexible(
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: deviceWidth > 600 ? 40.0 : 0.0,
+                ),
+                child: selected
+                    ? Consumer<OpacityViewModel>(
+                        builder: (_, opacityModel, __) {
+                          return Opacity(
+                            opacity: opacityModel.value,
+                            child: child,
+                          );
+                        },
+                      )
+                    : child,
               ),
-              child: selected
-                  ? Consumer<OpacityViewModel>(
-                      builder: (_, opacityModel, __) {
-                        return Opacity(
-                          opacity: opacityModel.value,
-                          child: child,
-                        );
-                      },
-                    )
-                  : child,
             );
           },
         ).toList(),
