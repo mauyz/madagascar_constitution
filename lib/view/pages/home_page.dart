@@ -34,6 +34,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final deviceWidth = MediaQuery.sizeOf(context).width;
     final repository = context.read<Repository>();
     final pageController = PageController(
       initialPage: 0,
@@ -67,9 +68,58 @@ class HomePage extends StatelessWidget {
           visible: false,
           child: Scaffold(
             appBar: AppBar(
+              leading: deviceWidth > 800
+                  ? Padding(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 12.0,
+                        horizontal: 8.0,
+                      ),
+                      child: SvgPicture.asset(
+                        "assets/mg.svg",
+                        fit: BoxFit.cover,
+                      ),
+                    )
+                  : null,
               title: const AppTitle(),
               elevation: 5,
+
               actions: [
+                if (deviceWidth > 800) ...[
+                  const Spacer(),
+                  DrawerItem(
+                    title: "Changer le thème",
+                    onTap: () {
+                      _changeTheme(context);
+                    },
+                  ),
+                  if (!kIsWeb)
+                    DrawerItem(
+                      title: "Partager l'application",
+                      onTap: () {
+                        _shareApp();
+                      },
+                    ),
+                  DrawerItem(
+                    title: "Contacter",
+                    onTap: () {
+                      _sendReport();
+                    },
+                  ),
+                  if (!kIsWeb && !Platform.isLinux)
+                    DrawerItem(
+                      title: "Noter l'application",
+                      onTap: () {
+                        _openStore(context);
+                      },
+                    ),
+                  DrawerItem(
+                    title: "A propos",
+                    onTap: () {
+                      _showAbout(context);
+                    },
+                  ),
+                  const Spacer(),
+                ],
                 IconButton(
                   onPressed: () => context.router.push(
                     const SearchContentRoute(),
@@ -80,89 +130,92 @@ class HomePage extends StatelessWidget {
                 )
               ],
             ),
-            drawer: Drawer(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  DrawerHeader(
-                    padding: EdgeInsets.zero,
-                    child: Stack(
+            drawer: deviceWidth < 800
+                ? Drawer(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
                       children: [
-                        SvgPicture.asset(
-                          "assets/mg.svg",
-                          fit: BoxFit.fill,
-                        ),
-                        Container(
-                          color:
-                              Theme.of(context).primaryColor.withOpacity(0.5),
-                          alignment: Alignment.center,
-                          child: const Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Text(
-                              "Constitution de la quatrième République de Madagascar",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w800,
+                        DrawerHeader(
+                          padding: EdgeInsets.zero,
+                          child: Stack(
+                            children: [
+                              SvgPicture.asset(
+                                "assets/mg.svg",
+                                fit: BoxFit.fill,
                               ),
-                            ),
+                              Container(
+                                color: Theme.of(context)
+                                    .primaryColor
+                                    .withOpacity(0.5),
+                                alignment: Alignment.center,
+                                child: const Padding(
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Text(
+                                    "Constitution de la quatrième République de Madagascar",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w800,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                          child: ListView(
+                            padding: const EdgeInsets.all(2.0),
+                            shrinkWrap: true,
+                            children: [
+                              DrawerItem(
+                                icon: Icons.dark_mode,
+                                title: "Changer le thème",
+                                onTap: () {
+                                  Navigator.of(context).pop();
+                                  _changeTheme(context);
+                                },
+                              ),
+                              if (!kIsWeb)
+                                DrawerItem(
+                                  icon: Icons.share,
+                                  title: "Partager l'application",
+                                  onTap: () {
+                                    Navigator.of(context).pop();
+                                    _shareApp();
+                                  },
+                                ),
+                              DrawerItem(
+                                icon: Icons.mail,
+                                title: "Contacter",
+                                onTap: () {
+                                  Navigator.of(context).pop();
+                                  _sendReport();
+                                },
+                              ),
+                              if (!kIsWeb && !Platform.isLinux)
+                                DrawerItem(
+                                  icon: Icons.rate_review,
+                                  title: "Noter l'application",
+                                  onTap: () {
+                                    Navigator.of(context).pop();
+                                    _openStore(context);
+                                  },
+                                ),
+                              DrawerItem(
+                                icon: Icons.info,
+                                title: "A propos",
+                                onTap: () {
+                                  Navigator.of(context).pop();
+                                  _showAbout(context);
+                                },
+                              ),
+                            ],
                           ),
                         ),
                       ],
                     ),
-                  ),
-                  Expanded(
-                    child: ListView(
-                      padding: const EdgeInsets.all(2.0),
-                      shrinkWrap: true,
-                      children: [
-                        DrawerItem(
-                          icon: Icons.dark_mode,
-                          title: "Changer le thème",
-                          onTap: () {
-                            Navigator.of(context).pop();
-                            _changeTheme(context);
-                          },
-                        ),
-                        if (!kIsWeb)
-                          DrawerItem(
-                            icon: Icons.share,
-                            title: "Partager l'application",
-                            onTap: () {
-                              Navigator.of(context).pop();
-                              _shareApp();
-                            },
-                          ),
-                        DrawerItem(
-                          icon: Icons.mail,
-                          title: "Contacter",
-                          onTap: () {
-                            Navigator.of(context).pop();
-                            _sendReport();
-                          },
-                        ),
-                        if (!kIsWeb && !Platform.isLinux)
-                          DrawerItem(
-                            icon: Icons.rate_review,
-                            title: "Noter l'application",
-                            onTap: () {
-                              Navigator.of(context).pop();
-                              _openStore(context);
-                            },
-                          ),
-                        DrawerItem(
-                          icon: Icons.info,
-                          title: "A propos",
-                          onTap: () {
-                            Navigator.of(context).pop();
-                            _showAbout(context);
-                          },
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
+                  )
+                : null,
             body: PageView(
               controller: pageController,
               physics: const AlwaysScrollableScrollPhysics(),
@@ -186,8 +239,7 @@ class HomePage extends StatelessWidget {
               child: Container(
                 margin: EdgeInsets.symmetric(
                   vertical: 8.0,
-                  horizontal:
-                      MediaQuery.sizeOf(context).width > 800 ? 30.0 : 10.0,
+                  horizontal: deviceWidth > 800 ? 30.0 : 10.0,
                 ),
                 alignment: Alignment.center,
                 child: IntrinsicWidth(
@@ -386,7 +438,8 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      applicationLegalese: AppConstants.aboutApp,
+      applicationLegalese: "${AppConstants.aboutApp}"
+          "\n\nContact du développeur : ${AppConstants.mauyzEmail}",
       copyright: AppConstants.copyright,
     );
   }
