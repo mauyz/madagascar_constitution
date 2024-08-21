@@ -10,13 +10,19 @@ class PreambleContentPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Container(
-        padding: const EdgeInsets.all(15.0),
-        child: SelectableText(
-          preamble.content,
-          style: const TextStyle(
-            fontWeight: FontWeight.w500,
+    final scrollController = ScrollController();
+    return Scrollbar(
+      thumbVisibility: true,
+      controller: scrollController,
+      child: SingleChildScrollView(
+        controller: scrollController,
+        child: Container(
+          padding: const EdgeInsets.all(15.0),
+          child: SelectableText(
+            preamble.content,
+            style: const TextStyle(
+              fontWeight: FontWeight.w500,
+            ),
           ),
         ),
       ),
