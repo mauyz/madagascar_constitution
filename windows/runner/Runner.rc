@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "madagascar_constitution" "\0"
+            VALUE "CompanyName", "EightGroup" "\0"
+            VALUE "FileDescription", "Constitution Malagasy" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "madagascar_constitution" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
+            VALUE "InternalName", "Constitution Malagasy" "\0"
+            VALUE "LegalCopyright", "© Copyright Mauyz, Baroov 2024" "\0"
             VALUE "OriginalFilename", "madagascar_constitution.exe" "\0"
-            VALUE "ProductName", "madagascar_constitution" "\0"
+            VALUE "ProductName", "Constitution Malagasy" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

@@ -1,0 +1,31 @@
+package_rename_config:
+  android:
+    app_name: Constitution Malagasy
+    package_name: com.eightgroup.mauyz.constitution
+    override_old_package: com.eightgroup.baroov.constitution
+
+  ios:
+    app_name: Constitution Malagasy
+    bundle_name: mg_constitution
+    override_old_package: com.eightgroup.baroov.constitution
+    package_name: com.eightgroup.mauyz.constitution
+
+  linux:
+    app_name: Constitution Malagasy
+    package_name: com.eightgroup.mauyz.constitution
+    exe_name: madagascar_constitution
+
+  macos:
+    app_name: Constitution Malagasy
+    package_name: com.eightgroup.mauyz.constitution
+    copyright_notice: © Copyright Mauyz, Baroov 2024
+
+  web:
+    app_name: Constitution Malagasy
+    description: Constitution de la 4e République de Madagascar
+
+  windows:
+    app_name: Constitution Malagasy
+    organization: EightGroup
+    copyright_notice: © Copyright Mauyz, Baroov 2024
+    exe_name: madagascar_constitution
