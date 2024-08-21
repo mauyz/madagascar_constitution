@@ -51,13 +51,9 @@ class _BottomNavBarState extends State<BottomNavBar>
       _controller.reset();
       _controller.forward();
     });
-
-    return Padding(
-      padding: EdgeInsets.symmetric(
-        vertical: 8.0,
-        horizontal: MediaQuery.sizeOf(context).width > 600 ? 30.0 : 10.0,
-      ),
-      child: Material(
+    final deviceWidth = MediaQuery.sizeOf(context).width;
+    return Container(
+      decoration: BoxDecoration(
         color: Colors.green.withOpacity(
           Theme.of(context).brightness == Brightness.dark ? 0.3 : 0.8,
         ),
@@ -66,65 +62,67 @@ class _BottomNavBarState extends State<BottomNavBar>
             100,
           ),
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          mainAxisSize: MainAxisSize.max,
-          children: widget.items.indexed.map(
-            (e) {
-              bool selected = widget.currentItem == e.$1;
-              final child = TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: (selected && widget.items.length > 1)
-                      ? Colors.red.withOpacity(
-                          Theme.of(context).brightness == Brightness.dark
-                              ? 0.3
-                              : 0.7,
-                        )
-                      : null,
-                ),
-                onPressed: () {
-                  if (!selected) {
-                    widget.onTap.call(e.$1);
-                    _controller.reset();
-                    _controller.forward();
-                  }
-                },
-                child: Padding(
-                  padding: EdgeInsets.symmetric(
-                    vertical:
-                        MediaQuery.sizeOf(context).width > 600 ? 10.0 : 5.0,
-                    horizontal: 10.0,
-                  ),
-                  child: DefaultTextStyle.merge(
-                    style: TextStyle(
-                      color: selected
-                          ? (Theme.of(context).brightness == Brightness.dark)
-                              ? Colors.green
-                              : Colors.white
-                          : (Theme.of(context).brightness == Brightness.dark)
-                              ? Colors.white
-                              : Colors.black,
-                      fontSize: 12,
-                    ),
-                    child: e.$2,
-                  ),
-                ),
-              );
-              return Flexible(
-                child: selected
-                    ? Consumer<OpacityViewModel>(
-                        builder: (_, opacityModel, __) {
-                          return Opacity(
-                            opacity: opacityModel.value,
-                            child: child,
-                          );
-                        },
+      ),
+      child: Wrap(
+        runAlignment: WrapAlignment.center,
+        crossAxisAlignment: WrapCrossAlignment.center,
+        children: widget.items.indexed.map(
+          (e) {
+            bool selected = widget.currentItem == e.$1;
+            final child = TextButton(
+              style: TextButton.styleFrom(
+                backgroundColor: (selected && widget.items.length > 1)
+                    ? Colors.red.withOpacity(
+                        Theme.of(context).brightness == Brightness.dark
+                            ? 0.3
+                            : 0.7,
                       )
-                    : child,
-              );
-            },
-          ).toList(),
-        ),
+                    : null,
+              ),
+              onPressed: () {
+                if (!selected) {
+                  widget.onTap.call(e.$1);
+                  _controller.reset();
+                  _controller.forward();
+                }
+              },
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: deviceWidth > 800 ? 10.0 : 5.0,
+                  horizontal: 12.0,
+                ),
+                child: DefaultTextStyle.merge(
+                  style: TextStyle(
+                    color: selected
+                        ? (Theme.of(context).brightness == Brightness.dark)
+                            ? Colors.green
+                            : Colors.white
+                        : (Theme.of(context).brightness == Brightness.dark)
+                            ? Colors.white
+                            : Colors.black,
+                    fontSize: 12,
+                  ),
+                  child: e.$2,
+                ),
+              ),
+            );
+            return Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: deviceWidth > 800 ? 50.0 : 20.0,
+              ),
+              child: selected
+                  ? Consumer<OpacityViewModel>(
+                      builder: (_, opacityModel, __) {
+                        return Opacity(
+                          opacity: opacityModel.value,
+                          child: child,
+                        );
+                      },
+                    )
+                  : child,
+            );
+          },
+        ).toList(),
       ),
     );
   }

@@ -117,37 +117,51 @@ class SearchContentPage extends StatelessWidget {
                           context.read<TabNavigationViewModel>().goTo,
                       children: tabs,
                     ),
-                    bottomNavigationBar: Consumer<TabNavigationViewModel>(
-                      builder: (_, tabViewModel, __) {
-                        return BottomNavBar(
-                          currentItem: tabViewModel.selected,
-                          onTap: (index) {
-                            if (tabViewModel.selected != index) {
-                              pageController.animateToPage(
-                                index,
-                                duration: const Duration(milliseconds: 500),
-                                curve: Curves.ease,
+                    bottomNavigationBar: IntrinsicHeight(
+                      child: Container(
+                        margin: EdgeInsets.symmetric(
+                          vertical: 8.0,
+                          horizontal: MediaQuery.sizeOf(context).width > 800
+                              ? 30.0
+                              : 10.0,
+                        ),
+                        alignment: Alignment.center,
+                        child: IntrinsicWidth(
+                          child: Consumer<TabNavigationViewModel>(
+                            builder: (_, tabViewModel, __) {
+                              return BottomNavBar(
+                                currentItem: tabViewModel.selected,
+                                onTap: (index) {
+                                  if (tabViewModel.selected != index) {
+                                    pageController.animateToPage(
+                                      index,
+                                      duration:
+                                          const Duration(milliseconds: 500),
+                                      curve: Curves.ease,
+                                    );
+                                  }
+                                },
+                                items: searchViewModel.data.keys.indexed
+                                    .map(
+                                      (e) => BottomNavBarItem(
+                                        icon: SvgPicture.asset(
+                                          'assets/${e.$2.name}.svg',
+                                          height: 20,
+                                          width: 20,
+                                        ),
+                                        label: switch (e.$2) {
+                                          ConstitutionLanguage.mg => "Malagasy",
+                                          ConstitutionLanguage.fr => "Français",
+                                          ConstitutionLanguage.en => "Anglais",
+                                        },
+                                      ),
+                                    )
+                                    .toList(),
                               );
-                            }
-                          },
-                          items: searchViewModel.data.keys.indexed
-                              .map(
-                                (e) => BottomNavBarItem(
-                                  icon: SvgPicture.asset(
-                                    'assets/${e.$2.name}.svg',
-                                    height: 20,
-                                    width: 20,
-                                  ),
-                                  label: switch (e.$2) {
-                                    ConstitutionLanguage.mg => "Malagasy",
-                                    ConstitutionLanguage.fr => "Français",
-                                    ConstitutionLanguage.en => "Anglais",
-                                  },
-                                ),
-                              )
-                              .toList(),
-                        );
-                      },
+                            },
+                          ),
+                        ),
+                      ),
                     ),
                   );
                 },
