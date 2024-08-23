@@ -38,7 +38,7 @@ class SearchResultPage extends StatelessWidget {
               shrinkWrap: true,
               itemCount: articles.length,
               itemBuilder: (_, index) {
-                return SeearchedArticleCard(
+                return SearchedArticleCard(
                   article: articles[index],
                   text: text,
                 );

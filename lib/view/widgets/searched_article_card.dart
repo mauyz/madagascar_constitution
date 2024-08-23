@@ -4,10 +4,10 @@ import 'package:highlight_text/highlight_text.dart';
 import 'package:madagascar_constitution/app/app_router.gr.dart';
 import 'package:madagascar_constitution/model/article.dart';
 
-class SeearchedArticleCard extends StatelessWidget {
+class SearchedArticleCard extends StatelessWidget {
   final Article article;
   final String text;
-  const SeearchedArticleCard({
+  const SearchedArticleCard({
     super.key,
     required this.article,
     required this.text,
