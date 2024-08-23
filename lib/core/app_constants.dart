@@ -11,11 +11,11 @@ class AppConstants {
 
   static const aboutApp = "Constitution de la 4e République de Madagascar"
       " APRES LE REFERENDUM DU 17 NOVEMBRE 2010,\narrêtés"
-      " par la Haute Cour Constitutionnelle le 6 décembre 2010.\n\n"
+      " par la Haute Cour Constitutionnelle le 6 décembre 2010.\n"
       "Source : https://tenymalagasy.org/bins/lalampanorenana";
 
   static final copyright =
-      "© copyright Moïse${kIsWeb ? '' : ", Baroov"} ${DateTime.now().year}";
+      "© ${DateTime.now().year} Moïse T.${kIsWeb ? '' : ", Baroov"}";
 
   static const androidId = "com.eightgroup.mauyz.constitution";
   static const iosId = "";
