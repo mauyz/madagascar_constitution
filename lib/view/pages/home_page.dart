@@ -50,14 +50,17 @@ class HomePage extends StatelessWidget {
             appBar: AppBar(
               elevation: 1,
               leading: deviceWidth > 800
-                  ? Padding(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 12.0,
-                        horizontal: 8.0,
-                      ),
-                      child: SvgPicture.asset(
-                        "assets/mg.svg",
-                        fit: BoxFit.cover,
+                  ? IconButton(
+                      onPressed: null,
+                      icon: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 5.0,
+                          vertical: 8.0,
+                        ),
+                        child: SvgPicture.asset(
+                          "assets/mg.svg",
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     )
                   : null,
