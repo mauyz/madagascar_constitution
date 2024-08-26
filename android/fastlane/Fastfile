@@ -33,7 +33,17 @@ platform :android do
   desc "Deploy a new version to the Google Play"
   lane :deploy do
     gradle(task: "clean assembleRelease")
-    upload_to_play_store
+    sh("cd ..;flutter clean;flutter pub get;flutter build appbundle --release")
+    upload_to_play_store(
+        track: 'production',
+        aab: '../build/app/outputs/bundle/release/app-release.aab',
+        skip_upload_apk: true,
+        skip_upload_images: true,
+        skip_upload_screenshots: true,
+        skip_upload_metadata: true,
+        skip_upload_changelogs: true,
+        skip_upload_aab: false,
+    )
   end
 
   desc "Build debug and test APK for screenshots"
