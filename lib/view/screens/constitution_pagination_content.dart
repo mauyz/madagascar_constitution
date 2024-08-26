@@ -2,14 +2,13 @@ import 'package:auto_route/auto_route.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:madagascar_constitution/app/app_router.gr.dart';
 import 'package:madagascar_constitution/core/constitution_language.dart';
 import 'package:madagascar_constitution/model/constitution.dart';
 import 'package:madagascar_constitution/model/headline.dart';
 import 'package:madagascar_constitution/model/preamble.dart';
 import 'package:madagascar_constitution/view/screens/headline_content.dart';
 import 'package:madagascar_constitution/view/screens/preamble_content.dart';
+import 'package:madagascar_constitution/view/widgets/back_to_home_button.dart';
 import 'package:madagascar_constitution/view/widgets/pagination_buttons.dart';
 import 'package:madagascar_constitution/viewmodel/article_list_type_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/pagination_view_model.dart';
@@ -48,24 +47,7 @@ class ConstitutionPaginationContent extends StatelessWidget {
         appBar: AppBar(
           elevation: 1,
           leading: kIsWeb
-              ? IconButton(
-                  tooltip: "Accueil",
-                  icon: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 5.0,
-                      vertical: 8.0,
-                    ),
-                    child: SvgPicture.asset(
-                      "assets/mg.svg",
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  onPressed: () {
-                    context.router.replaceAll(
-                      [const HomeRoute()],
-                    );
-                  },
-                )
+              ? const BackToHomeButton()
               : IconButton(
                   onPressed: () {
                     context.router.maybePop();
