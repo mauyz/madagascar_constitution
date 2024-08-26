@@ -48,11 +48,7 @@ class ArticleContentPage extends StatelessWidget {
                 elevation: 1,
                 leading: kIsWeb
                     ? IconButton(
-                        onPressed: () {
-                          context.router.replaceAll(
-                            [const HomeRoute()],
-                          );
-                        },
+                        tooltip: "Accueil",
                         icon: Padding(
                           padding: const EdgeInsets.symmetric(
                             horizontal: 5.0,
@@ -63,6 +59,11 @@ class ArticleContentPage extends StatelessWidget {
                             fit: BoxFit.cover,
                           ),
                         ),
+                        onPressed: () {
+                          context.router.replaceAll(
+                            [const HomeRoute()],
+                          );
+                        },
                       )
                     : IconButton(
                         onPressed: () {
