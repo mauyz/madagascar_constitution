@@ -34,10 +34,12 @@ class HeadlineList extends StatelessWidget {
             if (index == 0) {
               return PreambleTitle(
                 constitution: constitution,
+                constitutionLanguage: language,
               );
             }
             return HeadlineTitle(
               constitution: constitution,
+              constitutionLanguage: language,
               index: index - 1,
             );
           },
