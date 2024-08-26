@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:madagascar_constitution/core/constitution_language.dart';
 import 'package:madagascar_constitution/source/repository.dart';
 import 'package:madagascar_constitution/view/screens/search_result_content.dart';
+import 'package:madagascar_constitution/view/widgets/back_to_home_button.dart';
 import 'package:madagascar_constitution/view/widgets/bottom_nav_bar.dart';
 import 'package:madagascar_constitution/view/widgets/bottom_nav_bar_item.dart';
 import 'package:madagascar_constitution/viewmodel/opacity_view_model.dart';
@@ -27,9 +28,8 @@ class SearchContentPage extends StatelessWidget {
         return Scaffold(
           appBar: AppBar(
             elevation: 1,
-            leadingWidth: kIsWeb ? 0.0 : null,
             leading: kIsWeb
-                ? const SizedBox.shrink()
+                ? const BackToHomeButton()
                 : IconButton(
                     onPressed: () {
                       context.router.maybePop();

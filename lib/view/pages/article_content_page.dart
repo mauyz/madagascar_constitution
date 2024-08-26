@@ -5,6 +5,7 @@ import 'package:madagascar_constitution/core/constitution_language.dart';
 import 'package:madagascar_constitution/model/article.dart';
 import 'package:madagascar_constitution/source/repository.dart';
 import 'package:madagascar_constitution/view/pages/not_found_page.dart';
+import 'package:madagascar_constitution/view/widgets/back_to_home_button.dart';
 import 'package:provider/provider.dart';
 
 @RoutePage()
@@ -44,9 +45,8 @@ class ArticleContentPage extends StatelessWidget {
             return Scaffold(
               appBar: AppBar(
                 elevation: 1,
-                leadingWidth: kIsWeb ? 0.0 : null,
                 leading: kIsWeb
-                    ? const SizedBox.shrink()
+                    ? const BackToHomeButton()
                     : IconButton(
                         onPressed: () {
                           context.router.maybePop();

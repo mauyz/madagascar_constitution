@@ -8,6 +8,7 @@ import 'package:madagascar_constitution/model/headline.dart';
 import 'package:madagascar_constitution/model/preamble.dart';
 import 'package:madagascar_constitution/view/screens/headline_content.dart';
 import 'package:madagascar_constitution/view/screens/preamble_content.dart';
+import 'package:madagascar_constitution/view/widgets/back_to_home_button.dart';
 import 'package:madagascar_constitution/view/widgets/pagination_buttons.dart';
 import 'package:madagascar_constitution/viewmodel/article_list_type_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/pagination_view_model.dart';
@@ -45,9 +46,8 @@ class ConstitutionPaginationContent extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           elevation: 1,
-          leadingWidth: kIsWeb ? 0.0 : null,
           leading: kIsWeb
-              ? const SizedBox.shrink()
+              ? const BackToHomeButton()
               : IconButton(
                   onPressed: () {
                     context.router.maybePop();
