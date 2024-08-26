@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:madagascar_constitution/core/constitution_language.dart';
 import 'package:madagascar_constitution/model/article.dart';
 import 'package:madagascar_constitution/view/widgets/searched_article_card.dart';
 
-class SearchResultPage extends StatelessWidget {
+class SearchResultContent extends StatelessWidget {
+  final ConstitutionLanguage language;
   final String text;
   final List<Article> articles;
-  const SearchResultPage({
+  const SearchResultContent({
     super.key,
+    required this.language,
     required this.text,
     required this.articles,
   });
@@ -39,6 +42,7 @@ class SearchResultPage extends StatelessWidget {
               itemCount: articles.length,
               itemBuilder: (_, index) {
                 return SearchedArticleCard(
+                  language: language,
                   article: articles[index],
                   text: text,
                 );
