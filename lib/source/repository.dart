@@ -53,4 +53,15 @@ class Repository {
       if (en.isNotEmpty) ConstitutionLanguage.en: en,
     };
   }
+
+  Future<Article?> searchArticleById(
+      ConstitutionLanguage language, int id) async {
+    _data[language] ??= await JsonParser.parseDoc(language);
+    for (final article in _data[language]!.allArticles) {
+      if (article.id == id) {
+        return article;
+      }
+    }
+    return null;
+  }
 }
