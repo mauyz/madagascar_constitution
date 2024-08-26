@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:madagascar_constitution/core/constitution_language.dart';
 import 'package:madagascar_constitution/model/headline.dart';
-import 'package:madagascar_constitution/view/pages/article_gridview.dart';
+import 'package:madagascar_constitution/view/screens/article_gridview.dart';
 
-class HeadlineContentPage extends StatelessWidget {
+class HeadlineContent extends StatelessWidget {
+  final ConstitutionLanguage language;
   final Headline headline;
-  const HeadlineContentPage({
+  const HeadlineContent({
     super.key,
+    required this.language,
     required this.headline,
   });
 
@@ -23,6 +26,7 @@ class HeadlineContentPage extends StatelessWidget {
         itemBuilder: (_, index) {
           if (index == 0 && articles.isNotEmpty) {
             return ArticleGridview(
+              language: language,
               articles: articles,
             );
           } else {
@@ -50,6 +54,7 @@ class HeadlineContentPage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ArticleGridview(
+                        language: language,
                         articles: subtitleArticles,
                       ),
                     ),
@@ -90,6 +95,7 @@ class HeadlineContentPage extends StatelessWidget {
                                       bottom: 10.0,
                                     ),
                                     child: ArticleGridview(
+                                      language: language,
                                       articles: chapter.articles,
                                     ),
                                   ),
