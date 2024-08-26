@@ -1,7 +1,9 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:madagascar_constitution/core/constitution_language.dart';
 import 'package:madagascar_constitution/model/constitution.dart';
+import 'package:madagascar_constitution/view/widgets/article_button.dart';
 
 class HeadlineTitle extends StatelessWidget {
   final Constitution constitution;
@@ -34,12 +36,11 @@ class HeadlineTitle extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.center,
                   children: [
                     Text(
                       '${headline.title} ',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.w600,
-                      ),
+                      style: Theme.of(context).textTheme.titleLarge,
                     ),
                     Text(
                       '(${headline.formattedRange})',
@@ -52,32 +53,28 @@ class HeadlineTitle extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
-                child: SizedBox(
-                  height: 50,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: headline.allArticles.length,
-                    itemBuilder: (_, index) {
-                      final article = headline.allArticles[index];
-                      return Padding(
-                        padding: const EdgeInsets.symmetric(
-                          vertical: 10.0,
-                          horizontal: 4.0,
-                        ),
-                        child: FilledButton.tonal(
-                          onPressed: () {
-                            context.router.navigateNamed(
-                              "/articles/${constitutionLanguage.name}/${article.id}",
+                child: kIsWeb
+                    ? Wrap(
+                        children: headline.allArticles.map(
+                          (article) {
+                            return ArticleButton(
+                              language: constitutionLanguage,
+                              article: article,
                             );
                           },
-                          child: Text(
-                            article.shortTitle,
+                        ).toList(),
+                      )
+                    : SizedBox(
+                        height: 50,
+                        child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemCount: headline.allArticles.length,
+                          itemBuilder: (_, index) => ArticleButton(
+                            language: constitutionLanguage,
+                            article: headline.allArticles[index],
                           ),
                         ),
-                      );
-                    },
-                  ),
-                ),
+                      ),
               ),
             ],
           ),
