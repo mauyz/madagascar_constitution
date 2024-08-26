@@ -1,14 +1,16 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:madagascar_constitution/app/app_router.gr.dart';
+import 'package:madagascar_constitution/core/constitution_language.dart';
 import 'package:madagascar_constitution/model/constitution.dart';
 
 class HeadlineTitle extends StatelessWidget {
   final Constitution constitution;
+  final ConstitutionLanguage constitutionLanguage;
   final int index;
   const HeadlineTitle({
     super.key,
     required this.constitution,
+    required this.constitutionLanguage,
     required this.index,
   });
 
@@ -21,11 +23,8 @@ class HeadlineTitle extends StatelessWidget {
         elevation: 2.0,
         child: InkWell(
           onTap: () {
-            context.router.push(
-              ConstitutionPaginationRoute(
-                initialPage: index,
-                constitution: constitution,
-              ),
+            context.router.navigateNamed(
+              "/articles/${constitutionLanguage.name}?page=$index",
             );
           },
           child: Column(
@@ -67,10 +66,8 @@ class HeadlineTitle extends StatelessWidget {
                         ),
                         child: FilledButton.tonal(
                           onPressed: () {
-                            context.router.push(
-                              ArticleContentRoute(
-                                article: article,
-                              ),
+                            context.router.navigateNamed(
+                              "/articles/${constitutionLanguage.name}/${article.id}",
                             );
                           },
                           child: Text(
