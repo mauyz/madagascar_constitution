@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:madagascar_constitution/core/constitution_language.dart';
 import 'package:madagascar_constitution/model/article.dart';
 import 'package:madagascar_constitution/view/widgets/article_card.dart';
 import 'package:madagascar_constitution/viewmodel/article_list_type_view_model.dart';
 import 'package:provider/provider.dart';
 
 class ArticleGridview extends StatelessWidget {
+  final ConstitutionLanguage language;
   final List<Article> articles;
   const ArticleGridview({
     super.key,
+    required this.language,
     required this.articles,
   });
 
@@ -25,6 +28,7 @@ class ArticleGridview extends StatelessWidget {
             itemCount: articles.length,
             itemBuilder: (_, index) {
               return ArticleCard(
+                language: language,
                 article: articles[index],
               );
             },
@@ -36,6 +40,7 @@ class ArticleGridview extends StatelessWidget {
           children: articles.map(
             (article) {
               return ArticleCard(
+                language: language,
                 article: article,
               );
             },
