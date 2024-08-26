@@ -1,9 +1,10 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:madagascar_constitution/core/constitution_language.dart';
 import 'package:madagascar_constitution/source/repository.dart';
-import 'package:madagascar_constitution/view/pages/search_result_page.dart';
+import 'package:madagascar_constitution/view/screens/search_result_content.dart';
 import 'package:madagascar_constitution/view/widgets/bottom_nav_bar.dart';
 import 'package:madagascar_constitution/view/widgets/bottom_nav_bar_item.dart';
 import 'package:madagascar_constitution/viewmodel/opacity_view_model.dart';
@@ -25,14 +26,18 @@ class SearchContentPage extends StatelessWidget {
       builder: (context, _) {
         return Scaffold(
           appBar: AppBar(
-            leading: IconButton(
-              onPressed: () {
-                context.router.maybePop();
-              },
-              icon: const Icon(
-                Icons.arrow_back,
-              ),
-            ),
+            elevation: 1,
+            leadingWidth: kIsWeb ? 0.0 : null,
+            leading: kIsWeb
+                ? const SizedBox.shrink()
+                : IconButton(
+                    onPressed: () {
+                      context.router.maybePop();
+                    },
+                    icon: const Icon(
+                      Icons.arrow_back,
+                    ),
+                  ),
             title: ConstrainedBox(
               constraints: const BoxConstraints(minWidth: 500),
               child: IntrinsicWidth(
@@ -87,14 +92,15 @@ class SearchContentPage extends StatelessWidget {
                   child: Text('Aucun résultat'),
                 );
               }
-              final tabs = searchViewModel.data.values
-                  .map(
-                    (values) => SearchResultPage(
-                      text: searchController.text,
-                      articles: values,
-                    ),
-                  )
-                  .toList();
+              final tabs = searchViewModel.data.entries.map(
+                (e) {
+                  return SearchResultContent(
+                    language: e.key,
+                    text: searchController.text,
+                    articles: e.value,
+                  );
+                },
+              ).toList();
               final pageController = PageController(
                 initialPage: 0,
               );
