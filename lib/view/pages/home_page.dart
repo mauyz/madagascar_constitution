@@ -8,17 +8,13 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:madagascar_constitution/app/app_router.gr.dart';
 import 'package:madagascar_constitution/core/app_constants.dart';
 import 'package:madagascar_constitution/core/constitution_language.dart';
-import 'package:madagascar_constitution/source/repository.dart';
-import 'package:madagascar_constitution/view/pages/tab_content_page.dart';
+import 'package:madagascar_constitution/view/screens/tab_content.dart';
 import 'package:madagascar_constitution/view/widgets/app_title.dart';
 import 'package:madagascar_constitution/view/widgets/bottom_nav_bar.dart';
 import 'package:madagascar_constitution/view/widgets/bottom_nav_bar_item.dart';
 import 'package:madagascar_constitution/view/widgets/custom_about.dart';
 import 'package:madagascar_constitution/view/widgets/drawer_item.dart';
 import 'package:madagascar_constitution/view/widgets/theme_radio.dart';
-import 'package:madagascar_constitution/viewmodel/en_view_model.dart';
-import 'package:madagascar_constitution/viewmodel/fr_view_model.dart';
-import 'package:madagascar_constitution/viewmodel/mg_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/opacity_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/tab_navigation_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/theme_notifier.dart';
@@ -35,27 +31,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final deviceWidth = MediaQuery.sizeOf(context).width;
-    final repository = context.read<Repository>();
     final pageController = PageController(
       initialPage: 0,
     );
     return MultiProvider(
       providers: [
-        ListenableProvider<MgViewModel>(
-          create: (_) => MgViewModel(
-            repository: repository,
-          )..loadConstitution(),
-        ),
-        ListenableProvider<FrViewModel>(
-          create: (_) => FrViewModel(
-            repository: repository,
-          )..loadConstitution(),
-        ),
-        ListenableProvider<EnViewModel>(
-          create: (_) => EnViewModel(
-            repository: repository,
-          )..loadConstitution(),
-        ),
         ListenableProvider<TabNavigationViewModel>(
           create: (_) => TabNavigationViewModel(),
         ),
@@ -68,6 +48,7 @@ class HomePage extends StatelessWidget {
           visible: false,
           child: Scaffold(
             appBar: AppBar(
+              elevation: 1,
               leading: deviceWidth > 800
                   ? Padding(
                       padding: const EdgeInsets.symmetric(
@@ -81,8 +62,6 @@ class HomePage extends StatelessWidget {
                     )
                   : null,
               title: const AppTitle(),
-              elevation: 5,
-
               actions: [
                 if (deviceWidth > 800) ...[
                   const Spacer(),
@@ -221,15 +200,15 @@ class HomePage extends StatelessWidget {
               physics: const AlwaysScrollableScrollPhysics(),
               onPageChanged: context.read<TabNavigationViewModel>().goTo,
               children: const [
-                TabContentPage(
+                TabContent(
                   key: PageStorageKey<String>('mg'),
                   language: ConstitutionLanguage.mg,
                 ),
-                TabContentPage(
+                TabContent(
                   key: PageStorageKey<String>('fr'),
                   language: ConstitutionLanguage.fr,
                 ),
-                TabContentPage(
+                TabContent(
                   key: PageStorageKey<String>('en'),
                   language: ConstitutionLanguage.en,
                 ),

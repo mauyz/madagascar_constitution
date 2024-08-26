@@ -1,12 +1,15 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:madagascar_constitution/app/app_router.gr.dart';
+import 'package:madagascar_constitution/core/constitution_language.dart';
 import 'package:madagascar_constitution/model/article.dart';
 
 class ArticleCard extends StatelessWidget {
+  final ConstitutionLanguage language;
   final Article article;
   const ArticleCard({
     super.key,
+    required this.language,
     required this.article,
   });
 
@@ -16,9 +19,10 @@ class ArticleCard extends StatelessWidget {
       child: InkWell(
         borderRadius: BorderRadius.circular(12.0),
         onTap: () {
-          context.router.push(
+          context.router.navigate(
             ArticleContentRoute(
-              article: article,
+              language: language.name,
+              id: article.id,
             ),
           );
         },

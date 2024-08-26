@@ -2,13 +2,16 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:highlight_text/highlight_text.dart';
 import 'package:madagascar_constitution/app/app_router.gr.dart';
+import 'package:madagascar_constitution/core/constitution_language.dart';
 import 'package:madagascar_constitution/model/article.dart';
 
 class SearchedArticleCard extends StatelessWidget {
+  final ConstitutionLanguage language;
   final Article article;
   final String text;
   const SearchedArticleCard({
     super.key,
+    required this.language,
     required this.article,
     required this.text,
   });
@@ -21,7 +24,8 @@ class SearchedArticleCard extends StatelessWidget {
         onTap: () {
           context.router.push(
             ArticleContentRoute(
-              article: article,
+              language: language.name,
+              id: article.id,
             ),
           );
         },

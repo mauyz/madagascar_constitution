@@ -9,26 +9,32 @@
       "range": "And.1-And.6",
       "articles": [
         {
+          "id": 1,
           "title": "Andininy 1",
           "content": "Firenena iray ny Vahoaka Malagasy ka mivondrona ho Fanjakana masi-mandidy, tokana, repoblikana ary tsy mampifangaro ny fitondram-panjakàna sy ny finoana.\n« Repoblikan'i Madagasikara » no anarana entin’io Fanjakana io.\nNy demokrasia sy ny feni-kevitra momba ny Fanjakana tan-dalàna no fototra iorenan'ny Repoblika.\nEo amin'ny faritry ny taniny no maha masi-mandidy azy.\nTsy misy mihitsy mahazo manohintohina ny maha iray tsy anombinana ny tanin'ny Repoblika.\nTsy azo amidy na atakalo ny tanim-pirenena.\nNy fomba sy fepetra fivarotana sy fampanofana tany ho an’ny vahiny dia voafaritry ny lalàna."
         },
         {
+          "id": 2,
           "title": "Andininy 2",
           "content": "Ny Fanjakana dia manamafy ny tsy fombàny ny atsy sy ny aroa eo anatrehan'ny finoana samy hafa.\nNy tsy fampifangaroana ny fitondram-panjakana sy ny finoana eto amin’ny Repoblika dia miankina amin'ny foto-kevitra mikasika ny fisarahan'ny raharaham-panjakana sy ny fikambanam-pivavahana ary ny solontenany.\nNy Fanjakana sy ny fikambanam-pivavahana dia tena tsy mahazo mifampitsabatsabaka eo amin'ny sehatrasan'izy ireo tsirairay avy.\nTsy misy mihitsy Lehiben'Andrim-panjakana na mambra ao amin'ny Governemanta afaka miditra any amin'ny ambaratongam-pitarihana ny fikambanam-pivavahana iray; raha tsy izany dia azon’ny Fitsarana Avo momba ny Lalàmpanorenana atao ny manongana azy na heverina ho toy ny mametra-pialàna avy hatrany amin'ny asany na ny raharahany izy."
         },
         {
+          "id": 3,
           "title": "Andininy 3",
           "content": "Ny Repoblikan'i Madagasikara dia Firenena miankina amin'ny rafitry ny Vondrombahoakam-paritra Itsinjaram-pahefana izay ahitana Kaominina, Faritra ary Faritany ka ny fari-pahefana sy ny foto-kevitra momba ny fizakan-tena ara-pitondran-draharaha sy ara-pitantanam-bola dia iantohan'ny Lalàmpanorenana sy faritan’ny Lalàna."
         },
         {
+          "id": 4,
           "title": "Andininy 4",
           "content": "« Fitiavana – Tanindrazana – Fandrosoana » no filamatry ny Repoblikan'i Madagasikara.\nNy fanevany dia saina telo soratra, fotsy, mena, maitso, vita amin'ny tsivalana telo mahitsizoro mitovy refy, ka ny voalohany fotsy ary mitsangana manaraka ny tahon-tsaina, ny roa hafa mandry ka ny mena ambony ary ny maitso ambany.\nNy teny malagasy no tenim-pirenena.\n« Ry Tanindrazanay malala ô » no hiram-pirenena.\nAntananarivo no Renivohitry ny Repoblikan'i Madagasikara.\nNy lalàna no mametra ny fitombokasem-panjakana sy ny mari-piandrianan'ny Firenena.\nNy teny malagasy sy frantsay no teny ofisialy."
         },
         {
+          "id": 5,
           "title": "Andininy 5",
           "content": "Ny vahoaka izay ipoiran'ny fahefana rehetra no masi-mandidy ka mampiasa izany amin'ny alàlan'ny solontenany lany amin'ny alàlan'ny fifidianana andraisan’ny rehetra anjara mivantana na tsy mivantana, na koa amin’ny alalan’ny fitsapan-kevi-bahoaka. Tsy misy mihitsy ampahany amin'ny vahoaka, na olon-tokana mahazo manendry tena hampiasa izany fahefana feno izany.\nNy fandaminana sy ny fitantanana ny raharaha rehetra momba ny fifidianana dia ankinina amin'ny rafitra mahaleotena iray eto amin’ny Firenena.\nNy lalàna no mandamina ny fombafomba fampandehanana io rafitra io.\nMpifidy avokoa, araka ny fepetra faritan'ny lalàna, ny olom-pirenena lahy sy vavy rehetra mizaka ny zon'ny isam-batan'olona sy ny zo politika. Didim-pitsarana raikitra no hany mahavery ny zo maha-mpifidy."
         },
         {
+          "id": 6,
           "title": "Andininy 6",
           "content": "Ny lalàna dia maneho ny safidim-bahoaka. Mitovy ny olona rehetra eo anatrehan'ny lalàna, na izy natao hiarovana, na izy natao handidy, na izy natao hamaizana.\nMitovy zo ny olona rehetra eo anatrehan'ny lalàna, samy manana fahalalahana fototra arovan'ny lalàna ary tsy misy fanavakavahana na amin'ny maha-lahy na amin'ny maha-vavy, na amin'ny fari-pahalalàna, na amin'ny fari-piainana, na amin'ny fiaviana, na amin'ny finoana, na amin'ny tsy fitovian-kevitra.\nNy lalàna no manome tombony ny fitoviana amin’ny fidirana sy ny fandraisan’anjaran’ny vehivavy sy ny lehilahy amin’ny fisahanan’asam-panjakana sy amin’ny asa eo amin’ny sehatry ny fiainana ara-politika, ara-toekarena sy ara-tsosialy."
         }
@@ -44,42 +50,52 @@
           "title": "Zana-dohateny I. Ny amin'ny zo aman'andraikitry ny isam-batan'olona sy ny zo politika",
           "articles": [
             {
+              "id": 7,
               "title": "Andininy 7",
               "content": "Ny zon'ny isam-batan'olona sy ny fahalalahana fototra dia iantohan'ny Lalàmpanorenana ary ny lalàna no mandamina ny fampiasana azy."
             },
             {
+              "id": 8,
               "title": "Andininy 8",
               "content": "Arovan'ny Lalàna ny zon’ny olona rehetra hiaina. Tsy azo atao ny manala ain’olona amin’ny fomba tsy rariny. Tsy azo heverina ho fandikàna ity andininy ity ny famonoana raha toa ka tsy maintsy ilaina ny fampiasana hery mba hiantohana ny fiarovana ny olona rehetra amin'ny herisetra tsy ara-dalàna.\nTsy misy olona azo ampahoriana, saziana na ampijaliana amin’ny fomba tafahoatra sy tsy mendrika manetry ny maha-olombelona.\nVoarara indrindra ny manery olona iray hanaovana andrana ara-pitsaboana na ara-tsiansa raha tsy nahazoana ny fanekeny malalaka."
             },
             {
+              "id": 9,
               "title": "Andininy 9",
               "content": "Ny olona rehetra dia manan-jo amin'ny fahalalahana ary tsy azo samborina na tànana am-ponja tsy amin’antony.\nTsy misy olona azo enjehina na samborina na tànana am-ponja raha tsy noho ny anton-javatra voafaritry ny lalàna ary araka ny fomba voadidiny.\nIzay niharan'ny fisamborana na fitànana am-ponja tsy ara-dalàna dia manan-jo hahazo onitra."
             },
             {
+              "id": 10,
               "title": "Andininy 10",
               "content": "Ny fahalalahana maneho hevitra sy miteny, ny fahalalahana eo amin’ny fifandraisana, ny fahalalahana manao gazety, ny fahalalahana hiditra aminà fikambanana na hanorina fikambanana, ny fahalalahana hivory malalaka, ny fahalalahana mivezivezy, ny fahalalahana amin’ny fieritreretana sy amin’ny finoana dia samy iantohana ho an’ny rehetra ary tsy azo ferana raha tsy hoe ho fanajana ny fahalalahana sy ny zon’ny hafa sy noho ny fahaterena hiaro ny filaminam-bahoaka, ny fahamendrehan’ny firenena ary ny filaminan’ny Fanjakàna."
             },
             {
+              "id": 11,
               "title": "Andininy 11",
               "content": "Manan-jo hahalala vaovao ny tsirairay.\nTsy misy faneriterena mialoha azo ampiharina amin’ny fampahalalam-baovao amin’ny endriny rehetra ankoatr’ireo izay mamoafady na mety hanohintohina ny filaminam-bahoaka.\nZo ny fahalalahana amin'ny fampahalalam-baovao, na toy inona toy inona no hanohanana izany. Ny fampiasana io zo io dia adidy sy andraikitra saingy voafehin'ny fombafomba, fepetra, na sazy voalazan'ny lalàna, izay fepetra ilaina ao anatin'ny fiaraha-monina demokratika. Voarara amin’ny endriny rehetra ny sivana.\nNy fisahanana ny asa aman-draharahan'ny mpanao gazety dia voalamina araka ny lalàna."
             },
             {
+              "id": 12,
               "title": "Andininy 12",
               "content": "Ny olom-pirenena malagasy rehetra dia manana zo handao sy hiverina eto amin'ny tanim-pirenena araka ny fepetra voatondron'ny lalàna.\nZon'ny tsirairay ny mivezivezy sy manorim-ponenana an-kahalalahana manerana ny tanin'ny Repoblika, rehefa voahaja ny zon'ny hafa sy ny fepetra faritan'ny lalàna."
             },
             {
+              "id": 13,
               "title": "Andininy 13",
               "content": "Ny olona tsirairay dia iantohana amin’ny tsy fahazoana manao an-keriny na herisetra amin’ny tenany, amin’ny fonenany sy amin’ny tsiambaratelon’ny fifandraisany.\nTsy misy fisavan-trano na toerana azo atao raha tsy alàlana omen’ny lalàna ary araka ny baiko an-tsoratra nomen’ny fahefana mpitsara afaka manao izany, afa-tsy amin’ireo izay tratra ambodiomby.\nTsy misy olona azo sazina raha tsy araka ny lalàna navoaka hanan-kery alohan’ny nanaovana ilay fihetsika mahavoasazy.\nTsy misy olona azo sazina indroa noho ny toe-javatra iray efa nanamelohana azy. Ny lalàna dia miantoka ny zo hitady ny rariny sy ny hitsiny ho an’ny olona rehetra ary tsy vato misakana izany velively ny tsy fahampian’ny fidiram-bola aminy.Iantohan’ny Fanjakana ny zom-piarovan-tena feno sy tsy azo hozongozonina eo anatrehan’ny antokom-pitsarana rehetra, amin’ny dingana rehetra eo amin’ny fizotry ny ady, manomboka hatrany amin’ny famotorana mialoha eo amin’ny ambaratongan’ny mpanao famotorana na ny fampanoavana.\nVoarara ny fanerena ara-tsaina rehetra sy/na fampijaliana ara-batana mba hisamborana olona iray na hitànana azy am-ponja.\nHeverina ho tsy manan-tsiny ny voampanga sy voarohirohy rehetra mandra-pisian’ny didim- pitsarana raikitra manameloka azy.\nToe-javatra manokana ny fitànana am-ponja vonjimaika."
             },
             {
+              "id": 14,
               "title": "Andininy 14",
               "content": "Zon'ny olona rehetra no mivondrona an-kahalalahana ao anaty fikambanana, nefa tsy maintsy manaraka ny voalazan'ny lalàna.\nToy izany koa ny momba ny zo hanangana antoko politika. Ny lalàna momba ny antoko politika no mametra ny fomba entina manangana sy mamatsy vola azy ireo.\nRaràna ny fikambanana sy ny antoko politika izay manohintohina ny maha-iray tsy mivaky ny Firenena sy ny foto-kevitra repoblikana, sy izay manindrahindra fanjakazakana na fanavakavahana ara-pirazanana, ara-poko na ara-pinoana.\nMandray anjara amin'ny fanehoana safidy ny antoko sy fikambanana politika.\nNy Lalàmpanorenana no miantoka ny zo hijoro ho mpanohitra amin'ny fomba demokratika.\nAorian'ny fifidianana solombavambahoaka, ny vondrona politika mpanohitra dia manendry ny lehiben'ny mpanohitra. Raha tsy misy ny fifanarahana dia ny lehiben'ny vondrona politika mpanohitra izay nahazo vato manan-kery be indrindra tamin’ny latsabato no heverina ho lehiben'ny mpanohitra.\nNy sata mifehy ny mpanohitra sy ny antoko mpanohitra, eken'ity Lalàmpanorenana ity sy manome azy indrindra ny sehatra ahafahana haneho hevitra, dia faritana amin'ny alàlan'ny lalàna."
             },
             {
+              "id": 15,
               "title": "Andininy 15",
               "content": "Manan-jò hilatsaka hofidina amin'ny fifidianana rehetra voalazan'ny Lalàmpanorenana ny olom-pirenena tsirairay rehefa voahaja ny fepetra takian’ny lalàna."
             },
             {
+              "id": 16,
               "title": "Andininy 16",
               "content": "Adidin'ny tsirairay ny manaja ny Lalàmpanorenana sy ireo Andrim-panjakana, ary ireo didy aman-dalàn'ny Repoblika eo am-pizakàna ny zo sy ny fahalalahana eken’ity Lalampanorenana ity."
             }
@@ -90,94 +106,117 @@
           "title": "Zana-dohateny II. Ny amin’ny zo sy adidy momba ny toekarena sy sosialy ary koltoraly",
           "articles": [
             {
+              "id": 17,
               "title": "Andininy 17",
               "content": "Arovana sy iantohan’ny Fanjakàna ny fampiasàna ny zo izay miantoka ny maha-izy azy ny tsirairay, ny fahamendrehany, ny fivelarany feno ara-batana sy ara-tsaina ary ara-pitondrantena."
             },
             {
+              "id": 18,
               "title": "Andininy 18",
               "content": "Voninahitra sy adidy ny fanompoam-pirenena voadidin'ny lalàna.\nNy fanatontosana izany dia tsy manembantsembana ny toerana misy ny olom-pirenena eo amin'ny asany na ny fampiasana ny zo politika ananany."
             },
             {
+              "id": 19,
               "title": "Andininy 19",
               "content": "Mankatò sy mandamina ny zon'ny tsirairay amin'ny fiarovana ny fahasalamana dieny hatrany am-bohoka ny Fanjakana amin'ny alàlan'ny fandaminana ny fitsaboana ara-panjakana maimaimpoana, ka ny maha maimaimpoana izany dia avy amin'ny fahafaha-manao ny firaisankinam-pirenena."
             },
             {
+              "id": 20,
               "title": "Andininy 20",
               "content": "Arovan’ny Fanjakàna ny ankohonana izay singa voajanahary sy andrin’ny fiaraha-monina. Manana zo hanorina fianakaviana ary hamela ireo fananany manokana holovain'ny taranany ny olona tsirairay avy."
             },
             {
+              "id": 21,
               "title": "Andininy 21",
               "content": "Ny Fanjakana no miantoka amin'ny alàlan'ny famoahan-dalàna sy ny fananganana rafitra mpiahy mifanentana amin'ny fiarovana ny fianakaviana mba hahazoany mivoatra tsara, ka ao anatin'izany indrindra ny fiahiana ny reny sy ny zaza."
             },
             {
+              "id": 22,
               "title": "Andininy 22",
               "content": "Raisin’ny Fanjakana ho adidy ny fandraisana ny fepetra ilaina amin’ny fampandrosoana ara-tsaina ny isam-batan’olona ka tsy misy fameperana afa-tsy ny fahaizan’ny tsirairay."
             },
             {
+              "id": 23,
               "title": "Andininy 23",
               "content": "Manan-jo hianatra sy handray fanabeazana ny ankizy tsirairay avy ka tompon’andraikitra amin’izany ny ray aman-dreny ka hajaina ny fahalalahana hisafidy ananany. Ny Fanjakana dia mandray ho adidy ny fampivoarana ny fanofanana arak’asa."
             },
             {
+              "id": 24,
               "title": "Andininy 24",
               "content": "Mandamina fanabeazam-bahoaka maimaimpoana sy takatry ny rehetra hidirana ny Fanjakana. Ny fampianarana ambaratonga voalohany dia tsy maintsy ataon’ny rehetra."
             },
             {
+              "id": 25,
               "title": "Andininy 25",
               "content": "Eken’ny Fanjakana ny fisian’ny fampianarana tsy miankina aminy ary iantohany ny fahalalahana hanome izany fampianarana izany raha toa ka mifandanja amin’ny fepetra mikasika ny fampianarana momba ny fitandremam-pahasalamana sy ny fitondran-tena ary ny lentan’ny fianarana faritan’ny lalàna.\nIreny toeram-pampianarana tsy miankina ireny dia fehezin’ny lalàna momba ny hetra araka ny fepetra faritan’ny lalàna."
             },
             {
+              "id": 26,
               "title": "Andininy 26",
               "content": "Manan-jo handray anjara amin’ny fiainana ara-kolontsain’ny fiaraha-monina, amin’ny fandrosoana ara-tsiansa ary hioty ireo vokatsoa aterak’izany ny isam-batan’olona.\nNy Fanjakana, miaraka amin’ny Vondrombahoakam-paritra itsinjaram-pahefana, no miantoka ny fampivoarana sy ny fiarovana ny vakoka ara-kolontsaim-pirenena sy ny famokarana ara-tsiansa, ara-haisoratra ary ara-javakanto.\nNy Fanjakana, miaraka amin’ny Vondrombahoakam-paritra itsinjaram-pahefana no miantoka ny zom-pitompoana ara-tsaina."
             },
             {
+              "id": 27,
               "title": "Andininy 27",
               "content": "Zo sy adidy ho an’ny olom-pirenena tsirairay ny asa sy ny fiofanana arak’asa.\nNy fidirana amin’ny asam-panjakana dia misokatra ho an’ny olom-pirenena rehetra tsy misy fepetra ankoatry ny fahafaha-manao sy ny fahaizana.\nNa izany aza anefa, azo atao ny mametra isaky ny fari-piadidiana, ny isan’ny olona raisina ho ao amin'ny asam-panjakana ka ho faritan’ny lalàna ny fe-potoana faharetan’izany sy ny fomba fampiharana azy."
             },
             {
+              "id": 28,
               "title": "Andininy 28",
               "content": "Tsy misy natao ho matiantoka amin’ny asa aman-draharahany noho ny maha-lahy na maha-vavy azy, ny taona, ny finoana, ny firehan-kevitra, ny fiaviana, noho ny maha-mpikambana ao anaty rafitra sendikaly na koa ny faharesen-dahatra ara-politika."
             },
             {
+              "id": 29,
               "title": "Andininy 29",
               "content": "Ny olom-pirenena tsirairay dia manan-jo handray valin-kasasarana mifandanja amin’ny asa ataony izay ahafahany miantoka azy sy ny ankohonany, fiainana araka ny fahamendrehan’ny maha-olona."
             },
             {
+              "id": 30,
               "title": "Andininy 30",
               "content": "Miezaka ny Fanjakana hiahy ny filàn’ny olom-pirenena rehetra izay mety ho tsy afaka miasa noho ny taonany, na noho ny kilemany ara-batana na ara-tsaina, ka izany dia amin’ny alalàn’ny firotsahan’ny andrim-panjakana na antokon-draharaha miendrika sosialy an-tsehatra."
             },
             {
+              "id": 31,
               "title": "Andininy 31",
               "content": "Eken’ny Fanjakana ny zon’ny mpiasa tsirairay hiaro ny tombontsoany amin’ny alalàn’ny hetsika sendikaly ary indrindra amin’ny alalàn’ny fahalalahana hanangana sendikà. Malalaka ny fidirana aminà sendika."
             },
             {
+              "id": 32,
               "title": "Andininy 32",
               "content": "Zon’ny mpiasa tsirairay, indrindra amin’ny alàlan'ny solontenany, ny mandray anjara amin’ny famaritana ireo fitsipika sy fepetra momba ny asa."
             },
             {
+              "id": 33,
               "title": "Andininy 33",
               "content": "Ekena ny zo hanao fitokonana nefa izany dia tsy tokony hanohintohina ny fampandehanana ny asam-bahoaka na ny tombontsoa fototry ny Firenena. Ny fepetra hafa fampiasana io zo io dia feran’ny lalàna."
             },
             {
+              "id": 34,
               "title": "Andininy 34",
               "content": "Iantohan’ny Fanjakana ny fananan’ny tsirairay zo hanana fananana manokana. Tsy misy fananan’olona azo ongotana aminy raha tsy noho ny tombontsoam-bahoaka kanefa izany dia tsy maintsy handoavana onitra ara-drariny mialoha.\nNy Fanjakana no miantoka ny fanamorana amin’ny fahazoana ny fizakan-tany amin’ny alàlan'ny famoronana lalàna sy rafitra hisian’ny mangarahara amin’ny fahazoam-baovao momba ny tany."
             },
             {
+              "id": 35,
               "title": "Andininy 35",
               "content": "Amorain’ny Fanjakàna ny fahazoan’ny olom-pirenena trano fonenana amin’ny alàlan'ny fomba famatsiam-bola sahaza."
             },
             {
+              "id": 36,
               "title": "Andininy 36",
               "content": "Tsy maintsy mandroso miandalàna sy tombanana arakaraky ny fahafahany mandoa hetra ny fandraisan’ny olom-pirenena tsirairay anjara amin’ny fandaniam-bolam-panjakana."
             },
             {
+              "id": 37,
               "title": "Andininy 37",
               "content": "Ny Fanjakana no miantoka ny fahalalahan’ny fandraharahana ao anatin’ny faritry ny fanajana ny tombontsoa iombonana, ny filaminam-bahoaka, ny fitondran-tena mendrika ary ny tontolo iainana."
             },
             {
+              "id": 38,
               "title": "Andininy 38",
               "content": "Ny Fanjakana no miantoka ny fiarovana ny renivola sy ny fampiasam-bola hamokarana."
             },
             {
+              "id": 39,
               "title": "Andininy 39",
               "content": "Ny Fanjakana no miantoka ny tsy fiandaniana ara-politika amin’ny Fitondran-draharaham-panjakana, ny Foloalindahy, ny Fitsarana, ny Mpitandro ny filaminana , ny Fampianarana ary ny Fanabeazana.\nIzy no mandamina ny Fitondran-draharaham-panjakana mba hisorohana amin’ireo asa rehetra fandanindaniam-poana sy ny fanodinkodinana ny volam-panjakana ho an’ny tombontsoa manokana na politika."
             }
@@ -191,18 +230,22 @@
       "range": "And.40-And.136",
       "articles": [
         {
+          "id": 40,
           "title": "Andininy 40",
           "content": "Ireto avy ny Andrim-panjakana :\n- ny Filohan’ny Repoblika sy ny Governemanta ;\n- ny Antenimierampirenena sy ny Antenimierandoholona ;\n- ny Fitsarana Avo momba ny Lalàmpanorenana\nNy Fitsarana Tampony, ny Fitsarana Ambony sy ireo fitsarana miankina aminy ary koa ny Fitsarana Avo no manatanteraka ny asam-pitsarana."
         },
         {
+          "id": 41,
           "title": "Andininy 41",
           "content": "Ny lalàna no mamaritra ny habetsahana, ny fepetra ary ny fombafomba fanomezana ny tambin-karama omena ireo olo-manan-kaja nantsoina hisahana andraikitra maha olom-boafidy, na hamita asa, na hanatontosa iraka eo anivon’ireo Andrim-panjakana voalazan’ity Lalàmpanorenana ity.\nAlohan’ny hanatontosana ny asa na iraka sy hisahanana ny andraikiny dia mametraka fanambaram-pananana manoloana ny Fitsaràna Avo Momba ny Lalàmpanorenana ireo sokajin’olona voalazan’ny andàlana etsy ambony.\nTsy misy olona amin’ireo voalazan’ny andininy faha-40 mahazo mandray ivelan’ny zony tamby na karama avy amin’olona na rafitra mizaka zo aman’andraikitry ny isam-batan’olona, vahiny na teratany, raha toa izany manakantsakana ny fanatontosany ara-dalàna ny andraikitra nomena azy fa raha tsy izany dia aongana.\nNy lalàna no mamaritra ny fomba fampiharana ireo fepetra ireo indrindra ny amin’ny famerana ny zo, ny tamby sy ny karama ary ny paika arahina amin’ny fanonganana."
         },
         {
+          "id": 42,
           "title": "Andininy 42",
           "content": "Ny asa sahanina eny anivon’ny Andrim-panjakana dia tsy tokony ho zary loharanon-karena tsy ara-drariny na fitaovana ampiasaina ho amin’ny tombontsoan'ny tena manokana."
         },
         {
+          "id": 43,
           "title": "Andininy 43",
           "content": "Ny Filankevitra Ambony ho amin’ny Fiarovana ny Demokrasia sy ny Fanjakana tan-dalàna no miandraikitra ny fanaraha-maso ny fanajana ny toetra fototry ny fahefana, ny demokrasia sy ny fanajàna ny Fanjakana tan-dalàna, ny fanaraha-maso ny fampiroboroboana sy ny fiarovana ny zon’olombelona.\nNy lalàna no mamaritra ny fombafomba mikasika ny ho anisany sy ny fandaminana ary ny fampandehanana ny Filankevitra Ambony."
         }
@@ -212,6 +255,7 @@
           "title": "Zana-dohateny I. Ny amin’ny mpanatanteraka",
           "articles": [
             {
+              "id": 44,
               "title": "Andininy 44",
               "content": "Ny asan’ny mpanatanteraka dia sahanin’ny Filohan’ny Repoblika sy ny Governemanta."
             }
@@ -221,74 +265,92 @@
               "title": "Toko I. Ny amin’ny Filohan’ny Repoblika",
               "articles": [
                 {
+                  "id": 45,
                   "title": "Andininy 45",
                   "content": "Ny Filohan’ny Repoblika no Filoham-panjakana.\nFidina hiasa mandritra ny dimy taona azo havaozina indray mandeha monja, amin’ny alàlan'ny fifidianana andraisan’ny rehetra anjara mivantana izy.\nIzy no miantoka, amin’ny fanelanelanany, ny fampandehanana ara-dalàna sy mitohy ny fahefam-panjakana, ny fahaleovantenam-pirenena sy ny maha iray tsy anombinana ny tanindrazana. Izy no mitandro ny fiarovana sy ny fanajana ny fiandrianam-pirenena na eto an-toerana na any ivelany. Izy no miantoka ny Firaisam-pirenena.\nNy Filohan’ny Repoblika no miantoka ireo asa ireo ao anatin’ny fahefana izay napetrak’ity Lalàmpanorenana ity aminy."
                 },
                 {
+                  "id": 46,
                   "title": "Andininy 46",
                   "content": "Izay olona rehetra milatsaka hofidina ho Filohan’ny Repoblika dia tsy maintsy mizaka ny zom-pirenena Malagasy, misitraka ny zon’ny isam-batan’olona sy ara-politika, feno dimy amby telopolo taona farafahakeliny amin’ny vaninandro hifaranan’ny fametrahana ny filatsahana hofidina, monina eto amin’ny tanin’ny Repoblikan’i Madagasikara enim-bolana farafahakeliny mialohan’ny vaninandro farany ferana amin’ny fametrahana ny filatsahan-kofidina.\nNy Filohan'ny Repoblika amperin'asa izay milatsaka hofidina amin’ny fifidianana ho Filohan’ny Repoblika dia mametra-pialàna amin'ny toerany enimpolo andro alohan'ny hanatanterahana ny fifidianana Filohan'ny Repoblika. Amin’io anton-javatra io, ny Filohan’ny Antenimierandoholona no misahana ny anjara raharahan’ny Filohan’ny Repoblika andavanandro mandra-panolorana ny fahefana amin’ny Filoha vaovao.\nRaha toa ny Filohan’ny Antenimierandoholona ka milatsaka hofidina ihany koa, dia iarahan’ny Governemanta misahana ny asan’ny Filoham-panjakana.\nVoarara ho an’ireo olo-manan-kaja rehetra misahana andraikitra maha-olom-boafidy na manatanteraka asa eo anivon’ny Andrim-panjakana ary milatsaka hofidina amin’ny fifidianana ho Filohan'ny Repoblika, ny mampiasa mba hanaovana fampielezan-kevitra ny fitaovana na tombontsoa izay ananany noho ny asa ataony. Ny fandikana izany izay voazahan’ny Fitsarana Avo momba ny Lalàmpanorenana fototra dia zary antony tsy hampanan-kery ny filatsahana hofidina."
                 },
                 {
+                  "id": 47,
                   "title": "Andininy 47",
                   "content": "Ny fifidianana ny Filohan'ny Repoblika dia tanterahina telopolo andro farafahakeliny ary enimpolo andro farafahabetsany alohan’ny fiafaran’ny fe-potoana fiasan’ny Filoha am-perinasa.\nIreo fe-potoana ireo dia mihatra aorian’ny fahitana fototra ny fahabangan-toerana ambaran’ny Fitsarana Avo momba ny Lalàmpanorenana amin’ireo toe-javatra voalazan’ny andininy faha-52 sy faha-132 amin’ity Lalàmpanorenana ity.\nVoafidy ho Filohan’ny Repoblika avy hatrany izay mahazo ny antsamanilan’ny vato manan-kery amin'ny fihodinana voalohany. Raha tsy tratra izany, dia asiana fihodinana faharoa ka izay mahazo ny ampahany be indrindra amin’ny vato manan-kery no lany ho Filohan’ny Repoblika amin’ireo mpilatsa-kofidina roa nahazo vato be indrindra tamin’ny fihodinana voalohany. Ny fihodinana faharoa dia atao telopolo andro raha ela indrindra aorian’ny fanambarana ofisialy ny vokatry ny fihodinana voalohany.\nRaha misy ny fahafatesan’ny mpilatsaka hofidina alohan’ny fihodinana iray amin’ny fandatsaham-bato, na koa misy toe-javatra hafa tsy azo anoharana voamarin’ny Fitsarana Avo momba ny Lalàmpanorenana ara-dalàna, dia ahemotra amin’ny vaninandro vaovao ny fifidianana araka ny fepetra sy araky ny fombafomba izay ho faritana amin’ny alàlan'ny lalàna fehizoro.\nNy Filoha am-perinasa tsy nilatsaka hofidina amin’ny fifidianana dia mbola manohy ny asany mandra-pahatongan’ny fotoana hanolorana fahefana ny mpandimby azy araka ny fepetra voalazan’ny andininy faha-48."
                 },
                 {
+                  "id": 48,
                   "title": "Andininy 48",
                   "content": "Ny fanoloram-pahefana ofisialy dia atao eo amin’ny Filoha teo aloha sy ny Filoha voafidy vaovao.\nAlohan’ny handraisany ny asany, ny Filohan’ny Repoblika, amin’ny fotoam-pitsarana manetriketrika ataon’ny Fitsarana Avo momba ny Lalàmpanorenana, eo anoloan’ny Firenena sy eo anatrehan’ny Governemanta, ny Antenimierampirenena, ny Antenimierandoholona ary ny Fitsarana Tampony, dia manao izao fianianana izao :\n« Eto anatrehan’Andriamanitra Andriananahary sy ny Firenena ary ny Vahoaka, mianiana aho fa hanatanteraka antsakany sy andavany ary amim-pahamarinana ny andraikitra lehibe maha-Filohan’ny Firenena Malagasy ahy. Mianiana aho fa hampiasa ny fahefana natolotra ahy ary hanokana ny heriko rehetra hiarovana sy hanamafisana ny firaisam-pirenena sy ny zon’olombelona. Mianiana aho fa hanaja sy hitandrina toy ny anakandriamaso ny Lalàmpanorenana sy ny lalàm-panjakana, hikatsaka hatrany ny soa ho an’ny Vahoaka Malagasy tsy ankanavaka ».\nManomboka ny andro nanaovana ny fianianana ny fe-potoana iasan’ny Filohan’ny Repoblika."
                 },
                 {
+                  "id": 49,
                   "title": "Andininy 49",
                   "content": "Ny asan’ny Filohan’ny Repoblika dia tsy azo ampirafesina aminà asam-panjakana nahavoafidim-bahoaka, asa aman-draharaha hafa, asa ao anatin’ny antoko politika, vondrona politika, na fikambanana, ary fisahanana andraikitra eo anivon’ny fikambanam-pivavahana.\nIzay rehetra fandikana ireo fepetra voalazan’ity andininy ity, voamarin’ny Fitsarana Avo momba ny Lalàmpanorenana, dia zary ho antony amin’ny tsy fahafahana miasa tanteraka ho an’ny Filohan’ny Repoblika."
                 },
                 {
+                  "id": 50,
                   "title": "Andininy 50",
                   "content": "Ny tsy fahafahana miasa miserana manjo ny Filohan’ny Repoblika noho ny tsy fahafahana ara-batana na ara-tsaina hisahana ny asany izay voamarina ara-dalàna dia ambaran’ny Fitsarana Avo momba ny Lalàmpanorenana, rehefa nampakaran’ny Antenimierampirenena ny raharaha, araka ny fanapahan-kevitra nolanian’ny roa ampahatelon’ny mpikambana ao aminy.\nRaha sendra misy tsy fahafahana miasa miserana dia ny Filohan’ny Antenimierandoholona no misahana vonjimaika ny asan’ny Filoham-panjakana."
                 },
                 {
+                  "id": 51,
                   "title": "Andininy 51",
                   "content": "Ny fanalàna ny tsy fahafahana miasa miserana dia tapahan’ny Fitsarana Avo momba ny Lalàmpanorenana, rehefa nanao fampakaran-draharaha ny Antenimiera.\nNy tsy fahafahana miasa miserana dia tsy tokony hihoatry ny telo volana, ka aorian’izay dia azon’ny Fitsarana Avo momba ny Lalàmpanorenana atao ny manambara ny amin’ny fanovàna ny tsy fahafahana miasa miserana ho tsy fahafahana miasa tanteraka aorian’ny fampakaran-draharaha momba izany ataon’ny Antenimiera roa tonta izay manapaka amin’ny latsabato misaraka ary nolanian’ny roa ampahatelon’ny mpikambana ao aminy avy."
                 },
                 {
+                  "id": 52,
                   "title": "Andininy 52",
                   "content": "Aorian’ny fametraham-pialàna, fandaozana ny fahefana na amin’ny endriny inona na amin’ny endriny inona, fahafatesana, ny tsy fahafahana miasa tanteraka na ny fanonganana nambara, ny fahabangan’ny toeran’ny Filohan’ny Repoblika dia hozahan’ny Fitsarana Avo momba ny Lalàmpanorenana fototra.\nRaha vao hita fototra ny fahabangan’ny toeran’ny Filohan’ny Repoblika, dia ny Filohan’ny Antenimierandoholona no misahana ny asan’ny Filoham-panjakana.\nRaha misy tsy fahafahana miasa manjo ny Filohan’ny Antenimierandoholona hita fototry ny Fitsarana Avo momba ny Lalàmpanorenana, dia iarahan’ny Governemanta manontolo misahana ny asan’ny Filoham-panjakana."
                 },
                 {
+                  "id": 53,
                   "title": "Andininy 53",
                   "content": "Aorian’ny fizahana fototra ataon’ny Fitsarana Avo momba ny Lalàmpanorenana ny fahabangan’ny toeran’ny Filohan’ny Repoblika, dia hisy ny fifidianana Filohan’ny Repoblika vaovao atao ao anatin’ny 30 andro farafahakeliny ary 60 andro farafahabetsany, araka ny fepetra voalazan’ny andininy faha-46 sy faha-47 amin’ny Lalàmpanorenana.\nMandritry ny fe-potoana izay miantomboka amin’ny fahitana fototra ny fahabangan-toerana ka hatramin’ny fotoana hanolorana ny fahefana amin'ny Filohan’ny Repoblika vaovao na amin’ny fanesorana ny tsy fahafahana miasa miserana dia tsy azo ampiharina ny andininy faha-60, faha-100, faha-103, faha-162 ary faha-163 amin’ny Lalàmpanorenana."
                 },
                 {
+                  "id": 54,
                   "title": "Andininy 54",
                   "content": "Ny Filohan’ny Repoblika no manendry ny Praiminisitra araka ny tolotry ny antoko na vondrona antoko maro an’isa ao amin’ny Antenimierampirenena.\nNy Filohan’ny Repoblika no mampitsahatra ny Praiminisitra amin’ny asany, aorian’ny fanolorany ny fametraham-pialàn’ny Governemanta, na vokatry ny fahadisoana goavana, na noho ny tsy fahombiazana azo tsapain-tànana.\nNy Filohan’ny Repoblika no manendry ny mambra ao amin’ny Governemanta sy mampitsahatra azy ireo amin’ny asany, araka ny tolokevitra avy amin’ny Praiminisitra."
                 },
                 {
+                  "id": 55,
                   "title": "Andininy 55",
                   "content": "Ny Filohan’ny Repoblika no :\n1. mitarika ny Filankevitry ny Minisitra ;\n2. manao sonia ny hitsivolana noraisina teo amin’ny Filankevitry ny Minisitra araka ireo toe-javatra sy fepetra voalazan’ity Lalàmpanorenana ity ;\n3. manao sonia ny didim-panjakana notapahina teo anivon’ny Filankevitry ny Minisitra ;\n4. manendry, eo anivon'ny Filankevitry ny Minisitra, amin’ny asam-panjakàna ambony izay ferana amin’ny alàlan'ny didim-panjakana raisina eo amin’ny Filankevitry ny Minisitra ny lisitra ;\n5. afaka manapaka, eo amin’ny Filankevitry ny Minisitra, momba ny raharaha rehetra mavesan-danja mikasika ny Firenena, ny amin’ny hanontaniana mivantana ny hevitry ny vahoaka amin’ny alàlan'ny fitsapan-kevi-bahoaka ;\n6. manoritra sy manapaka, eo amin’ny Filankevitry ny Minisitra, ny politika ankapobe arahin’ny Fanjakana.\n7. manara-maso ny fampiharana ny politika ankapoben’ny Fanjakàna voafaritra araka izany sy ny asan’ny Governemanta;\n8. mampiasa ireo ratsa-mangaika mpanara-maso ny Fitondran-draharaham-panjakana.\nAfaka mamindra ny sasantsasany amin’ny fahefany amin’ny Praiminisitra ny Filohan’ny Repoblika."
                 },
                 {
+                  "id": 56,
                   "title": "Andininy 56",
                   "content": "Ny Filohan’ny Repoblika no Filoha Faratampon’ny Foloalindahy ka izy no miantoka ny maha-iray tsy mivaky azy. Amin’izany dia ampian’ny Filankevitra Ambony momba ny Fiarovam-pirenena izy.\nNy Filankevitra Ambony momba Fiarovam-pirenena, eo ambany fahefan’ny Filohan’ny Repoblika, dia miandraikitra indrindra ny fitandroana ny fandriampahalemana sy ny fandrindrana ny asa nankinin’ny Foloalindahy aminy mba hitandroana ny fandriampahalemana eo amin’ny fiaraha-monina. Ny fandaminana izany sy ny anjara raharahany dia faritana amin’ny alàlan'ny lalàna.\nNy Filohan’ny Repoblika no manapaka mandritra ny Filankevitry ny Minisitra ny handefasana miaramila sy fitaovana amin’ny firotsahana any ivelany rehefa avy naka ny hevitry ny Filankevitra Ambony momba ny Fiarovam-pirenena sy ny Antenimiera.\nIzy no manapaka ao amin’ny Filankevitry ny Minisitra ny tetika momba ny fiarovam-pirenena eo amin’ny lafiny miaramila, toekarena, sosialy, kolontsaina, lafin-tany ary tontolo iainana.\nNy Filohan’ny Repoblika no manendry ny miaramila nantsoina hisolotena ny Fanjakana any amin’ireo antokon-draharaha iraisam-pirenena."
                 },
                 {
+                  "id": 57,
                   "title": "Andininy 57",
                   "content": "Ny Filohan’ny Repoblika no manendry sy mampody ireo Masoivoho sy iraka manokan’ny Repoblika any amin’ireo Firenena sy Fikambanana Iraisam-pirenena hafa.\nIzy no mandray ny taratasy fanendrena sy fampodiana ny solontenan’ny Fanjakana sy ny Fikambanana Iraisam-pirenena ankatoavin’ny Repoblikan’i Madagasikara."
                 },
                 {
+                  "id": 58,
                   "title": "Andininy 58",
                   "content": "Ny Filohan’ny Repoblika no manana fahefana hamindra fo amin'ireo voasazy.\nIzy no manolotra ny mari-boninahitra sy ny fampisaloram-boninahitry ny Repoblika."
                 },
                 {
+                  "id": 59,
                   "title": "Andininy 59",
                   "content": "Ny Filohan’ny Repoblika no mamoaka hampanan-kery ny lalàna ao anatin’ny telo herinandro manaraka ny fampitàn’ny Antenimierampirenena ny lalàna nolaniana tanteraka.\nAlohan’ny fahataperan’io fe-potoana io, ny Filohan’ny Repoblika dia afaka mangataka amin‘ny Antenimiera ny fandinihana indray ilay lalàna na ny andininy sasantsasany ao aminy. Tsy azo làvina io fandinihina vaovao io."
                 },
                 {
+                  "id": 60,
                   "title": "Andininy 60",
                   "content": "Azon’ny Filohan’ny Repoblika atao ny mandrava ny Antenimierampirenena rehefa avy nampahafantatra ny Praiminisitra, sy naka ny hevitr’ireo Filohan’ny Antenimiera.\nNy fifidianana ankapobe dia tanterahina ao anatin’ny enimpolo andro farafahakeliny ary sivifolo andro farafahabetsany aorian’ny nanambarana ny fandravàna.\nNy Antenimierampirenena dia mivory avy hatrany ny alakamisy faharoa manaraka ny fifidianana azy. Raha toa io fivoriana io ka atao ivelan’ny fe-potoana tokony hanatanterahana fivoriana ara-potoana, dia hisokatra avy hatrany ary tanterahina mandritra ny dimy ambinifolo andro ilay fotoam-pivoriana.\nTsy misy fandravàna vaovao azo atao ao anatin’ny roa taona manaraka ireo fifidianana ireo."
                 },
                 {
+                  "id": 61,
                   "title": "Andininy 61",
                   "content": "Raha tandindomin-doza ny Andrim-panjakan’ny Repoblika, ny fahaleovantenam-pirenena, ny firaisam-pirenena na ny maha-iray tsy anombinana ny Tanindrazana ka voatohintohina ny fizotra ara-dalànan’ny asan’ireo fahefam-panjakana dia azon’ny Filohan’ny Repoblika atao ny manambara ampahibemaso ny fisian’ny toe-javatra mampihotakotaka amin’ny faritra sasany na eo amin’ny Firenena manontolo, izany hoe ny fotoam-pahamaizana, ny fahalatsahan’ny Firenena an-katerena na ny fampiharana lalàna miaramila. Eo amin’ny Filankevitry ny Minisitra no andraisan’ny Filohan’ny Repoblika ny fanapahana amin’izany rehefa naka ny hevitry ny Filohan’ny Antenimierampirenena, ny Filohan’ny Antenimierandoholona, ny Filohan’ny Fitsarana Avo momba ny Lalàmpanorenana izy.\nNy fanambarana ampahibemaso ny fisian’ny toe-javatra mampihotakotaka dia manome fahefana manokana ny Filohan’ny Repoblika ka lalàna fehizoro no mamaritra ny farafetrany sy ny fahelany.\nRaha vao nambara ampahibemaso fa misy ny toe-javatra mampihotakotaka dia azon’ny Filohan’ny Repoblika atao ny manao lalàna amin’ny alàlan’ny hitsivolana."
                 },
                 {
+                  "id": 62,
                   "title": "Andininy 62",
                   "content": "Ny didy amam-pitsipika noraisin’ny Filohan’ny Repoblika, ankoatr’ireo toe-javatra voalazan’ny andininy faha-54 andàlana voalohany sy faharoa, faha-58 andàlana voalohany sy faharoa, faha-59, faha-81, faha-60, faha-94, faha-100, faha-114, faha-117 ary faha-119 dia iarahany manao sonia amin’ny Praiminisitra ary, raha ilaina, iarahana amin’ny Minisitra voakasik’izany."
                 }
@@ -298,22 +360,27 @@
               "title": "TOKO II. Ny amin’ny Governemanta",
               "articles": [
                 {
+                  "id": 63,
                   "title": "Andininy 63",
                   "content": "Ny Governemanta dia ahitana ny Praiminisitra sy ny Minisitra.\nIzy no manatanteraka ny politika ankapoben’ny Fanjakana.\nIzy no tompon’andraikitra eo anoloan’ny Antenimierampirenena araka ny fepetra voalazan’ny andininy faha-100 sy faha-103 etsy ambany.\nNy Governemanta no mampiasa ny Fitondran-draharaham-panjakana."
                 },
                 {
+                  "id": 64,
                   "title": "Andininy 64",
                   "content": "Ny asan’ny mambra ao amin’ny Governemanta dia tsy azo ampirafesina amin’ny fisahanana ny asa maha-voafidim-bahoaka, ny andraikitra fisoloan-tena amin’ny asa, ny fisahanana asa eo anivon’ny fikambanam-pivavahana, ny fisahanan'asam-panjakana rehetra na ny asa aman-draharaha rehetra andraisan-karama.\nNy mambra rehetra ao amin’ny Governemanta, milatsaka hofidina amin’ny asa maha-voafidim-bahoaka, dia tsy maintsy mametra-pialàna amin’ny asany raha vao nambara fa azo raisina ny filatsahany hofidina."
                 },
                 {
+                  "id": 65,
                   "title": "Andininy 65",
                   "content": "Ny Praiminisitra, Lehiben’ny Governemanta no :\n1. mitarika ny politika ankapoben’ny Fanjakana ;\n2. manana fahefana eo amin’ireo mambra ao amin’ny Governemanta izay izy no mitarika ny asa, sy tompon’andraikitra amin’ny fandrindrana ny asan’ny minisitera ary koa ny fanatanterahana ny fandaharanasam-pirenena rehetra momba ny fampandrosoana ;\n3. manolotra volavolan-dalàna ;\n4. manapaka ny volavolan-dàlana aroso hodinihin’ny Filankevitry ny Minisitra ary apetraka eo amin’ny biraon'ny iray amin’ireo Antenimiera roa tonta ;\n5. miantoka ny fanatanterahana ny lalàna ;\n6. manana ny fahefana hanao didy amam-pitsipika na dia eo aza ny fepetra voalazan’ny andininy faha-55 andàlana faha-3;\n7. manara-maso ny fampiharana ireo didim-pitsarana ;\n8. mampakatra raharaha, raha ilaina, any amin’ny Fisafoan-draharaha Ankapoben'ny Fanjakana sy ireo rantsa-mangaika hafa mpanara-maso ny Fitondran-draharaham-panjakana sy manao izay hampandeha tsara ny raharaham-panjakana, ny fitantanana arak’izay tokony ho izy ny volan’ny vondrombahoakam-panjakana sy ny an’ireo antokon-draharaham-panjakana ;\n9. miantoka ny filaminana, ny fandriampahalemana ary ny maha-marin-toerana manerana ny tanim-pirenena anatin’ny fanajana ny firaisam-pirenena ; amin'izany, izy no mampiasa ireo hery rehetra miandraikitra ny filaminana, ny fitandroana ny fandriampahalemana, ny filaminana anatiny ary ny fiarovana ;\n10. raha misy korontana politika goavana ary alohan’ny hanambaràna fisian’ny toe-javatra mampihotakotaka, dia afaka mampiasa ny mpitandro filaminana mba hamerina amin’ny laoniny ny fandriampahalemana rehefa avy naka ny hevitry ny manam-pahefana ambony ao amin’ny polisy, ny zandarimaria ary ny tafika, ny Filan-kevitra Ambony momba ny Fiarovam-pirenena sy ny Filohan’ny Fitsarana Avo momba ny Lalampanorenana,\n11. Lehiben’ny fitondran-draharaham-panjakana ;\n12. manendry amin’ny fisahanan’asa sivily sy miaramila ary koa amin’izay antokon-draharaha miankina amin’ny Fanjakana, na dia eo aza ny fepetra voalazan’ny andininy faha-55 andàlana faha-4.\nAzony atao mamindra amin’ireo mpikambana ao amin’ny Governemanta ny ampahany amin‘ny fahefany.\nIzy no misahana ny fampandrosoana mifandanja sy mirindra eo amin'ny Vondrom-bahoaka Itsinjaram-pahefana rehetra.\nTsy tohinina ny fepetra voalazan’ny andininy faha-55, nefa raha misy antony manokana, dia azony atao, ny mitarika ny Filankevitry ny Minisitra araka ny fanomezam-pahefana mazava tsara nomen‘ny Filohan’ny Repoblika sy araka ny lahadinika voafaritra."
                 },
                 {
+                  "id": 66,
                   "title": "Andininy 66",
                   "content": "Ny Praiminisitra no mitarika ny Filankevitry ny Governemanta. Eo amin’ny Filankevitry ny Governemanta izy no :\n1. mamaritra ny fampiharana ny politika ankapoben’ny Fanjakana sy manapaka ny fepetra ho raisina hiantohana ny fanatanterahana izany ;\n2. misahana ny anjara raharaha hafa izay tsy maintsy hakàna ny hevitry ny Governemanta araka ny voalazan‘ity Lalàmpanorenana ity sy ireo lalàna manokana ;\n3. manapaka ireo fepetra fampiharana ny fandaharanasam-pirenena momba ny fampandrosoana ara-toekarena sy ara-tsosialy ary koa ny amin’ny fanajariana ny tany, izay novolavolaina miaraka amin’ny manampahefana any amin’ireo Vondrom-bahoaka Itsinjaram-pahefana."
                 },
                 {
+                  "id": 67,
                   "title": "Andininy 67",
                   "content": "Ny didy amam-pitsipika raisin’ny Praiminisitra dia iarahany manao sonia amin’ny Minisitra miandraikitra ny fanatanterahana izany, raha ilaina."
                 }
@@ -325,6 +392,7 @@
           "title": "Zana-dohateny II. Ny amin’ny mpanao lalana",
           "articles": [
             {
+              "id": 68,
               "title": "Andininy 68",
               "content": "Ny Antenimierampirenena sy ny Antenimierandoholona no mandrafitra ny Antenimiera. Izy no mandany ny lalàna sy manara-maso ny asan'ny Governemanta ary ny fanaovana tombana ny politikam-panjakana."
             }
@@ -334,46 +402,57 @@
               "title": "Toko I. Ny amin’ny Antenimierampirenena",
               "articles": [
                 {
+                  "id": 69,
                   "title": "Andininy 69",
                   "content": "Fidin’ny daholobe hiasa mandritry ny dimy taona amin’ny alàlan'ny latsabato mivantana ny mpikambana ao amin’ny Antenimierampirenena ka izay mahazo vato be indrindra no lany.\nNy fomba fanatanterahana ny latsabato dia ferana amin’ny alàlan'ny lalàna fehizoro.\nNy mpikambana ao amin’ny Antenimierampirenena dia mitondra ny anarana hoe: « Solombavambahoakan’i Madagasikara »."
                 },
                 {
+                  "id": 70,
                   "title": "Andininy 70",
                   "content": "Didim-panjakana raisina eo amin’ny Filankevitry ny Minisitra no mametra ny isan’ny mpikambana ao amin’ny Antenimierampirenena, ny fitsinjarana toerana manerana ny tanim-pirenena sy ny fizarazarana ny fari-pifidianana."
                 },
                 {
+                  "id": 71,
                   "title": "Andininy 71",
                   "content": "Tsy azo ampirafesina amin’ny andraikitra hafa maha-olom-boafidim-bahoaka sy izay mety ho fisahanana asam-panjakana hafa ankoatra ny asa fampianarana ny andraikitry ny solombavambahoaka.\nMiato avy hatrany amin’ny maha olom-boafidy azy ny solombavambahoaka voatendry ho mpikambana ao amin’ny Governemanta. Ny mpisolo toerana no misolo azy.\nManatanteraka ny asany araka ny feon’ny fieritreretany ary ao anatin’ny fanajàna ny fitsipika fototra voafaritra araka ny fomba voadidy arahina ao amin’ny andininy faha-79 etsy ambany ny solombavambahoaka."
                 },
                 {
+                  "id": 72,
                   "title": "Andininy 72",
                   "content": "Mandritra ny fe-potoana iasany, ny solombavambahoaka dia tsy afaka miova vondrona politika mba hiditra any aminà vondrona vaovao, ankoatra ny anaran’ny vondrona izay nahavoafidy azy, raha tsy izany dia aongana.\nRaha misy ny fandikàna ny andàlana etsy aloha, dia ambaran’ny Fitsarana Avo momba ny Lalàmpanorenana ny sazy fanonganana.\nNy solombavambahoaka voafidy ka tsy avy aminà antoko iray dia afaka miditra ao amin’ny vondrona parlemantera araka ny safidiny eo anivon’ny Antenimiera.\nNy fananganana Solombavambahoaka iray dia azon’ny Fitsarana Avo momba ny Lalàmpanorenana anaovana fanambarana ihany koa, raha toa izy ka mivoana amin’ny làlam-pitondran-tenan’ny vondrona parlemantera misy azy.\nNy fomba fanonganana sy ny fitsipika momba ny toetra fototra ary ny fitandroana ny hasin’ny asa dia faritana amin’ny alàlan’ny lalàna mikasika ny antoko politika sy ny didy amam-pitsipika mikasika ny famatsiam-bola ny antoko politika."
                 },
                 {
+                  "id": 73,
                   "title": "Andininy 73",
                   "content": "Tsy misy solombavambahoaka na dia iray aza azo enjehina, karohina, samborina, tànana am-ponja, na tsaraina noho ny hevitra naposany na latsabato nataony teo am-panaovana ny asany.\nTsy misy Solombavambahoaka na dia iray aza azo enjehina sy samborina noho ny heloka bevava na heloka tsotra mandritra ny fotoam-pivoriana raha tsy nahazoan-dàlana tamin’ny Antenimiera, raha tsy hoe tratra ambodiomby.\nTsy misy solombavambahoaka na dia iray aza azo samborina ivelan’ny fotoam-pivoriana, raha tsy nahazoan-dàlana tamin’ny Biraon’ny Antenimiera, raha tsy hoe tratra ambodiomby, noho ny fanenjehana nomena alàlana na ny fanamelohana tanteraka.\nAfaka manao fitarainana an-tsoratra any amin’ny Birao maharitry ny Antenimierampirenena izay rehetra olona manana fanamarihana momba ny tsy fahavitan’ny solombavambahoaka iray ny asa nankinina taminy. Tsy maintsy manome valiny amin'ny antsipiriany mikasika ilay raharaha ny Birao ao anatin’ny telo volana."
                 },
                 {
+                  "id": 74,
                   "title": "Andininy 74",
                   "content": "Fidina eo amin’ny fiandohan’ny fotoam-pivoriana voalohany ny Filoha sy ny mpikambana ao amin’ny Birao mandritry ny fotoam-piasany .\nNa izany aza noho ny antony lehibe, dia azo esorina amin’ny toerana misy azy ireo avy ny mpikambana ao amin’ny Birao amin’ny alàlan’ny latsabato miafina ataon'ny roa ampahatelon’ny solombavambahoaka."
                 },
                 {
+                  "id": 75,
                   "title": "Andininy 75",
                   "content": "Mivory ara-potoana indroa isan-taona ny Antenimierampirenena. Ny faharetan’ny fotoam-pivoriana isanisany dia Ferana ho enimpolo andro.\nManomboka ny talata voalohany amin’ny volana mey ny fotoam-pivoriana voalohany ary ny talata fahatelo amin’ny volana oktobra kosa ny fotoam-pivoriana faharoa izay atokana indrindra amin’ny fandaniana ny lalàna mifehy ny fitantanam-bolam-panjakana."
                 },
                 {
+                  "id": 76,
                   "title": "Andininy 76",
                   "content": "Mivory tsy ara-potoana araka ny lahadinika voafaritra ny Antenimierampirenena noho ny fitarihan’ny Praiminisitra, na noho ny fangatahan’ny antsasa-manilan’ny mpikambana ao amin’ny Antenimierampirenena araka ny didim-panjakana noraisin’ny Filohan’ny Repoblika teo amin’ny Filankevitry ny Minisitra.\nTsy mihoatra ny roa ambin’ny folo andro ny faharetan’ny fotoam-pivoriana. Na izany aza anefa, raha vantany vao tapitra ny lahadinika izay niantsoana ny Antenimieram-pirenena, dia faranana amin’ny alàlan'ny didim-panjakana ny fivoriana."
                 },
                 {
+                  "id": 77,
                   "title": "Andininy 77",
                   "content": "Ampahibemaso ny fivorian’ny Antenimierampirenena. Tanana an-tsoratra izany, ary havoaka ho fantatry ny besinimaro araka ny fepetra voalazan’ny lalàna.\nMivory tsy ampahibemaso ny Antenimierampirenena araka ny fangatahana ataon’ny ampahaefatry ny mpikambana ao aminy na ny fangatahana ataon’ny Governemanta. Anaovana fitànana an-tsoratra ny fanapahana nofaranana."
                 },
                 {
+                  "id": 78,
                   "title": "Andininy 78",
                   "content": "Manao fivoriana manokana avy hatrany ny Antenimierampirenena ny talata faharoa manaraka ny fanambarana ny vokatry ny fifidianana azy mba hananganana ny biraony sy ny fanamboarana ny vaomiera.\nManana zo amin’ny toeran’ny filoha lefitra iray ny mpanohitra ary mitarika ny iray amin’ireo vaomiera farafahakeliny.\nMifarana ny fivoriana raha vao tapitra ny lahadinika."
                 },
                 {
+                  "id": 79,
                   "title": "Andininy 79",
                   "content": "Ny fitsipika mikasika ny fampandehanana ny Antenimierampirenena dia faritan’ny lalàna fehizoro ao amin’ny foto-kevitra ankapobe sy faritan’ny fitsipika anatiny ao amin’ny fombafomba arahiny. Avoaka amin’ny Gazetim-panjakan’ny Repoblika ny fitsipika anatiny."
                 }
@@ -383,26 +462,32 @@
               "title": "TOKO II. Ny amin’ny Antenimierandoholona",
               "articles": [
                 {
+                  "id": 80,
                   "title": "Andininy 80",
                   "content": "Loholon’i Madagasikara” no anarana entin’ireo mpikambana ao amin’ny Antenimierandoholona. Dimy taona no fe-potoana iasany, afa-tsy amin’izay mikasika ny Filohan’ny Antenimierandoholona, ho fampiharana ny andininy faha-46 andalana faharoa amin’ity Lalàmpanorenana ity."
                 },
                 {
+                  "id": 81,
                   "title": "Andininy 81",
                   "content": "Ny Antenimierandoholona no misolo tena ireo Vondrom-bahoaka Itsinjaram-pahefana sy ireo vondron-draharaha ara-toekarena ary ara-tsosialy. Izany dia ahitana, ho an’ny roa ampahatelony, mpikambana voafidy mitovy isa ho an’ny Faritany tsirairay, ny iray ampahatelony dia mpikambana tendren’ny Filohan’ny Repoblika, ny ampahany araka ny fanolorana ataon’ny vondrona izay mahasolo-tena be indrindra avy amin’ny hery ara-toekarena sy ara-tsosialy ary ara-kolontsaina, ny ampahany noho ny fahaizana manokana."
                 },
                 {
+                  "id": 82,
                   "title": "Andininy 82",
                   "content": "Lalàna fehizoro no mamaritra ny fitsipika momba ny fampandehanan-draharaha sy ny firafitry ny Antenimierandoholona. Torak’izany koa ny fomba fifidianana sy fanendrena ny mpikambana ao aminy."
                 },
                 {
+                  "id": 83,
                   "title": "Andininy 83",
                   "content": "Maka ny hevitry ny Antenimierandoholona ny Governemanta momba ny raharaha ara-toekarena sy ara-tsosialy ary ny fandaminana ny Vondrom-bahoaka Itsinjaram-pahefana."
                 },
                 {
+                  "id": 84,
                   "title": "Andininy 84",
                   "content": "Mivory ara-potoana indroa isan-taona ny Antenimierandoholona. Enimpolo andro no faharetan’ny fotoam-pivoriana.\nManomboka ny talata voalohany amin’ny volana mey ny fotoam-pivoriana voalohany ary ny talata fahatelo amin’ny volana oktobra kosa ny fotoam-pivoriana faharoa izay atokana indrindra amin’ny fandaniana ny lalàna mifehy ny fitantanam-bolam-panjakana.\nAfaka manao fotoam-pivoriana manokana ihany koa izy araka ny fiantsoana ataon’ny Governemanta. Ny lahadinika amin’izany dia ferana amin'ny alàlan'ny didim-panjakana fiantsoana izay noraisana teo amin’ny Filankevitry ny Minisitra.\nRehefa tsy mivory ny Antenimierampirenena, ny Antenimierandoholona dia tsy afaka mandinika afa-tsy ny raharaha nangatahin’ny Governemanta ny heviny, afa-tsy izay volavolan-dalàna."
                 },
                 {
+                  "id": 85,
                   "title": "Andininy 85",
                   "content": "Ny fepetra voalazan’ny andininy faha-71 hatramin’ny faha-79 dia ampiharina amin’ny Antenimierandoholona ihany koa."
                 }
@@ -412,78 +497,97 @@
               "title": "TOKO III. Ny amin'ny fifandraisan'ny governemanta sy ny antenimiera",
               "articles": [
                 {
+                  "id": 86,
                   "title": "Andininy 86",
                   "content": "Samy manam-pahefana hanolotra volavolan-dalàna ny Praiminisitra, ny Solombavambahoaka ary ny Loholona.\nDinihina eo amin’ny Filankevitry ny Minisitra ny volavolan-dalàna ary apetraka amin’ny birao iray amin’ireo biraon’ny Antenimiera roa.\nNy lahadiniky ireo Antenimiera dia ahitana araka ny laharampahamehana sy araka ny lahadinika faritan’ny Governemanta, ny ady hevitra momba ny volavolan-dalàna napetraky ny Praiminisitra teo amin’ny Biraon’ny Antenimierampirenena na teo amin’ny Biraon’ny Antenimierandoholona.\nNy tolo-dalàna sy ny fanitsiana napetraky ny mpikambana ao amin’ny Antenimiera dia ampahafantarina ny Governemanta, izay manana fe-potoana telopolo andro ho an’ny tolo-dalàna ary dimy ambin’ny folo andro amin’ny fanitsiana mba hanaovany fanamarihana.\nRehefa tapitra izany fe-potoana izany, dia miroso amin’ny fandinihana ny tolo-dalàna sy ny fanitsiana mba handaniana azy ny Antenimiera nametrahana izany.\nTsy azo raisina ny tolo-dalàna na ny fanitsiana raha toa ny fandaniana azy ireo ka misy fiatraikany eo amin’ny sehatry ny fanatanterahana ny tetibola an-dalam-panatanterahana, na ny fihenan’ny loharam-bolam-panjakana na ny fitambesaran’ny lolohan’ny Fanjakana, afa-tsy izay mikasika ny lalàna mifehy ny fitantanam-bolam-panjakana.\nRaha hita mandritra ny fomba arahina amin’ny fanaovan-dalàna fa tsy tafiditra ao anatin’ny faritra sahanin’ny lalàna ny tolo-dalàna sy ny fanitsiana dia afaka manohitra ny tsy fahazoana mandray izany ny Governemanta. Raha misy ny tsy fifanarahana eo amin’ny Governemanta sy ny Antenimierampirenena na ny Antenimierandoholona , dia mamoaka didy ao anatin’ny valo andro ny Fitsarana Avo momba ny Lalàmpanorenana araka ny fangatahana ataon'ny Praiminisitra na ny Filohan’ny iray amin’ireo Antenimiera mpanao lalàna.\nFotoam-pivoriana herinandro roa amin’ny efatra farafahakeliny no atokana handinihina ireo rijan-teny sy ireo adi-hevitra izay nangatahin’ny Governemanta ho soratana eo amin’ny lahadinika."
                 },
                 {
+                  "id": 87,
                   "title": "Andininy 87",
                   "content": "Ny Antenimiera no mandany ny lalàna fehizoro, ny lalàna mifehy ny fitantanam-bola ary ny lalàna tsotra araka ny fepetra faritan’ity Lalàmpanorenana ity."
                 },
                 {
+                  "id": 88,
                   "title": "Andininy 88",
                   "content": "Ankoatra ireo anton-javatra ampisahanan’ny andininy hafa ao amin’ny Lalàmpanorenana azy, dia lalàna fehizoro ihany no mametra :\n1. ny fitsipika mikasika ny fifidianana ny Filohan’ny Repoblika ;\n2. ny fombafomba amin’ny fandatsaham-bato mikasika ny fifidianana solombavambahoaka, ny fepetra ahafahana milatsaka hofidina, ny fomba itondrana ny tsy fampirafesana ny asa aman-draharaha sy ny fanonganana, ny fitsipika momba ny fanoloana raha misy fahabangan-toerana, ny fandaminana ary ny fampandehanana ny Antenimierampirenena ;\n3. ny fombafomba amin’ny fandatsaham-bato mikasika ny fifidianana Loholona, ny fepetra ahafahana milatsaka hofidina, ny fomba itondrana ny tsy fampirafesana ny asa aman-draharaha sy ny fanonganana, ny fitsipika momba ny fanoloana raha misy fahabangan-toerana, ny fandaminana ary fampandehanana ny Antenimierandoholona ;\n4. Ny fitsipika mifehy ny fahefana, ny fomba fandaminana sy ny fampandehanana ny Vondrom-bahoakam-paritra Itsinjaram-pahefana ary koa ny fitsipika mifehy ny fitantanana ny raharahany manokana;\n5. ny fandaminana, ny firafitra, ny fampandehanan-draharaha ary ny andraikitry ny Fitsarana Tampony sy ireo Fitsaran-dehibe telo mandrafitra azy. Toa izany koa ny mikasika ny fanendrena ireo mpikambana ao aminy sy ireo izay mikasika ny paika arahina eo anatrehany;\n6. ny sata mifehy ny Mpitsara;\n7. ny fandaminana sy ny fampandehanana ary ny anjara raharahan’ny Filankevitra Ambony momba ny Mpitsara ;\n8. ny fandaminana, ny fampandehanana, ny anjara raharaha, ny fampakaran-draharaha ary ny paika ady arahina manoloana ny Fitsarana Avo ;\n9. ny fandaminana, ny fampandehanana, ny anjara raharaha, ny fampakaran-draharaha ary ny paika arahina manoloana ny Fitsarana Avo momba ny Lalàmpanorenana ;\n10. ny Fehezan-dalàna momba ny fifidianana ;\n11. ny fepetra ankapobe mikasika ny lalàna mifehy ny fitantanam-bolam-panjakana ;\n12. ny fepetra ankapobe mikasika ny Fifampiraharaham-barotra amin’ny Fanjakana amin’ny harena an-kibon’ny tany;\n13. ny fisian’ny toe-javatra mampihotakotaka ary koa ny famerana ny fahafahan’ny vahoaka, ny isam-batan’olona ary iombonana mandritra izany fotoana izany ;\n14. ny fepetra fampitoviana ara-bola hisian’ny tombom-pitoviana eo amin’ny samy vondrom-bahoakam-paritra."
                 },
                 {
+                  "id": 89,
                   "title": "Andininy 89",
                   "content": "Ny lalàna fehizoro dia laniana sy ovàna araka ireto fepetra manaraka ireto :\n1. ny volavolan-dalàna na tolo-dalàna dia tsy aroso hotapahina sy holanian’ny Antenimiera voalohany nandray azy raha tsy tapitra ny fe-potoana dimy ambin’ny folo andro aorian’ny nametrahana azy ;\n2. ny paika arahina voalazan’ny andininy faha-86, faha-96 ary faha-98 no ampiharina. Na izany aza anefa, tsy maintsy ny antsasa-manilan’ny mpikambana ao amin’ny Antenimiera tsirairay no mandany ny lalàna fehizoro, raha misy ny tsy fifanarahan-kevitra eo amin’ny Antenimiera roa tonta izay samy efa nandinika izany indroa, dia ny Antenimierampirenena amin’ny alàlan'ny latsabato iadanian’ny roa ampahatelon’ny mpikambana ao aminy no mandray fanapahan-kevitra farany.\nRaha toa ka tsy nolanian’ny Antenimierampirenena ny volavolan-dalàna fehizoro alohan’ny fiafaran’ny fotoam-pivoriana dia azo ampiharina amin’ny alàlan'ny hitsivolana ny fepetra entin’io volavolan-dalàna io, ka ampidirina ao raha ilaina izany, ny iray na maromaro amin’ireo fanitsiana nolanian’ny Antenimiera iray.\n3. tsy maintsy mitovy ny fenitra andanian’ny Antenimiera roa tonta ny lalàna fehizoro mikasika ny Antenimierandoholona.\nTsy azo avoaka hanan-kery ny lalàna fehizoro raha tsy efa nambaran’ny Fitsarana Avo momba ny Lalàmpanorenana fa mifanaraka amin’ny Lalàmpanorenana."
                 },
                 {
+                  "id": 90,
                   "title": "Andininy 90",
                   "content": "Ao anatin’ny faritry ny lalàna fehizoro ampiharina mikasika izany, ny lalàna mifehy ny fitantanam-bolam-panjakana dia :\n1. mamaritra ny loharanom-bola sy ny lolohan’ny Fanjakana araka ny fepetra sy araka ny voalazan’ny lalàna fehizoro ;\n2. mamaritra ho an’ny taom-piasana ny karazana, ny habetsahana, ary ny fanokanana ny loharanom-bola sy ny lolohan’ny Fanjakana ary koa ny fifandanjana eo amin’ny teti-bola sy ny vola vokatr’izany araka ny fanerena eo amin’ ny lafiny toe-karena faobe.\n3. mamaritra ny tahan’ny fidiram-bola tokony hiverina amin’ny Fanjakana sy ny Vondrom-bahoaka Itsinjaram-pahefana ary koa ny karazana sy ny tahan’ny hetra sy ny haba ambony indrindra raisina mivantana ho an’ny tetibolan’izany vondrom-bahoaka izany faritana eo amin’ny Filankevitry ny Minisitra.\nNy lalàna fehizoro no mamaritra ny fomba fampiharana ireo fepetra voalazan’ity andininy ity ary koa ny fepetra momba ny fampitoviana ny vola hisian’ny tombom-pitoviana eo amin’ny samy Vondrom-bahoaka Itsinjaram-pahefana.\nNy lalàna no mamaritra mazava ny fepetra fisamboram-bola sy manapaka ny mety ho fananganana ny tahiry.\nNy lalàna no mamaritra:\n- Ny fombafomba fampiasana ny tahiry fisamboram-bola avy any ivelany sy ny fanaraha-maso ataon’ny Antenimiera sy araka ny lalàna;\n- Ny fomba fitondrana ny andraikitry ny tena manokana sy ara-bolan’ny fahefana momba ny fitantanam-bola, tompo-mariky ny fanodinkodinana ny vola nosamborina ary koa ny tsy fidiran’ny Fanjakana andraikitra amin’izany."
                 },
                 {
+                  "id": 91,
                   "title": "Andininy 91",
                   "content": "Ny lalàna momba ny fandaharanasa no mamaritra ny tanjona kendrena amin’ny asa ataon’ny Fanjakana mikasika ny toekarena, tontolo iainana, sosialy ary fanajariana ny tany.\nNy fepetra voalazan’ity andininy ity dia soritana mazava sy fenoina amin’ny alàlan'ny lalàna fehizoro."
                 },
                 {
+                  "id": 92,
                   "title": "Andininy 92",
                   "content": "Mandritra ny fivoriana ara-potoana faharoa no andinihan’ny Antenimiera ny volavolan-dalàna mifehy ny fitantanam-bolam-panjakana.\nNy Minisitra miandraikitra ny Fitantanam-bola sy ny Tetibola no manomana ny volavolan-dalàna mifehy ny fitantanam-bolam-panjakana ka eo ambany fahefan’ny Praiminisitra, Lehiben’ny Governemanta no anaovany izany.\nManana fe-potoana enimpolo andro farafahabetsany ny Antenimiera handinihana izany.\nManana fe-potoana telopolo andro farahahabetsany manomboka eo amin’ny fotoana nanolorana ny volavolan-dalàna taminy ny Antenimierampirenena mba handinihana azy am-boalohany. Rehefa tsy naneho ny heviny tao anatin’izay fe-potoana izay izy, dia heverina ho toy ny efa nandany azy sahady ka dia atolotra ny Antenimierandoholona indray ilay volavolan-dalàna.\nMitovy amin’izay fepetra izay ihany, dia manana fe-potoana dimy ambin’ny folo andro manomboka ny fampitana ny volavolan-dalàna ny Antenimierandoholona mba handinihany azy am-boalohany ary ny Antenimera tsirairay dia manana fe-potoana dimy andro hanaovany ny fandinihana azy manaraka.\nRaha misy iray amin’ireo Antenimiera tsy maneho ny heviny tao anatin’ny fe-potoana voatondro, dia heverina ho toy ny efa nanao latsabato nanekena ilay rijan-teny natolotra ho dinihana izy.\nRaha tsy nolanian’ny Antenimiera alohan’ny fiafaran’ny fotoam-pivoriana faharoa ny volavolan-dalàna momba ny fitantanam-bola, dia ampidirina ao ny fanitsiana iray na maromaro neken’ny Antenimiera roa tonta.\nIzay fanitsiana rehetra natao tamin’ilay volavolan-dalàna momba ny tetibola ka miteraka fitomboan’ny fandaniana na fihenan’ny loharanom-bolam-panjakana dia tsy maintsy ampiarahina amin’ny tolo-kevitra momba ny fampitomboana ny vola miditra na ny toekarena mifandanja amin’izany.\nRaha tsy napetraka ara-potoana mba holaniana alohan’ny fiantombohan’ny taom-piasana ny volavolan-dalàna momba ny fitantanam-bolam-panjakana amin’ny taom-piasana iray, dia omena alàlana ny Praiminisitra ahazoany manao ny famoriana ny hetra ary manokatra amin’ny alàlan'ny didim-panjakana ny sorabola mifandraika amin’ireo asa nolaniana tamin’ny latsabato.\nLalàna fehizoro no mamaritra ny fomba fankatoavana ny volavolan-dalàna momba ny fitantanam-bolam-panjakana."
                 },
                 {
+                  "id": 93,
                   "title": "Andininy 93",
                   "content": "Ny Fitsarana momba ny Kaonty no manampy ny Antenimiera amin’ny fanaraha-maso ny asa ataon’ny Governemanta. Manampy ny Antenimiera sy ny Governemanta amin’ny fanaraha-maso ny fanatanterahana ny lalàna mifehy ny fitantanam-bolam-panjakana ary koa amin’ny fanombanana ny politikam-panjakana izy. Amin’ny fifandraisany amin’ny vahoaka, izy dia mandray anjara amin’ny fampahafantarana ny olom-pirenena.\nNy kaontin’ny Fitondran-draharaham-panjakana dia tokony ho ara-dalàna sady marina. Manome endrika azo itokiana amin’ny vokatry ny fitantanany, ny fananany ary ny toe-bola izany."
                 },
                 {
+                  "id": 94,
                   "title": "Andininy 94",
                   "content": "Ny Filohan’ny Repoblika no mifandray amin’ny Antenimiera amin’ny alàlan'ny hafatra tsy azo iadian-kevitra."
                 },
                 {
+                  "id": 95,
                   "title": "Andininy 95",
                   "content": "Ankoatra ireo raharaha ampisahanin’ny andininy hafa ao amin’ny Lalàmpanorenana azy dia :\nI- Ny lalàna no mametra ny fitsipika mikasika :\n1. ny zon’ny olom-pirenena sy ny antoka fototra nomena ny tsirairay, fikambanana, antoko politika ary ny vondrona hafa rehetra ho amin’ny fampiasana ny zo sy ny fahalalahana ary koa ny adidy aman’andraikitr’izy ireo ;\n2. ny fifandraisana iraisam-pirenena ;\n3. ny zom-pirenena ;\n4. ny Banky Foibe sy ny fomba ny famoaham-bola ;\n5. ny fivezivezen’ny olona ;\n6. ny fitsipika mikasika ny paika arahina amin’ny ady madio sy ny raharaham-barotra ;\n7. ny fitsipika mikasika ny paika arahina amin’ny ady atao amin’ny Fanjakana sy ny paika arahina amin’ny fitantanam-bolam-panjakana ;\n8. ny famaritana ny heloka bevava sy ny heloka tsotra ary koa ny sazy ampiharina amin’izany, ny paika ady heloka, ny famotsoran-keloka ;\n9. ny fitsipika mikasika ny fifanoheran’ny lalàna sy ny an’ny fahefana ;\n10. ny fananganana rafi-pitsarana vaovao sy ny fahefana tandrify azy avy ary koa ny fandaminana sy ny fitsipika mifehy ny paika arahina izay ampiharina amin’izany ;\n11. ny fandaminana ny fianakaviana, ny sata sy ny fizakan-jon’ny isam-batan’olona, ny fehin’ny fanambadiana, ny fandovana sy fanomezana ;\n12. ny fifehezana araka ny lalàna ny fitompoana, ny fizakà-manana, ny adidy ateraky ny zo isam-batan’olona sy ny ara-barotra ary ny fepetra ahazoana manaisotra amin’ny tompony ny fananany na ny fampiasana azy tsy azo lavina noho ny filan’ny besinimaro na ny famindrana ny fitompoana azy amin’ny Fanjakana ;\n13. ny fananganana ny sokajin’antokon-draharaham-panjakana ;\n14. ny sata sy ny fitondrana ny fizakan-tenan’ireo Oniversite, ary koa ny sata mifehy ny mpampianatra eny amin’ny fampianarana ambaratonga ambony ;\n15. ny sori-dàlana lehibe amin’ny fanomezan-danja ny fampianarana ambaratonga fototra sy faharoa ;\n16. ny loharanon-karena iankinan’ny fiainam-pirenena;\n17. ny fandaminana sy ny fampandehanana ny Vondrombahoakam-paritra itsinjaram-pahefana ;\n18. ny sata manokan’ny Renivohitry ny Repoblika, ny ampahany sasantsasany amin’ny tanim-pirenena, ireo lapam-panjakana sy ireo trano isan’ny fananam-panjakana, ireo seranana sy ny zotram-pifamoivoizana, ireo seranam-piaramanidina, ary koa ny satan’ireo harena an-dranomasina ;\n19. ny karazana, ny fototra ary ny taha farany ambony amin’ny hetra sy haba any amin’ny Vondrombahoakam-paritra itsinjaram-pahefana ;\n20. ny Filankevitry ny Andrin’ny Mari-boninahitra Malagasy ;\n21. ny fanatsarana ny tanàna sy ny fonenana ;\n22. ny fepetra amin’ny fisitrahan’ny vahiny tany ;\n23. ny fepetra famindrana amin’ny Fanjakana ny tany tsy nohamaintisamolaly ;\n24. ny fandaminana ny fampandehanana ary anjara raharahan’ny Fisafoan-draharaham-panjakana Ankapobe ary ireo rantsana hafa momba ny fanaraha-maso ny Fitondran-draharaham-panjakana.\nII- Ny lalàna no mamaritra ny foto-kevitra ankapobe momba :\n1. ny fandaminana ny fiarovam-pirenena sy ny fampiasan’ireo manam-pahefana sivily ny Foloalindahy na ny Hery mpitandro ny filaminana ;\n2. ny sata ankapobe mifehy ny mpiasam-panjakana sivily sy miaramila eto amin'ny Firenena ary ny mpiasam-panjakana any amin’ny faritra;\n3. ny lalàna mifehy ny asa, ny zo sendikaly, ny zo hitokona ary ny fitsinjovana ara-tsosialy ;\n4. ny famindrana ny fananan’ny orinasa na antokon-draharaha miankina amin’ny Fanjakana amin’olon-tsotra na ny mifamadika amin’izany ;\n5. ny fandaminana na ny fampandehanana ny sehatrasa samihafa misahana lalàna, toekarena, sosialy ary kolontsaina ;\n6. ny fiarovana ny tontolo iainana.\nIII- Ny fivorian’ny Antenimiera roa tonta mitambatra ho Kongresy irery, amin’ny alàlan'ny latsabato iandanian’ny antsasa-manilan’ny mpikambana rehetra ao anatiny, no afaka manome alàlana hamakiana ady amin’ny firenen-kafa."
                 },
                 {
+                  "id": 96,
                   "title": "Andininy 96",
                   "content": "Ny volavolan-dalàna sy ny tolo-dalàna rehetra dia dinihin’ny Antenimiera nandray azy voalohany vao ampitaina any amin’ny Antenimiera ankilany. Ifandimbiasan’ny Antenimiera roa tonta ny ady hevitra mandra-pisian’ny fandaniana rijan-teny tokana.\nRaha toa ka tsy mety lany ny volavolan-dalàna na tolo-dalàna iray rehefa nodinihin’ny Antenimiera tsirairay indroa ka misy tsy fifanarahan-kevitra tamin’izy roa tonta, na rehefa nodinihin’ny Antenimiera tsirairay indray mandeha rehefa nanambara ny fisian’ny hamehana ny Governemanta, dia afaka mandray fanapahan-kevitra ny Praiminisitra hamory vaomiera ikambanana isasahana izay ampiandraiketina fanolorana rijan-teny momba ireo fepetra mbola iadian-kevitra. Ny rijan-teny novolavolan’io vaomiera ikambanana io dia azon’ny Governemanta atolotra ny Antenimiera roa tonta mba hankatoavina. Tsy misy fanitsiana azo raisina raha tsy nahazoana ny faneken’ny Governemanta.\nRaha toa ka tsy afaka mandany rijan-teny tokana iombonana ny vaomiera na tsy nolaniana araka ireo fepetra voalaza ao amin’ny andalana etsy aloha ilay rijan-teny, dia ny Antenimierampirenena, amin’ny alàlan'ny latsabato iandanian’ny antsasa-manilan’ny mpikambana ao aminy no manapa-kevitra farany."
                 },
                 {
+                  "id": 97,
                   "title": "Andininy 97",
                   "content": "Manana endrika didy amam-pitsipika ny raharaha hafa tsy tafiditra ao anatin'ny faritra sahanin'ny lalàna. Azo ovàna amin’ny alàlan'ny didim-panjakana izay avoaka rehefa milaza ny heviny ny Fitsarana Avo momba ny Lalàmpanorenana ireo rijan-teny miendrika lalàna tafiditra ao anatin'izany raharaha izany.\nIreo rijan-teny miendri-dalàna mety ho raisina, rehefa manan-kery ity Lalàmpanorenana ity dia tsy azo ovàna amin’ny alàlan'ny didim-panjakana raha tsy nambaran’ny Fitsarana Avo momba ny Lalàmpanorenana fa miendrika didy amam-pitsipika izany araka ny voalazan’ny andalana etsy aloha."
                 },
                 {
+                  "id": 98,
                   "title": "Andininy 98",
                   "content": "Ny Governemanta, raha manamby ny andraikitra araka ny fepetra voalazan’ny andininy faha-100 etsy ambany, dia afaka mitaky amin’ny Antenimiera tsirairay mba hanapa-kevitra avy amin’ny alàlan’ny latsabato tokana mikasika ny fepetra manontolo na ampahany voalazan’ny rijan-teny iadian-kevitra :\n- mandritra ny fivoriana tsy ara-potoana, raha toa ka voatolotra valo amby efapolo ora mialoha ny fisokafan’ny fivoriana ireo rijan-teny ireo ;\n- ao anatin’ny valo andro farany amin’ny fotoam-pivoriana ara-potoana tsirairay avy."
                 },
                 {
+                  "id": 99,
                   "title": "Andininy 99",
                   "content": "Ao anatin’ny telopolo andro nanendrena azy no anoloran’ny Praiminisitra ny fandaharan’asany momba ny fampiharana ny politika ankapoben’ny Fanjakana amin’ny Antenimiera izay afaka manome tolo-kevitra.\nRaha tsapan’ny Governemanta eo am-panatanterahana ny asa fa misy fanovàna fototra tokony hatao amin’io fandaharanasa io, dia entin’ny Praiminisitra eny amin’ny Antenimierampirenena izay afaka manome tolo-kevitra izany fanovàna izany."
                 },
                 {
+                  "id": 100,
                   "title": "Andininy 100",
                   "content": "Aorian’ny fandinihana nataon’ny Filankevitry ny Minisitra, dia azon’ny Praiminisitra atao ny manamby ny andraikitry ny Governemantany amin’ny fametrahana fangataham-pitokisana.\nTsy azo atao ny fandatsa-bato raha tsy afaka valo amby efapolo ora aorian’ny fametrahana ny fangataham-pitokisana. Raha toa ka ny antsasa-manilan’ny mpikambana ao amin’ny Antenimierampirenena no mitsipaka ny fangataham-pitokisana dia mametraka ny fialany amin’ny Filohan’ny Repoblika ny Governemanta.\nNy Filohan’ny Repoblika no manendry ny Praiminisitra araka ny andininy faha-54."
                 },
                 {
+                  "id": 101,
                   "title": "Andininy 101",
                   "content": "Isaky ny fiandohan’ny fivoriana ara-potoana voalohany no anoloran’ny Governemanta amin’ny Antenimierampirenena ny tatitra momba ny fanatanterahana ny fandaharanasany.\nArahina adihevitra mahakasika ny asan’ny Governemanta sy ny fanombanana ny politikam-panjakana ny fanolorana."
                 },
                 {
+                  "id": 102,
                   "title": "Andininy 102",
                   "content": "Ny fomba ampiasain’ny Antenimiera ahafantarany ny asa sahanin’ny Governemanta dia ny fanontaniana am-bava, ny fanontaniana an-tsoratra, ny fanadinana hentitra ary ny fampiasana ny vaomiera mpanao famotorana.\nFivoriana iray isaky ny dimy ambin’ny folo andro farafahakeliny, ka anatin’izany ny fivoriana atao mandritra ny fotoam-pivoriana tsy ara-potoana voalazan’ny andininy faha 76 dia atokana ho an’ny fanontanian’ireo mpikambana ao amin’ny Antenimiera sy ireo valiny avy amin’ny Governemanta .\nFivoriana telo andro isam-bolana no atokana ho amin’ny lahadinika izay notapahin’ny Antenimiera tsirairay araka ny fitarihan’ny vondron’ny mpanohitra ao amin’ny Antenimiera voakasika ary koa avy ny an’ny vodron’ireo vitsy an’isa."
                 },
                 {
+                  "id": 103,
                   "title": "Andininy 103",
                   "content": "Azon’ny Antenimierampirenena atao ny maneho tsy fankasitrahana ny andraikitry ny Governemanta amin’ny alàlan'ny latsabato fitsipaham-pitokisana.\nTsy azo raisina anefa ny tolo-kevitra toy izany raha tsy ny antsasaky ny mpikambana ao amin’ny Antenimierampirenena no manao sonia azy. Valo amby efapolo ora aorian’ny fametrahana ny tolo-kevitra hotapahina vao azo atao ny latsabato.\nTsy lany ny fitsipaham-pitokisana raha tsy ny roa ampahatelon’ny mpikambana ao amin’ny Antenimierampirenena no mankato azy.\nRaha lany izany fitsipaham-pitokisana izany dia mametraka ny fialany amin’ny Filohan’ny Repoblika ny Governemanta ."
                 },
                 {
+                  "id": 104,
                   "title": "Andininy 104",
                   "content": "Ny Antenimiera amin’ny alalan’ny latsa-bato ataon’ny antsasa-manilan’ny mpikambana mandrafitra ny Antenimiera tsirairay dia afaka mamindra ny fahefany amin’ny Filohan’ny Repoblika hanao lalàna mandritra ny fotoana voafetra sy mikasika toe-javatra voafaritra.\nNy fanomezam-pahefana dia manome alàlana ny Filohan’ny Repoblika handray fepetra amin’ny ankapobeny momba ny toe-javatra mahakasika ny sehatry ny lalàna, amin’ny alalan’ny hitsivolana raisina eo amin’ny Filankevitry ny Minisitra."
                 }
@@ -495,6 +599,7 @@
           "title": "Zana-dohateny III. Ny amin’ny filankevitra ara-toekarena, ara-tsosialy ary ara-kolontsaina",
           "articles": [
             {
+              "id": 105,
               "title": "Andininy 105",
               "content": "Ny Filankevitra ara-toekarena, ara-tsosialy ary ara-kolontsaina izay ampakaran’ny Governemanta raharaha, no manome ny heviny mikasika ny volavolan-dalàna, hitsivolana na didim-panjakana ary koa mikasika ireo tolo-dalàna izay naroso hodinihiny.\nManam-pahefana izy handinika ny volavolà sy tolo-dalàna manana endrika ar-toekarena ara-tsosialy ary ara-kolontsaina ankoatra ny lalàna momba ny fitantanam-bolam-panjakana. Afaka mandray amin’ny alalan’ny tenany manokana ireo fandinihana na famotopotorana rehetra mikasika ireo raharaha ara-toekarena, ara-tsosialy ary ara-kolontsaina izy. Ampitaina any amin’ny Filohan’ny Repoblika ny tatitra ataony.\nNy firafitra, ny anjara raharaha ary ny fampandehanana ny Filan-kevitra ara-toekarena, ara-tsosialy ary ara-kolontsaina dia Ferana amin’ny alalan’ny lalàna fehizoro."
             }
@@ -509,34 +614,42 @@
               "title": "Toko I. Ny amin'ny fe-kevitra fototra",
               "articles": [
                 {
+                  "id": 106,
                   "title": "Andininy 106",
                   "content": "Eto amin’ny Repoblikan’i Madagasikara, ny Fitsarana Tampony, ny Fitsarana Ambony sy ireo fitsarana miankina aminy ary koa ny Fitsarana Avo no mitsara araka ny Lalàmpanorenana sy araka ny lalàna, amin’ny anaran’ny Vahoaka Malagasy."
                 },
                 {
+                  "id": 107,
                   "title": "Andininy 107",
                   "content": "Ny Filohan’ny Repoblika no miantoka ny fahaleovantenan’ny fitsarana.\nAmin’izany izy, dia ampian’ny Filankevitra Ambony momba ny Mpitsara izay izy no Filohany.\nNy Minisitra misahana ny Fitsarana no Filoha lefitra.\nNy Filankevitra Ambony momba ny Mpitsara, rantsa-mangaika miandraikitra ny fiarovana, ny fitantanana ny fiainan’ny mpiasa manao ho anton-draharaha ny asa sy ny famaizana ny mpitsara no miandraikitra ny :\n- fitandroana indrindra indrindra ny fanajana ny lalàna sy ireo fepetra raketin’ny sata mifehy ny Mpitsara,\n- fanaraha-maso ny fanajana ny fitsipika momba ny fitandroana ny hasin’ny asa amin’ny maha mpitsara ,\n- fanomezana torolàlana hanatsarana ny fomba fitantanan-draharaham-pitsarana, indrindra amin’izay mikasika ny fepetra eo amin’ny lafin’ny lalàna na didy amam-pitsipika mikasika ny antokom-pitsarana sy ny Mpitsara.\nNy mambra ao amin’ny Governemanta, ny Antenimiera, ny Filankevitra Ambony momba ny fiarovana ny demokrasia sy ny Fanjakana tan-dalàna, ny Lehiben’ny Fitsarana ary koa ny fikambanana natsangana ara-dalàna dia afaka mitondra ny raharaha manoloana ny Filankevitra Ambony momba ny Mpitsara.\nNy fitsipika mikasika ny fandaminana, ny fampandehanana ary ny anjara raharahan’ny Filankevitra Ambony momba ny Mpitsara dia ferana amin’ny alàlan'ny lalàna fehizoro."
                 },
                 {
+                  "id": 108,
                   "title": "Andininy 108",
                   "content": "Eo amin’ny asam-pitsarana sahaniny dia mahaleotena ny Mpitsara mpamoaka didy, ny mpitsara sy mpitsara mpanampy ka ny Lalàmpanorenana sy ny lalàna ihany no mifehy azy ireo.\nAmin'izany, ankoatra ny toe-javatra voalazan’ny lalàna ary na dia eo aza ny fahefana ara-pitsipi-pifehezana, dia tsy azo tohintohinina na amin’ny fomba inona na amin’ny fomba inona izy ireo amin’ny asam-pitsarana ataony ho fisahanana ny andraikiny"
                 },
                 {
+                  "id": 109,
                   "title": "Andininy 109",
                   "content": "Ny mpitsara mpamoaka didy dia tsy azo hetsehina amin’ny toerany ; manao ny asa mifanentana amin’ny toerana tokony hisy azy araka ny laharany ; tsy azo afindra toerana raha tsy misy fanekena avy aminy afa-tsy hoe misy antony ilàna izany amin’ny asa, voamarin’ny Filankevitra Ambony momba ny Mpitsara ara-dalàna."
                 },
                 {
+                  "id": 110,
                   "title": "Andininy 110",
                   "content": "Ny Mpitsara ao amin’ny Fampanoavana dia fehezin’ny ambaratongam-pahefana ; na izany aza anefa, ao amin’ny fehin-teny na fitakiana am-bava ataony, dia izay feon’ny fieritreretany sy araka ny lalàna no mibaiko azy. Mampiasa ireo mpiandraikitra ny fikarohana fandikan-dalàna izay ahafahany manara-maso ny asa sy ny fampandehanan-draharaha izy.\nNy fangatahana azy ireo hanatanteraka zavatra hita miharihary fa mifanohitra amin’ny lalàna dia mitarika fanasaziana araka ny lalàna ho an’ireo mpampanao izany."
                 },
                 {
+                  "id": 111,
                   "title": "Andininy 111",
                   "content": "Ny fanaovana ny asa maha Mpitsara dia tsy azo ampirafesina amin’ny asa sahanina eo anivonà antoko politika sy eo anivon’ny Governemanta, amin’ny asa fanatanterahana andraikitry ny olom-boafidy eo anivon’ny vahoaka na izay rehetra mety ho fisahanana asa aman-draharaha ahazoam-bola, afa-tsy ny asa fampianarana.\nNy mpitsara amperinasa rehetra dia tsy mahazo maka fiandaniana ara-politika.\nNy mpitsara misahana andraikitra maha olom-boafidy dia heverina ho toy ny nafindra hanao asa hafa."
                 },
                 {
+                  "id": 112,
                   "title": "Andininy 112",
                   "content": "Ny Fisafoan-draharaha Ankapoben’ny Fitsarana, ahitana ny solontenan’ny Antenimiera, ny solontenan’ny Governemanta ary ny solontenan’ny Filankevitra Ambony momba ny fiarovana ny demokrasia sy ny Fanjakana tan-dalàna ary ny solontenan’ny Mpitsara no miandraikitra ny fanaraha-maso ny fanajana ny fitsipika manokana momba ny fitandroana ny hasin’ny asa amin’ny maha Mpitsara, ary koa ny fihetsika ataon’ny mpiasan’ny fitsarana.\nMiankina amin’ny Fiadidiana ny Repoblika izy.\nNy Filohan’ny Repoblika, ny Antenimiera, ny Governemanta, ny Lehiben’ny Fitsarana, ny fikambanana natsangana ara-dalàna ary ny olona rehetra manana tombontsoa amin’izany dia afaka mitondra fitarainana manoloana ny Fisafoan-draharaha ankapobe ny Fitsarana.\nNy fitsipika mikasika ny fandaminana, ny fampandehanana ary ny anjara raharahan’ny Fisafoan-draharaha ankapobe ny Fitsarana dia ferana amin’ny alàlan'ny lalàna."
                 },
                 {
+                  "id": 113,
                   "title": "Andininy 113",
                   "content": "Ny Filan-kevi-pirenena momba ny Fitsarana, rantsa-mangaika fakan-kevitra ahitana ny Filoha Voalohany ao amin’ny Fitsarana Tampony, Filoha, ny Tonia Voalohany Mpampanoa ao amin’ny Fitsarana Tampony, sy ireo Lehiben’ny Fitsarana Ambony sy Fitsarana Tampony, ny solontenan’ny fahefana mpanatanteraka, ny fahefana mpanao lalàna, ny Fitsarana Avo momba ny Lalàmpanorenana, ny Filankevitra Ambony momba ny Mpitsara, ny Filankevitra Ambony momba ny fiarovana ny demokrasia sy ny Fanjakana tan-dalàna ary ny mpiasan’ny fitsarana amin’ny ankapobeny. Amin’izany, izy dia afaka manolotra amin’ny Governemanta ny fepetra eo amin’ny lafiny lalàna na didy amam-pitsipika mikasika ny fandaminana sy fampandehanana ny antokom-pitsarana, ny sata mifehy ny Mpitsara sy ny mpiasan’ny fitsarana.\nNy fitsipika mikasika ny fandaminana, ny fampandehanana ary ny anjara raharahan’ny Filankevi-pirenena momba ny Fitsarana dia ferana amin’ny alàlan'ny lalàna."
                 }
@@ -546,30 +659,37 @@
               "title": "TOKO II. Ny amin'ny fitsarana avo momba ny lalàmpanorenana",
               "articles": [
                 {
+                  "id": 114,
                   "title": "Andininy 114",
                   "content": "Misy mpikambana sivy ao amin’ny Fitsarana Avo momba ny Lalàmpanorenana. Ny fe-potoana iasany dia fito taona tsy azo havaozina.\nMpikambana telo amin’izy ireo no tendren’ny Filohan’ny Repoblika, roa fidin’ny Antenimierampirenena, roa fidin’ny Antenimierandoholona, ary roa fidin’ny Filankevitra Ambony momba ny Mpitsara.\nNy Filohan’ny Fitsarana Avo momba ny Lalàmpanorenana dia fidin’ny mpikambana amin’ireo mpikambana ao amin’io Fitsarana io.\nIzany fifidianana izany ary koa ny fanendrena ny mpikambana hafa dia toavina amin’ny alàlan'ny didim-panjakana raisin’ny Filohan’ny Repoblika."
                 },
                 {
+                  "id": 115,
                   "title": "Andininy 115",
                   "content": "Ny asa maha mpikambana ao amin’ny Fitsarana Avo momba ny Lalàmpanorenana dia tsy azo ampirafesina amin’ny asan’ny mpikambana ao amin’ny Governemanta, ao amin’ny Antenimiera, amin’izay rehetra andraikitra maha olom-boafidim-bahoaka eo anivon’ny vahoaka, amin'izay rehetra asa aman-draharaha hafa ahazoam-bola afa-tsy ny asa fampianarana, ary koa ny asa aman-draharaha rehetra eo anivon’ny antoko politika na eo anivon’ny sendikà ."
                 },
                 {
+                  "id": 116,
                   "title": "Andininy 116",
                   "content": "Ankoatra ny raharaha ampisahanin’ny andininy hafa ao amin’ny Lalàmpanorenana, ary araka ny fepetra voalazan’ny lalàna fehizoro dia ny Fitsarana Avo momba ny Lalàmpanorenana no :\n1. mitsara raha mifanaraka amin’ny Lalàmpanorenana ireo fifanekena, lalàna, hitsivolana, ary ireo didy amam-pitsipika mahaleotena ;\n2. mandamina ny fifanolanana ara-pahefana eo amin’ny Andrim-panjakana roa na maromaro, na eo amin’ny Fanjakana sy ny Vondrom-bahoaka Itsinjaram-pahefana iray na maromaro na eo amin’ny Vondrom-bahoaka Itsinjaram-pahefana roa na maromaro ;\n3. mitsara raha mifanaraka amin’ny Lalàmpanorenana ny fanapahana sy didy amam-pitsipika nankatoavin’ny Vondrom-bahoaka Itsinjaram-pahefana ;\n4. mitsara ny raharaha mikasika ny fizotry ny fitsapan-kevi-bahoaka, ny fifidianana ny Filohan’ny Repoblika ary ny fifidianana solombavambahoaka sy ny loholona ;\n5. manambara ny vokatra ofisialin’ny fifidianana ny Filohan’ny Repoblika, solombavambahoaka ary ny fakana ny hevitra amin’ny alàlan'ny fitsapan-kevi-bahoaka."
                 },
                 {
+                  "id": 117,
                   "title": "Andininy 117",
                   "content": "Ny Filohan’ny Repoblika dia mandroso ny lalàna fehizoro sy ny lalàna ary ny hitsivolana hodinihin’ny Fitsarana Avo momba ny Lalàmpanorenana izay manapaka raha mifanaraka amin'ny Lalàmpanorenana, alohan’ny amoahana azy ireo hanan-kery.\nNy fepetra nambara fa tsy mifanaraka amin’ny Lalàmpanorenana dia tsy azo avoaka hanan-kery. Raha izany no miseho, ny Filohan’ny Repoblika dia afaka manapaka, na hamoaka hanan-kery ireo fepetra hafa amin’ilay lalàna na ilay hitsivolana, na mandroso ny rijan-teny manontolo amin’ny fanapahana ataon’ny Antenimiera na ny Filankevitry ny Minisitra indray, araka ny trangan-javatra, na koa tsy hamoaka azy hanan-kery.\nAmin’ireo trangan-javatra voalaza etsy ambony ireo, ny fampakaran-draharaha eo amin’ny Fitsarana Avo momba ny Lalàmpanorenana dia mampihantona ny fe-potoana tokony hamoahana ny lalàna hanan-kery. Ny fitsipika anatin’ny Antenimiera tsirairay dia aroso hamarinina raha mifanaraka amin’ny Lalàmpanorenana alohan’ny hampiharana azy. Ny fepetra nambara fa tsy mifanaraka amin’ny Lalàmpanorenana dia tsy azo ampiharina."
                 },
                 {
+                  "id": 119,
                   "title": "Andininy 119",
                   "content": "Azon’ny Lehiben’ny Andrim-panjakana sy ny rantsa-mangaika ao amin’ny Vondrom-bahoakam-paritra Itsinjaram-pahefana atao ny maka ny hevitry ny Fitsarana Avo momba ny Lalàmpanorenana, mikasika ny fifanarahana na tsia amin’ny Lalàmpanorenana ny volavolam-panapahan-kevitra na ny fivoasana ny fepetra iray amin’ity Lalàmpanorenana ity."
                 },
                 {
+                  "id": 119,
                   "title": "Andininy 119",
                   "content": "Azon’ny Lehiben’ny Andrim-panjakana sy ny rantsa-mangaika ao amin’ny Vondrom-bahoakam-paritra Itsinjaram-pahefana atao ny maka ny hevitry ny Fitsarana Avo momba ny Lalàmpanorenana, mikasika ny fifanarahana na tsia amin’ny Lalàmpanorenana ny volavolam-panapahan-kevitra na ny fivoasana ny fepetra iray amin’ity Lalàmpanorenana ity."
                 },
                 {
+                  "id": 120,
                   "title": "Andininy 120",
                   "content": "Mamoaka didim-pitsarana ny Fitsarana Avo momba ny Lalàmpanorenana amin’ny fifanolanana miseho amin’ny fifidianana sy fakàna ny hevitry ny vahoaka mivantana.\nManao fanapahana kosa izy amin’ny anton-javatra hafa tandrifin’ny fahefana ananany, afa-tsy ny trangan-javatra voalazan’ny andininy faha-119.\nLazaina ny anton’ny didim-pitsarana sy fanapahana avoakan’ny Fitsarana Avo momba ny Lalàmpanorenana ary tsy azo akarina fitsarana hafa intsony. Tsy maintsy ampiharina amin’ny fahefam-panjakana ary koa izay rehetra manam-pahefana amin’ny fitondrana sy ny fitsarana izy ireny."
                 }
@@ -579,42 +699,52 @@
               "title": "Toko III. Ny amin'ny fitsarana tampony",
               "articles": [
                 {
+                  "id": 121,
                   "title": "Andininy 121",
                   "content": "Ny Fitsarana Tampony no manara-maso ny fampandehanana ara-dalàna ny antokom-pitsarana misahana ny ady madio sy ady heloka, ny ady atao amin’ny Fanjakana ary ny fitantanam-bolam-panjakana.\nToy izao no firafiny :\n- ny Fitsarana Fandravana;\n- ny Filankevi-panjakana;\n- ny Fitsarana momba ny Kaonty"
                 },
                 {
+                  "id": 122,
                   "title": "Andininy 122",
                   "content": "Ny Filoha Voalohany sy ny Tonia Voalohany Mpampanoa ao amin’ny Fitsarana Tampony no lehiben’io antokom-pitsarana avo io.\nIzy ireo dia tendrena avy, amin’ny alàlan'ny didim-panjakana noraisina teo amin’ny Filankevitry ny Minisitra araka ny tolokevitra nataon’ny Filankevitra Ambony momba ny Mpitsara. Raha azo atao dia avy amin’ireo mpitsara tranainy indrindra ao amin’ny laharana ambony indrindra avy amin’ny antokom-pitsarana misahana ady madio sy ady heloka, ady atao amin’ny Fanjakana ary fitantanam-bolam-panjakana no tendrena."
                 },
                 {
+                  "id": 123,
                   "title": "Andininy 123",
                   "content": "Misy Filoha lefitra telo manampy ny Filoha Voalohany ao amin’ny Fitsarana Tampony ka ampiandraiketin-draharaha tsirairay avy ao amin’ny fiadidiana ny Fitsarana Fandravana, ny Filankevi-panjakana ary ny Fitsarana momba ny Kaonty.\nNy Filoha lefitra tsirairay dia tendrena eo amin’ny Filankevitry ny Minisitra amin’ny alàlan'ny didim-panjakana avy amin’ny Filohan’ny Repoblika araka ny tolokevitra nataon’ny Filankevitra Ambony momba ny Mpitsara. Raha azo atao avy amin’ireo mpitsara tranainy indrindra ao amin’ny laharana ambony indrindra ao amin’ny antokom-pitsarana misahana ady madio sy ady heloka, ady atao amin’ny Fanjakana ary fitantanam-bolam-panjakana no tendrena."
                 },
                 {
+                  "id": 124,
                   "title": "Andininy 124",
                   "content": "Ny Fampanoavana ao amin’ny Fitsarana Tampony dia ahitana:\n- ny Fampanoavana ao amin’ny Fitsarana fandravana ;\n- ny Kaomisaria jeneralin’ny lalàna ho an’ny Filan-kevi-panjakana ;\n- ny Kaomisaria jeneraly momba ny Tahirim-bolam-panjakana ho an’ny Fitsarana momba ny Kaonty.\nNy lehiben’ireo antokon-draharaha telo ireo no manampy ny Tonia Voalohany Mpampanoa ao amin’ny Fitsarana Tampony.\nNy lehiben’ny Fampanoavana ao amin’ny Fitsarana Fandravana, ny Kaomisaria jeneralin’ny lalàna na ny Kaomisaria jeneraly momba ny Tahirim-bolam-panjakana dia tendrena eo amin’ny Filankevitry ny Minisitra araka ny tolokevitra nataon’ny Filankevitra Ambony momba ny Mpitsara; raha azo atao dia avy amin’ireo mpitsara tranainy indrindra ao amin’ny laharana ambony indrindra ao amin’ny antokom-pitsarana misahana ady madio sy ady heloka, ady atao amin’ny Fanjakana ary fitantanam-bolam-panjakana no tendrena."
                 },
                 {
+                  "id": 125,
                   "title": "Andininy 125",
                   "content": "Ankoatra ireo anjara raharaha ampisahanin’ny lalàna manokana azy dia ny Fitsarana Tampony no mitsara ny fifanolanana mikasika ny fahefa-mitsara eo amin’ny fitsarana roa avy amin’ny antokom-pitsarana samihafa."
                 },
                 {
+                  "id": 126,
                   "title": "Andininy 126",
                   "content": "Ny Fitsarana Fandravana no manara-maso ny fampiharan’ireo antokom-pitsarana misahana ny ady madio sy ady heloka ny lalàna.\nAnkoatra ireo fahefana eken’ny lalàna manokana hosahaniny dia izy no manapaka ny amin’ny fangatahana fandravana atao amin’ny didy navoakan’ireo antoko-pitsarana izay tsy misy intsony fampakarana azo atao aminy."
                 },
                 {
+                  "id": 127,
                   "title": "Andininy 127",
                   "content": "Ankoatran’ny fahefana sy fepetra manokana voalazan’ny lalàna ny Filankevi-panjakana no manamarina ny maha-ara-dalàna ny fanapahana ataon’ny Fitondran-draharaham-panjakana ary mitandro ny fampiharana ny lalàna ataon’ny antoko-pitsarana misahana ny ady atao amin’ny Fanjakana.\nNy Filankevi-panjakana, araka ny fepetra faritan’ny lalàna fehizoro no :\n1. mitsara ny fangatahana fanafoanana ny fanapahana noraisin’ny manam-pahefana ao amin’ny fitondran-draharaha foibe, ny fangatahana famerenan-jo noho ny fahavoazana vokatry ny asan’ny Fitondran-draharaham-panjakana , ny fitarainana amin’ny fifanolanana mikasika ny hetra ;\n2. mandinika ny fampakarana fitsarana ambony ny fanamarinana ny maha ara-dalàna ny fanapahana nataon’ny manam-pahefana ao amin’ny Vondrom-bahoakam-paritra Itsinjaram-pahefana ;\n3. mitsara ny fampakarana fitsarana ambony na ny fandravana ireo didy navoakan’ny fitsarana misahana ny ady atao amin’ny Fanjakana na antokom-pitsarana misahana ny ady atao amin'ny Fanjakana manana fahefa-mitsara manokana.\nIzy no mitsara ireo raharaha sasantsasany ifanolanana amin’ny fifidianana.\nAzon’ny Praiminisitra sy ny mambra ao amin’ny Governemanta atao ny maka hevitra aminy mba hanomezany ny heviny, mikasika ny volavolan’ny rijan-tenin-dalàna sy ny didy amam-pitsipika ary ny fifanarahana na momba ny fivoasana ny voalazan’ny lalàna sy ny didy amam-pitsipika.\nAraka ny fangatahan’ny Praiminisitra dia afaka mandinika rijan-tenin-dalàna mikasika ny fandaminana, ny fomba fiasa sy ny andraikitry ny sampan-draharaham-panjakana izy."
                 },
                 {
+                  "id": 128,
                   "title": "Andininy 128",
                   "content": "Ny Fitsarana momba ny Kaonty no manara-maso ny fampiharan’ireo antokom-pitsarana misahana ny fitantanam-bola ny lalàna. Ankoatra ireo fahefana eken’ny lalàna manokana hosahaniny dia izy no:\n1. mitsara ny kaontin’ireo mpitàm-bolam-panjakana ;\n2. manara-maso ny fanatanterahana ny lalàna mifehy ny fitantanam-bolam-panjakana sy ny tetibolan’ny antokon-draharaha miankina amin’ny Fanjakana ;\n3. manara-maso ny kaonty sy ny fitantanana ny orinasam-panjakana ;\n4. mitsara ny fampakarana ambony natao tamin’ireo didim-pitsarana navoakan’ny fitsarana momba ny fitantanam-bolam-panjakana na ireo antokon-draharaham-panjakana miendrika fitsarana ;\n5. manampy ny Antenimiera sy ny Governemanta eo amin’ny fanaraha-maso ny fanatanterahana ny lalàna mifehy ny fitantanam-bolam-panjakana."
                 },
                 {
+                  "id": 129,
                   "title": "Andininy 129",
                   "content": "Ny Fitsarana Tampony dia mandefa tatitra isan-taona momba ny asa nosahaniny any amin'ny Filohan’ny Repoblika, ny Praiminisitra, ireo Filohan’ny Antenimiera roa tonta sy ny Minisitra miandraikitra ny Fitsarana ary ny Filankevitra Ambony momba ny Mpitsara.\nIo tatitra io dia tsy maintsy avoaka amin’ny Gazetim-panjakana amin’ny taona manaraka ny fikatonan’ny taom-pitsarana voakasika."
                 },
                 {
+                  "id": 130,
                   "title": "Andininy 130",
                   "content": "Ny Filoha Voalohany, ny Tonia Mpampanoa ao amin’ny Fitsarana Ambony dia tendrena eo amin’ny Filankevitry ny Minisitra amin’ny alàlan'ny didim-panjakana noraisin’ny Filohan’ny Repoblika araka ny tolo-kevitry ny Filankevitra Ambony momba ny Mpitsara. Raha azo atao, avy amin’ireo mpitsara tranainy indrindra ao amin’ny laharana ambony indrindra ao amin’ny antokom-pitsarana misahana ady madio sy ady heloka, ady atao amin’ny Fanjakana ary fitantanam-bolam-panjakana no tendrena."
                 }
@@ -624,26 +754,32 @@
               "title": "Toko IV. Ny amin'ny fitsarana avo",
               "articles": [
                 {
+                  "id": 131,
                   "title": "Andininy 131",
                   "content": "Ny Filohan’ny Repoblika dia tsy tompon’andraikitra noho ny zava-natao teo amin’ny asany na teo am-panaovana ny raharahany afa-tsy ny amin’ny famadihana Tanindrazana, ny fandikana bevava na ny fandikana miverimberina ny Lalàmpanorenana, na koa ny fanaovana antsirambina ny andraikiny ka hita miharihary fa tsy mifanaraka amin’ny fisahanana ny asa maha-filoha.\nNy Antenimierampirenena no afaka miampanga azy amin’ny alàlan'ny latsabato atao ampahibemaso ary lanian’ny roa ampahatelon’ny mpikambana ao aminy.\nAzo tsaraina eo anoloan’ny Fitsarana Avo Izy. Ny fiampangana dia mety hiafara amin'ny fanalàna azy amin’ny toerany."
                 },
                 {
+                  "id": 132,
                   "title": "Andininy 132",
                   "content": "Raha misy ny fanonganana ny Filohan’ny Repoblika dia ny Fitsarana Avo momba ny Lalàmpanorenana no mizaha fototra ny fahabangan’ny toerany ary tanterahina araka ny fepetra voalazan’ny andininy faha-47 etsy ambony ny fifidianana Filoha vaovao. Ny Filoha voaongana dia tsy mahazo milatsaka hofidina intsony amin’izay rehetra mety ho asan’olom-boafidim-bahoaka."
                 },
                 {
+                  "id": 133,
                   "title": "Andininy 133",
                   "content": "Ny Filohan’Antenimiera, ny Praiminisitra, ny mpikambana hafa ao amin’ny Governemanta ary ny Filohan’ny Fitsarana Avo momba ny Lalàmpanorenana dia tompon’andraikitra itataovam-pamaizana noho ny zava-natao teo amin’ny asany ka voatondro ho heloka bevava na heloka tsotra tamin’ny fotoana nanaovana izany, ka ny Fitsarana Avo no mitsara azy.\nNy Antenimierampirenena no afaka miampanga azy ireo amin’ny amin’ny alàlan'ny latsabato atao ampahibemaso lanian’ny antsasa-manilan’ny mpikambana.\nNy Tonia Voalohany Mpampanoa ao amin’ny Fitsarana Tampony no manao ny fanenjehana."
                 },
                 {
+                  "id": 134,
                   "title": "Andininy 134",
                   "content": "Ny Filohan’Antenimiera, ny Praiminisitra, ny mpikambana hafa ao amin’ny Governemanta ary ny Filohan’ny Fitsarana Avo momba ny Lalàmpanorenana dia azon’ny antoko-pitsarana momba ny lalàna ifampitondran’ny daholobe tsaraina raha mandika lalàna tamin’ny fotoana tsy anatanterahany andraiki-panjakana.\nNy Tonian’ny Fampanoavan’ny Fitsarana Fandravana no manao ny fanenjehana.\nAmin’izany raha misy ny heloka tsotra, ny antokom-pitsarana famaizana mahefa dia tarihin’ny Filohan’ny Fitsarana, ary raha misy ny tsy fahafahany dia filoha lefitra iray no mitarika izany.\nAmpiharina koa amin’ireo solombavambahoaka, loholona ary ny mpikambana ao amin’ny Fitsarana Avo momba ny Lalàmpanorenana ny fepetra voalazan’ireo andàlana telo etsy aloha ireo."
                 },
                 {
+                  "id": 135,
                   "title": "Andininy 135",
                   "content": "Manana fahefana feno sy tanteraka hitsara ny Fitsarana Avo."
                 },
                 {
+                  "id": 136,
                   "title": "Andininy 136",
                   "content": "Misy mpikambana iraika ambinifolo ao amin’ny Fitsarana Avo. Ireto avy izy ireo :\n1. ny Filoha Voalohan’ny Fitsarana Tampony, Filoha izay soloin’ny Filohan’ny Fitsarana Fandravana avy hatrany raha misy tsy fahafahany ;\n2. Filohan’ny Rantsana roa avy ao amin’ny Fitsarana Fandravana sy mpisolo toerana roa tendren’ny Fivoriam-ben’io Fitsarana io ;\n3. Filoha Voalohany roa avy amin’ny Fitsarana Ambony sy mpisolo toerana roa tendren’ny Filoha Voalohan’ny Fitsarana Tampony ;\n4. Solombavambahoaka tompon-toerana roa sy solombavambahoaka mpisolo toerana roa nofidin’ny Antenimierampirenena amin’ny fiantombohan’ny fe-potoana fanaovan-dalàna ;\n5. Loholona tompon-toerana roa sy loholona mpisolo toerana roa nofidin’ny Antenimierandoholona amin’ny fiantombohan’ny fe-potoana fanaovan-dalàna.\n6. Mpikambana roa tompon-toerana sy mpikambana roa mpisolo toerana avy amin’ny Filankevitra Ambony momba ny fiarovana ny demokrasia sy ny Fanjakana tan-dalàna.\nNy Tonia Voalohany Mpampanoa ao amin’ny Fitsarana Tampony ampian’ny iray na maromaro amin’ireo mpikambana ao amin’ny fampanoavana iadidiany no misolo tena ny fampanoavana. Raha misy tsy fahafahan’ny Tonia Voalohany Mpampanoa dia ny Tonia Mpampanoa ao amin’ny Fitsarana Fandravana no misolo toerana azy.\nNy lehiben’ny Firaketan-draharahan’ny Fitsarana Tampony no mpiraki-draharahan’ny Fitsarana Avo. Izy no mitazona ny firaketana an-tsoratra. Raha misy tsy fahafahany dia ny lehiben’ny firaketan-draharahan’ny Fitsarana Fandravana no misolo azy.\nNy fandaminana sy ny paika arahina manoloana ny Fitsarana Avo dia feran’ny lalàna fehizoro."
                 }
@@ -658,10 +794,12 @@
       "range": "And.137-And.138",
       "articles": [
         {
+          "id": 137,
           "title": "Andininy 137",
           "content": "Ny Filohan’ny Repoblika no mifampiraharaha sy mankato ny fifanekena iraisam-pirenena. Ampahafantarina azy izay fifampiraharahana rehetra mahakasika fifanekena iraisam-pirenena tsy ilàna fankatoavana.\nTsy maintsy lalàna no manome alàlana amin’ny fankatoavana na fanekena ny fifanekem-pihavanana, ny fifanekem-barotra, ny fifanekena na fifanarahana mikasika ny fandaminana iraisam-pirenena, ireo izay mampiditra andraikitra ho hefaina amin’ny volam-panjakana tafiditra amin’izany ny fisamboram-bola avy any ivelany, ireo izay manova ny fepetra miendrika lalàna, ireo izay mikasika ny fitoetry ny olona, fifanekena tsy hifanafika, ireo izay manova ny faritry ny tanim-pirenena.\nAlohan’izay fankatoavana rehetra atao, dia atolotry ny Filohan’ny Repoblika ny Fitsarana Avo momba ny Lalàmpanorenana ireo fifanekena, mba hohamarinina raha mifanaraka amin’ny Lalàmpanorenana.\nRaha misy tsy fifanarahana amin’ny Lalàmpanorenana, dia tsy azo atao ny fankatoavana raha tsy aorian’ny fanovàna ny Lalampanorenana.\nRaha vantany vao navoaka ho fantatry ny besinimaro ny fifanekena na ny fifanarahana nankatoavina na nekena ara-dalàna dia manan-kery mihoatra noho ny lalàna raha toa ampiharin’ny ankilany ny fifanarahana na ny fifanekena tsirairay.\nNy fifanekena mahakasika firotsahanan’i Madagasikara amina Vondrom-paritra dia tsy maintsy aroso amin’ny fitsapa-kevi-bahoaka hakàna ny heviny."
         },
         {
+          "id": 138,
           "title": "Andininy 138",
           "content": "Ny Praiminisitra no manao ny fifampiraharahana sy manao sonia ny fifanarahana iraisam-pirenena tsy ilàna fankatoavana."
         }
@@ -677,38 +815,47 @@
           "title": "Zana-dohateny I. Ny amin’ny fepetra ankapobe",
           "articles": [
             {
+              "id": 139,
               "title": "Andininy 139",
               "content": "Ireo Vondrombahoakam-paritra Itsinjaram-pahefana, manana zo aman’andraikitra eken’ny lalàna ary mizaka tena ara-pitantanana sy ara-bola, no sehatra eo amin’ny rafi-pitondrana ahazoan’ny olom-pirenena mandray anjara amin’ny fitantanana ny raharaham-bahoaka ary miantoka ny fanehoana izay fahasamihafana misy eo amin’izy ireo sy ny mampiavaka azy.\nLalàna no mamaritra ny fari-pananany izay ahitana ny fananana ampiasaina ho amin’ny tombontsoam-bahoaka sy ny fananana manokana.\nNy tany tsy hita tompo sy ireo tsy manan-tompo dia anisan’ny fananana tantanan’ny Fanjakana."
             },
             {
+              "id": 140,
               "title": "Andininy 140",
               "content": "Manana fahefana handray didy amam-pitsipika ny Vondrombahoakam-paritra Itsinjaram-pahefana.\nNy Fanjakana no mitandro ny tsy hisian’ny fifanipahan’ny didy amam-pitsipiky ny Vondrombahoakam-paritra Itsinjaram-pahefana iray amin’ny tombontsoan’ny Vondrombahoakam-paritra Itsinjaram-pahefana iray hafa.\nNy Fanjakana no miahy ny hisian’ny fampandrosoana mirindra eo amin’ireo samy Vondrombahoakam-p aritra Itsinjaram-pahefana ka izany dia mifototra amin’ny firaisan-kinam-pirenena, ny harena azo trandrahana ananan’ny faritra tsirairay avy ary ny fifandanjana isam-paritra amin’ny alàlan’ny fepetra fifampitsinjarana mifanentana.\nHandraisana fepetra manokana ho ny fampandrosoana ireo faritra izay tratra aoriana, anisan’izany ny famoronana tahiry manokana ho amin’ny firaisan-kina."
             },
             {
+              "id": 141,
               "title": "Andininy 141",
               "content": "Ireo Vondrombahoakam-paritra Itsinjaram-pahefana ampian’ny Fanjakana no mitandro indrindra ny filaminam-bahoaka, ny fiarovana ny fiaraha-monina, ny fitantanan-draharaha, ny fanajariana ny tany, ny fampandrosoana ara-toekarena, ny fiarovana ny tontolo iainana ary ny fanatsarana ny fari-piainana.\nAmin’ireo lafiny voalaza ireo dia ny lalàna no mametra ny fitsinjarana ny fari-pahefana mba hitsinjovana ny tombontsoam-pirenena sy ny tombontsoan’ny faritra."
             },
             {
+              "id": 142,
               "title": "Andininy 142",
               "content": "Mizaka tena ara-bola ireo Vondrombahoakam-paritra Itsinjaram-pahefana.\nMamolavola sy mitantana ny tetibolany izy ireo, araka ny feni-kevitra ampiharina amin’ny fitantanana ny volam-panjakana.\nVatsiana amin’ny loharanom-bola maro samihafa ny tetibolan’ny Vondrombahoakam-paritra Itsinjaram-pahefana."
             },
             {
+              "id": 143,
               "title": "Andininy 143",
               "content": "Ny Kaominina, ny Faritra ary ny Faritany no Vondrombahoakam-paritra Itsinjaram-pahefana eto amin’ny Repoblika.\nNy famoronana sy ny famaritana ny Vondrombahoakam-paritra Itsinjaram-pahefana dia tsy maintsy mifototra amin’ny fitoviana eo amin’ny toe-tany, toekarena, sosialy ary kolontsaina. Ny lalàna no mamaritra izany."
             },
             {
+              "id": 144,
               "title": "Andininy 144",
               "content": "Malalaka ny fitantanana tena malalaka ireo Vondrombahoakam-paritra Itsinjaram-pahefana ka amin’ny alàlan’ny fanapahan-kevitry ny antenimierany no andamina ny raharahany araka ny tandrifim-pahefana omen’ny Lalàmpanorenana sy ny lalàna azy ireo.\nTsy tokony mifanohitra amin’ny Lalàmpanorenana sy ny didy aman-dalàna izany fanapahan-kevitra izany."
             },
             {
+              "id": 145,
               "title": "Andininy 145",
               "content": "Ny fisoloantena ny Fanjakana eo anivon’ny Vondrombahoakam-paritra Itsinjaram-pahefana dia fehezin’ny lalàna."
             },
             {
+              "id": 146,
               "title": "Andininy 146",
               "content": "Ny Fanjakana dia miandraikitra ny fampiharana ireto fepetra manaraka ireto :\n- fitsinjarana ny fari-pahefana eo amin’ny Fanjakana sy ny vondrombahoakam-paritra Itsinjaram-pahefana ;\n- fitsinjarana ny loharanom-bola eo amin’ny Fanjakana sy ny vondrombahoakam-paritra Itsinjaram-pahefana ;\n- fitsinjarana ny raharaham-panjakana eo amin’ny Fanjakana sy ny vondrombahoakam-paritra itsinjaram-pahefana."
             },
             {
+              "id": 147,
               "title": "Andininy 147",
               "content": "Ny fidiram-bolan’ny Vondrombahoakam-paritra Itsinjaram-pahefana dia ahitana indrindra :\n- Ny vola azo avy amin’ ny hetra sy haba nolanian’ny Filankevitra ary takiana mivantana harotsaka amin’ny tetibolan’ny Vondrombahoakam-paritra Itsinjaram- pahefana ; lalàna no mamaritra ny karazana sy ny sanda ambony indrindra amin’ireny hetra sy haba ireny izay hijerena indrindra ny andraikitra iantsorohan’ny Vondrombahoakam-paritra Itsinjaram-pahefana sy ny loloha ara-ketra ankapobe mitambesatra amin’ny Firenena ;\n- Ny anjara tokony ho azy avy hatrany amin’ny vola azo amin’ny hetra sy ny haba miditra ao amin’ny tetibolan’ny Fanjakana ; izany anjara izany izay sintonina avy hatrany amin’ny fotoana famoriana ny vola dia faritan’ny lalàna araka ny isan-jato izay ijerena ny andraikitra sahanin’ny Vondrombahoakam-paritra Itsinjaram-pahefana amin’ny ankapobeny sy isam-batan’olona mba hiantohana ny fampandrosoana ara-toekarena sy ara-tsosialy mifandanja eo amin’ireo Vondrombahoakam-paritra Itsinjaram-pahefana rehetra manerana ny tanim-pirenena ;\n- ny vola vokatry ny fanampiana avy amin'ny Fanjakana, voatokana na tsia ho amin'ny asa, ary nomena avy amin'ny teti-bolam-panjakana ho an'ny Vondrombahoakam-paritra Itsinjaram-pahefana rehetra na ny iray amin'izy ireo ka atao mifandanja amin'ny toe-javatra manokana misy eo aminy, na hamenoan’ireo Vondrombahoakam-paritra Itsinjaram-pahefana ny adidiny ara-bola izay nateraky ny fandaharan’asa na tetik’asa notapahan'ny Fanjakana ary tanterahan'ireo Vondrombahoakam-paritra Itsinjaram-pahefana ;\n- ny vola azo avy amin'ny fanampiana avy any ivelany ka tsy averina sy ny vola azo avy amin'ny fanomezana nomena ny Vondrombahoakam-paritra Itsinjaram-pahefana ;\n- ny vola miditra avy amin'ny fananany manokana;\n- ny fisamboram-bola izay ferana araka ny lalàna ny fepetra momba izany."
             }
@@ -723,22 +870,27 @@
               "title": "Toko I. Ny amin'ny kaominina",
               "articles": [
                 {
+                  "id": 148,
                   "title": "Andininy 148",
                   "content": "Ny kaominina no Vondrombahoakam-paritra Itsinjaram-pahefana fototra. >Ny kaominina dia atao hoe ambonivohitra na ambanivohitra ka ny fisokajiana dia miankina amin’ny tahan’ny mponina sy ny lafim-pivoarana ary ny fiitaran’ny Tanàna."
                 },
                 {
+                  "id": 149,
                   "title": "Andininy 149",
                   "content": "Ny kaominina dia mandray anjara amin’ny fampandrosoana ara-toekarena, ara-tsosialy, ara-kolotsaina sy momba ny tontolo iainana eo amin’ny fari-piadidiam-paritra misy azy. Ny fari-pahefany dia mikasika indrindra ny feni-kevitry ny Lalàmpanorenana sy ny lalàna ary koa ny feni-kevitra momba ny fanatonana ny vahoaka, ny fampivoarana ary ny fiarovana ny tombontsoan’ny mponina."
                 },
                 {
+                  "id": 150,
                   "title": "Andininy 150",
                   "content": "Ny kaominina dia afaka mivondrona ho amin’ny fanatanterahana tetikasa fampandrosoana iombonana."
                 },
                 {
+                  "id": 151,
                   "title": "Andininy 151",
                   "content": "Ao amin’ny kaominina, ny asa fanatanterahana sy fanapahan-kevitra dia sahanin’ny rantsa-mangaika miavaka sy nofidina tamin’ny latsa-bato andraisan’ny rehetra anjara mivantana.\nNy mpikambana, ny fandaminana, ny anjara raharaha ary ny fampandehanana ny rantsa-mangaika mpanatanteraka sy mpanapa-kevitra ary koa ny fomba sy ny fepetra momba ny fifidianana ny mpikambana ao amin’ny kaominina dia ferana araka ny lalàna."
                 },
                 {
+                  "id": 152,
                   "title": "Andininy 152",
                   "content": "Ny Fokonolona, nalamina ho fokontany eo anivon’ny kaominina, no fototry ny fampandrosoana sy ny firindrana eo amin’ny lafiny fiaraha-monina sy ny kolontsaina ary ny tontolo iainana.\nNy tompon’andraikitra ao amin’ny fokontany dia mandray anjara amin’ny famolavolana ny fandaharanasa momba ny fampandrosoana ny kaominina ao aminy."
                 }
@@ -748,18 +900,22 @@
               "title": "TOKO II. Ny amin'ny faritra",
               "articles": [
                 {
+                  "id": 153,
                   "title": "Andininy 153",
                   "content": "Miompana indrindra amin’ny lafiny toekarena sy fiaraha-monina ny andraikitry ny faritra.\nNy faritra no misahana ny fampiroborobona sy fandrindrana ny fampandrosoana ara-toekarena sy ara-tsosialy ao anatin’ny fari-piadidiany ka mandrafitra ny fomba fandaminana, ny fanajariana ny tany ary ny fampiharana ny hetsika fampandrosoana rehetra miaraka amin’ny antokon-draharaha miankina na tsy miankina amin’ny Fanjakana."
                 },
                 {
+                  "id": 154,
                   "title": "Andininy 154",
                   "content": "Ny asan’ny mpanatanteraka dia sahanin’ny rantsa-mangaika tarihin’ny Lehiben’ny Faritra izay olo-boafidy tamin’ny alalan’ny latsabato andraisan’ny rehetra anjara.\nNy Lehiben’ny Faritra no tompon’andraikitra voalohany amin’ny tetika sy ny fanatanterahana ny asa rehetra mikasika ny fampandrosoana ara-toekarena sy ara-tsosialy ao amin’ny faritra misy azy.\nIzy no Lehiben’ny Fitondran-draharaham-panjakana eo amin’ny faritra."
                 },
                 {
+                  "id": 155,
                   "title": "Andininy 155",
                   "content": "Ny asa fanapahan-kevitra dia sahanin’ny Filankevi-paritra ka ny mpikambana dia olom-boafidy tamin’ny latsabato andraisan’ny rehetra anjara.\nNy solombavambahoaka sy ny loholona avy amin’ny fari-piadidiana samihafa ao amin’ny faritra dia mpikambana avy hatrany ao amin’ny Filankevi-paritra, ary anisany mpanapan-kevitra."
                 },
                 {
+                  "id": 156,
                   "title": "Andininy 156",
                   "content": "Ny mpikambana, ny fandaminana, ny anjara raharaha ary ny fampandehanana ny rantsa-mangaika mpanatanteraka sy mpanapa-kevitra ary koa ny fomba sy ny fepetra momba ny fifidianana ny mpikambana ao amin’ny faritra dia ferana araka ny lalàna."
                 }
@@ -769,18 +925,22 @@
               "title": "TOKO III. Ny amin'ny faritany",
               "articles": [
                 {
+                  "id": 157,
                   "title": "Andininy 157",
                   "content": "Ny Faritany dia vondrombahoakam-paritra itsinjaram-pahefana, manana zo aman’andraikitra eken’ny lalàna ary koa mizaka-tena ara-pitondrana sy ara-bola.\nIzy no miantoka ny fandrindrana sy ny fampirindrana ny asa fampandrosoana ho an’ny tombontsoan’ny faritany ary miahy ny fampandrosoana ara-drariny sy mirindra ireo Vondrombahoakam-paritra Itsinjaram-pahefana ao amin’ny faritany.\nNy faritany no manatanteraka ny politika momba ny fampandrosoana izay nofaritana sy notapahina teo amin’ny filankevi-paritany.\nNy faritra no misahana ny fampiroborobona sy fandrindrana ny fampandrosoana ara-toekarena sy ara-tsosialy ao anatin’ny fari-piadidiany ka mandrafitra ny fomba fandaminana, ny fanajariana ny tany ary ny fampiharana ny hetsika fampandrosoana rehetra miaraka amin’ny antokon-draharaha miankina na tsy miankina amin’ny Fanjakana."
                 },
                 {
+                  "id": 158,
                   "title": "Andininy 158",
                   "content": "Ny asan’ny mpanatanteraka dia sahanin’ny rantsa-mangaika tarihin’ny Lehiben’ny Faritany izay olom-boafidy tamin’ny alalan’ny latsabato.\nNy Lehiben’ny Faritany no tompon’andraikitra voalohany amin’ny tetika sy ny fanatanterahana ny asa rehetra mikasika ny fampandrosoana ara-toekarena sy ara-tsosialy ao amin’ny faritany misy azy.\nIzy no Lehiben’ny Fitondran-draharaham-panjakana eo amin’ny faritany."
                 },
                 {
+                  "id": 159,
                   "title": "Andininy 159",
                   "content": "Ny asa fanapahan-kevitra dia sahanin’ny Filankevi-paritany ka ny mpikambana ao aminy dia olom-boafidy amin’ny alàlan’ny latsabato andraisan’ny rehetra anjara.\nNy solombavambahoaka sy ny loholona avy amin’ny fari-piadidiana samihafa ao amin’ny faritany dia mpikambana avy hatrany ao amin’ny Filankevi-paritany, ary anisany mpanapan-kevitra."
                 },
                 {
+                  "id": 160,
                   "title": "Andininy 160",
                   "content": "Ny ho anisany, ny fandaminana, ny anjara raharaha ary ny fampandehanana ny rantsa-mangaika mpanatanteraka sy mpanapa-kevitra ary koa ny fomba sy ny fepetra momba ny fifidianana ny mpikambana ao aminy dia ferana araka ny lalàna."
                 }
@@ -795,14 +955,17 @@
       "range": "And.161-And.163",
       "articles": [
         {
+          "id": 161,
           "title": "Andininy 161",
           "content": "Tsy misy fanitsiana azo atao amin’ny lalampanorenana na dia iray aza raha tsy hita fa tena ilaina"
         },
         {
+          "id": 162,
           "title": "Andininy 162",
           "content": "Raha toa ka hita fa tena ilaina ny fanitsiana dia anjaran’ny Filohan'ny Repoblika no manapaka eo amin'ny Filankevitry ny Minisitra, na ny Antenimiera amin'ny alalan’ny latsabato misaraka izay nolanian'ny roa ampahatelon'ny mpikambana no manao izany.\nNy volavola na tolokevitra fanitsiana dia tsy maintsy ankatoavin’ny telo ampahaefatry ny mpikambana ao amin’ny Antenimierampirenena sy ny Antenimierandoholona.\nNy volavola na tolokevitra izay nankatoavina dia aroso amin’ny fitsapan-kevi-bahoaka"
         },
         {
+          "id": 163,
           "title": "Andininy 163",
           "content": "Ny maha-Repoblika ny Fanjakana, ny foto-kevitra maha-iray tsy anombinana ny tanim-pirenena, ny foto-kevitry ny fisarahan'ny fahefana, ny foto-kevitry ny fizakan-tenan'ny Vondrombahoakam-paritra Itsinjaram-pahefana, ny faharetana sy ny isan'ny fe-potoana iasan'ny Filohan'ny Repoblika, dia tsy azo anaovana fanitsiana.\nNy fahefana manokana ananan'ny Filohan'ny Repoblika ao anatin'ny fisehoan-javatra mampihotakotaka na savorovoro politika dia tsy manome azy ny zo hanao fanitsiana ny Lalàmpanorenana."
         }
@@ -814,22 +977,27 @@
       "range": "And.164-And.168",
       "articles": [
         {
+          "id": 164,
           "title": "Andininy 164",
           "content": "Izao Lalàmpanorenana izao dia holaniana amin'ny alàlan'ny fitsapan-kevi-bahoaka. Ampiharina izany raha vantany vao havoakan'ny Filohan'ny Fahefana Avon'ny Tetezamita hanan-kery, ao anatin'ny folo andro manaraka ny fanambaràna farany ny vokatry ny fitsapan-kevi-bahoaka ataon'ny Fitsarana Avo momba ny Lalàmpanorenana."
         },
         {
+          "id": 165,
           "title": "Andininy 165",
           "content": "Ny lalàna manan-kery dia mbola mihatra hatrany amin'ireo fepetra rehetra izay tsy mifanohitra amin'ity Lalàmpanorenana ity.\nNy rijan-tenin-dalàna mikasika ireo Andrim-panjakana sy ireo rantsa-mangaika ary koa ny lalàna fampiharana voalazan’ity Lalampanorenana ity dia raisina amin’ny alalan’ny hitsivolana."
         },
         {
+          "id": 166,
           "title": "Andininy 166",
           "content": "Mandra-pametrahana amin'ny toerana miandàlana ny Andrim-panjakana voalazan'izao Lalàmpanorenana izao, ireo Andrim-panjakana sy ireo rantsa-mangaika voalaza ho amin'ny fe-potoanan'ny Tetezamita dia manohy misahana ny asany.\nMitsahatra avy hatrany ny asan’ny Filankevitra Ambonin’ny Tetezamita sy ny Kongresin’ny tetezamita vantany vao voafidy ny biraon’ny Antenimiera vaovao.\nEo am-piandrasana ny fametrahana amin’ny toerany ny Antenimierandoholona dia mizaka ny fahefana rehetra hanao lalàna ny Antenimierampirenena.\nMandrampahatongan’ny fotoana andraisan’ny Filohan'ny Repoblika vaovao ny fahefany dia manohy misahana ny asan'ny Filoham-panjakana ny Filohan’ny Fahefana Avon’ny Tetezamita.\nRaha misy fahabangan-toeran’ny Filoha, n’inon’inona antony dia iarahan’ny Praiminisitra, Filohan’ny Filankevitra Ambony ny Tetezamita ary ny Filohan’ny Kongresy misahana ny asan’ny Filoham-panjakana."
         },
         {
+          "id": 167,
           "title": "Andininy 167",
           "content": "Ho fanajàna ny Lalampanorenana, ny Filohan’ny Repoblika dia miantso ireo ambaratongam-pahefana mahefa mba hanolotra ireo ho mpikambana ao amin’ny Fitsarana Avo ahafahana manangana io rafitra io. Izany dia tanterahina ao anatin’ny 12 volana manaraka ny fotoana nandraisany fahefana, ka raha vao tapitra io fe-potoana io dia atsangana avy hatrany ny Fitsaràna Avo. Raha misy ny tsy fahatomombanana dia azon’ny rehetra mahaporofo tombontsoa atao ny mampakatra ny raharaha manoloana izay andrim-panjakana mahefa mba ny hangatahana fanasaziana.\nRaha misy antony manokana, amin'izay mikasika ny Filohan'ny Repoblika, ny Fitsarana Avo momba ny Lalàmpanorenana dia omem-pahefana handray ny sazy izay mety ho noraisin'ny Fitsarana Avo raha toa izy ka efa nijoro."
         },
         {
+          "id": 168,
           "title": "Andininy 168",
           "content": "Ao anatin’ny tondrozotra mahakasika ny fampihavanam-pirenena, dia atsangana ny Filankevitry ny Fampihavanana Malagasy; ka ny lalàna no mamaritra ny momba ny mpikambana sy ny andraikiny ary ny fomba entiny miasa."
         }

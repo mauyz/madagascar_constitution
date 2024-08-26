@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:madagascar_constitution/model/preamble.dart';
 
-class PreambleContentPage extends StatelessWidget {
+class PreambleContent extends StatelessWidget {
   final Preamble preamble;
-  const PreambleContentPage({
+  const PreambleContent({
     super.key,
     required this.preamble,
   });
