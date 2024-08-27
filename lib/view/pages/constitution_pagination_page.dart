@@ -10,25 +10,25 @@ import 'package:provider/provider.dart';
 @RoutePage()
 class ConstitutionPaginationPage extends StatelessWidget {
   final String language;
-  final int? page;
+  final int? title;
   const ConstitutionPaginationPage({
     super.key,
     @pathParam required this.language,
-    @queryParam this.page,
+    @queryParam this.title,
   });
 
   @override
   Widget build(BuildContext context) {
-    final initialPage = page ?? -1;
     if (!ConstitutionLanguage.values
             .map(
               (e) => e.name,
             )
             .toList()
             .contains(language) ||
-        (page != null && (page! < -1 || page! > 6))) {
+        (title != null && (title! < 0 || title! > 7))) {
       return const NotFoundPage();
     }
+    final initialPage = title ?? 0;
     final repository = context.read<Repository>();
     final constitutionLanguage = switch (language) {
       "mg" => ConstitutionLanguage.mg,
