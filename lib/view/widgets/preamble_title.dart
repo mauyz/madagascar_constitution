@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:madagascar_constitution/app/app_router.gr.dart';
 import 'package:madagascar_constitution/core/constitution_language.dart';
 import 'package:madagascar_constitution/model/constitution.dart';
 
@@ -21,8 +22,11 @@ class PreambleTitle extends StatelessWidget {
         elevation: 2.0,
         child: InkWell(
           onTap: () {
-            context.router.navigateNamed(
-              "/articles/${constitutionLanguage.name}?page=-1",
+            context.router.navigate(
+              ConstitutionPaginationRoute(
+                language: constitutionLanguage.name,
+                title: 0,
+              ),
             );
           },
           child: Padding(

@@ -30,7 +30,7 @@ class PaginationButtons extends StatelessWidget {
                   ),
                 ),
               ),
-              onPressed: currentPage == -1
+              onPressed: currentPage == 0
                   ? null
                   : () => pageController.previousPage(
                         duration: const Duration(milliseconds: 500),
@@ -53,7 +53,7 @@ class PaginationButtons extends StatelessWidget {
                   ),
                 ),
               ),
-              onPressed: currentPage == 6
+              onPressed: currentPage == 7
                   ? null
                   : () => pageController.nextPage(
                         duration: const Duration(milliseconds: 500),

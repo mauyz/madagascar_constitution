@@ -9,7 +9,8 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i6;
-import 'package:flutter/material.dart' as _i7;
+import 'package:flutter/foundation.dart' as _i7;
+import 'package:flutter/material.dart' as _i8;
 import 'package:madagascar_constitution/view/pages/article_content_page.dart'
     as _i1;
 import 'package:madagascar_constitution/view/pages/constitution_pagination_page.dart'
@@ -85,19 +86,19 @@ class ArticleContentRouteArgs {
 class ConstitutionPaginationRoute
     extends _i6.PageRouteInfo<ConstitutionPaginationRouteArgs> {
   ConstitutionPaginationRoute({
-    _i7.Key? key,
+    _i8.Key? key,
     required String language,
-    int? page,
+    int? title,
     List<_i6.PageRouteInfo>? children,
   }) : super(
           ConstitutionPaginationRoute.name,
           args: ConstitutionPaginationRouteArgs(
             key: key,
             language: language,
-            page: page,
+            title: title,
           ),
           rawPathParams: {'language': language},
-          rawQueryParams: {'page': page},
+          rawQueryParams: {'title': title},
           initialChildren: children,
         );
 
@@ -111,12 +112,12 @@ class ConstitutionPaginationRoute
       final args = data.argsAs<ConstitutionPaginationRouteArgs>(
           orElse: () => ConstitutionPaginationRouteArgs(
                 language: pathParams.getString('language'),
-                page: queryParams.optInt('page'),
+                title: queryParams.optInt('title'),
               ));
       return _i2.ConstitutionPaginationPage(
         key: args.key,
         language: args.language,
-        page: args.page,
+        title: args.title,
       );
     },
   );
@@ -126,18 +127,18 @@ class ConstitutionPaginationRouteArgs {
   const ConstitutionPaginationRouteArgs({
     this.key,
     required this.language,
-    this.page,
+    this.title,
   });
 
-  final _i7.Key? key;
+  final _i8.Key? key;
 
   final String language;
 
-  final int? page;
+  final int? title;
 
   @override
   String toString() {
-    return 'ConstitutionPaginationRouteArgs{key: $key, language: $language, page: $page}';
+    return 'ConstitutionPaginationRouteArgs{key: $key, language: $language, title: $title}';
   }
 }
 

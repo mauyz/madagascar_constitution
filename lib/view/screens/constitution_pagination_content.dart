@@ -29,7 +29,7 @@ class ConstitutionPaginationContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final sharedPreferences = context.read<SharedPreferences>();
-    final pageController = PageController(initialPage: initialPage + 1);
+    final pageController = PageController(initialPage: initialPage);
     return MultiProvider(
       providers: [
         ListenableProvider<PaginationViewModel>(
@@ -58,9 +58,9 @@ class ConstitutionPaginationContent extends StatelessWidget {
                 ),
           title: Consumer<PaginationViewModel>(
             builder: (_, paginationViewModel, __) {
-              final pageTitle = paginationViewModel.page == -1
+              final pageTitle = paginationViewModel.page == 0
                   ? constitution.preamble.title
-                  : constitution.headlines[paginationViewModel.page].title;
+                  : constitution.headlines[paginationViewModel.page - 1].title;
               return AutoSizeText(
                 pageTitle,
                 maxLines: 2,
@@ -73,10 +73,10 @@ class ConstitutionPaginationContent extends StatelessWidget {
           actions: [
             Consumer<PaginationViewModel>(
               builder: (buildContext, paginationViewModel, __) {
-                return (paginationViewModel.page != -1 &&
+                return (paginationViewModel.page != 0 &&
                         MediaQuery.sizeOf(buildContext).width >= 600)
                     ? Padding(
-                        padding: const EdgeInsets.only(right: 5.0),
+                        padding: const EdgeInsets.only(right: 8.0),
                         child: Consumer<ArticleListTypeViewModel>(
                           builder: (_, listTypeViewModel, __) {
                             return IconButton(
@@ -113,9 +113,8 @@ class ConstitutionPaginationContent extends StatelessWidget {
                       physics: const AlwaysScrollableScrollPhysics(),
                       controller: pageController,
                       itemCount: constitution.headlines.length + 1,
-                      onPageChanged: (index) => context
-                          .read<PaginationViewModel>()
-                          .goToPage(index - 1),
+                      onPageChanged: (index) =>
+                          context.read<PaginationViewModel>().goToPage(index),
                       itemBuilder: (_, index) {
                         final currentContent = (index == 0)
                             ? constitution.preamble

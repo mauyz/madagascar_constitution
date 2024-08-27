@@ -67,7 +67,6 @@ class HomePage extends StatelessWidget {
               title: const AppTitle(),
               actions: [
                 if (deviceWidth > 800) ...[
-                  const Spacer(),
                   DrawerItem(
                     title: "Changer le thème",
                     onTap: () {
@@ -100,16 +99,30 @@ class HomePage extends StatelessWidget {
                       _showAbout(context);
                     },
                   ),
-                  const Spacer(),
-                ],
-                IconButton(
-                  onPressed: () => context.router.push(
-                    const SearchContentRoute(),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: FilledButton.tonalIcon(
+                      onPressed: () => context.router.push(
+                        const SearchContentRoute(),
+                      ),
+                      icon: const Icon(
+                        Icons.search,
+                      ),
+                      label: const Text("Rechercher"),
+                    ),
                   ),
-                  icon: const Icon(
-                    Icons.search,
-                  ),
-                )
+                ] else
+                  Padding(
+                    padding: const EdgeInsets.only(right: 8.0),
+                    child: IconButton(
+                      onPressed: () => context.router.push(
+                        const SearchContentRoute(),
+                      ),
+                      icon: const Icon(
+                        Icons.search,
+                      ),
+                    ),
+                  )
               ],
             ),
             drawer: deviceWidth < 800
