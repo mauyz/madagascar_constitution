@@ -33,7 +33,7 @@ class PreambleTitle extends StatelessWidget {
             padding: const EdgeInsets.all(15.0),
             child: Text(
               preamble.title.toUpperCase(),
-              style: Theme.of(context).textTheme.titleLarge,
+              style: Theme.of(context).textTheme.titleMedium,
             ),
           ),
         ),
