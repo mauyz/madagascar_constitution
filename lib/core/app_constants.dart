@@ -13,6 +13,11 @@ class AppConstants {
       " APRES LE REFERENDUM DU 17 NOVEMBRE 2010,\narrêtés"
       " par la Haute Cour Constitutionnelle le 6 décembre 2010.\n"
       "Source : https://tenymalagasy.org/bins/lalampanorenana";
+  static const appClause =
+      "Clause de non-responsabilité :\nCette application n'est pas affiliée à "
+      "une entité gouvernementale et ne représente pas une autorité officielle.\n"
+      "Elle vise à offrir un accès simplifié à la Constitution de Madagascar "
+      "pour des fins informatives et éducatives uniquement.";
 
   static final copyright =
       "© ${DateTime.now().year} Moïse T.${kIsWeb ? '' : ", Baroov"}";

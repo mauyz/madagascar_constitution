@@ -433,7 +433,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      applicationLegalese: "${AppConstants.aboutApp}"
+      applicationLegalese: "${AppConstants.aboutApp} \n\n${AppConstants.appClause}"
           "\n\nContact du développeur : ${AppConstants.mauyzEmail}",
       copyright: AppConstants.copyright,
     );
