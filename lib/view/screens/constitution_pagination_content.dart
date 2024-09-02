@@ -77,7 +77,7 @@ class ConstitutionPaginationContent extends StatelessWidget {
               language: language,
               onChanged: (value) {
                 if (value != null && language != value) {
-                  context.router.replace(
+                  context.router.popAndPush(
                     ConstitutionPaginationRoute(
                       language: value.name,
                       title: initialPage,

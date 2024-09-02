@@ -63,7 +63,7 @@ class ArticleContentPage extends StatelessWidget {
                     language: languageEnum,
                     onChanged: (value) {
                       if (value != null && languageEnum != value) {
-                        context.router.replace(
+                        context.router.popAndPush(
                           ArticleContentRoute(
                             language: value.name,
                             id: id,
