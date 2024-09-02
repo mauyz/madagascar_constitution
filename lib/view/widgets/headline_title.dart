@@ -44,7 +44,7 @@ class HeadlineTitle extends StatelessWidget {
                   children: [
                     Text(
                       '${headline.title} ',
-                      style: Theme.of(context).textTheme.titleLarge,
+                      style: Theme.of(context).textTheme.titleMedium,
                     ),
                     Text(
                       '(${headline.formattedRange})',

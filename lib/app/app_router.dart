@@ -14,15 +14,19 @@ class AppRouter extends RootStackRouter {
               path: "",
               page: HomeRoute.page,
             ),
-            AutoRoute(
+            CustomRoute(
               path: "articles/:language",
               page: ConstitutionPaginationRoute.page,
+              transitionsBuilder: TransitionsBuilders.slideLeft,
+              durationInMilliseconds: 200,
             ),
           ],
         ),
-        AutoRoute(
+        CustomRoute(
           path: "/articles/:language/:id",
           page: ArticleContentRoute.page,
+          transitionsBuilder: TransitionsBuilders.slideLeft,
+          durationInMilliseconds: 200,
         ),
         AutoRoute(
           path: "/search",
