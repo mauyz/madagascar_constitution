@@ -18,7 +18,7 @@ class AppRouter extends RootStackRouter {
               path: "articles/:language",
               page: ConstitutionPaginationRoute.page,
               transitionsBuilder: TransitionsBuilders.slideLeft,
-              durationInMilliseconds: 200,
+              durationInMilliseconds: 400,
             ),
           ],
         ),
@@ -26,7 +26,7 @@ class AppRouter extends RootStackRouter {
           path: "/articles/:language/:id",
           page: ArticleContentRoute.page,
           transitionsBuilder: TransitionsBuilders.slideLeft,
-          durationInMilliseconds: 200,
+          durationInMilliseconds: 400,
         ),
         AutoRoute(
           path: "/search",
