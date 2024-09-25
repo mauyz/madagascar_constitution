@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:madagascar_constitution/viewmodel/pagination_view_model.dart';
 
 class PaginationButtons extends StatelessWidget {
-  final PageController pageController;
-  final PaginationViewModel paginationViewModel;
+  final Function()? onPreviousTap;
+  final Function()? onNextTap;
   const PaginationButtons({
     super.key,
-    required this.pageController,
-    required this.paginationViewModel,
+    this.onPreviousTap,
+    this.onNextTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    final currentPage = paginationViewModel.page;
     return Padding(
       padding: const EdgeInsets.only(bottom: 2.0),
       child: Row(
@@ -30,12 +28,7 @@ class PaginationButtons extends StatelessWidget {
                   ),
                 ),
               ),
-              onPressed: currentPage == 0
-                  ? null
-                  : () => pageController.previousPage(
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.ease,
-                      ),
+              onPressed: onPreviousTap,
               child: const Text('<'),
             ),
           ),
@@ -53,12 +46,7 @@ class PaginationButtons extends StatelessWidget {
                   ),
                 ),
               ),
-              onPressed: currentPage == 7
-                  ? null
-                  : () => pageController.nextPage(
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.ease,
-                      ),
+              onPressed: onNextTap,
               child: const Text('>'),
             ),
           ),

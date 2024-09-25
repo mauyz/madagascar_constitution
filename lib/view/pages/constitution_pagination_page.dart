@@ -11,10 +11,12 @@ import 'package:provider/provider.dart';
 class ConstitutionPaginationPage extends StatelessWidget {
   final String language;
   final int? title;
+  final bool? useDefaultAnimation;
   const ConstitutionPaginationPage({
     super.key,
     @pathParam required this.language,
     @queryParam this.title,
+    this.useDefaultAnimation,
   });
 
   @override
