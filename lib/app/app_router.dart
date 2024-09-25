@@ -45,7 +45,26 @@ class AppRouter extends RootStackRouter {
         CustomRoute(
           path: "/articles/:language/:id",
           page: ArticleContentRoute.page,
-          transitionsBuilder: TransitionsBuilders.slideTop,
+          transitionsBuilder: (context, animation, __, child) {
+            final args = context.router.current.args;
+            if (args is ArticleContentRouteArgs &&
+                args.useDefaultAnimation == false) {
+              return SlideTransition(
+                position: Tween<Offset>(
+                  begin: const Offset(-1.0, 0.0),
+                  end: Offset.zero,
+                ).animate(animation),
+                child: child,
+              );
+            }
+            return SlideTransition(
+              position: Tween<Offset>(
+                begin: const Offset(1.0, 0.0),
+                end: Offset.zero,
+              ).animate(animation),
+              child: child,
+            );
+          },
           durationInMilliseconds: 400,
         ),
         AutoRoute(

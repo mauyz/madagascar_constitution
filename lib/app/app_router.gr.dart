@@ -27,6 +27,7 @@ class ArticleContentRoute extends _i6.PageRouteInfo<ArticleContentRouteArgs> {
     _i7.Key? key,
     required String language,
     required int id,
+    bool? useDefaultAnimation,
     List<_i6.PageRouteInfo>? children,
   }) : super(
           ArticleContentRoute.name,
@@ -34,6 +35,7 @@ class ArticleContentRoute extends _i6.PageRouteInfo<ArticleContentRouteArgs> {
             key: key,
             language: language,
             id: id,
+            useDefaultAnimation: useDefaultAnimation,
           ),
           rawPathParams: {
             'language': language,
@@ -57,6 +59,7 @@ class ArticleContentRoute extends _i6.PageRouteInfo<ArticleContentRouteArgs> {
         key: args.key,
         language: args.language,
         id: args.id,
+        useDefaultAnimation: args.useDefaultAnimation,
       );
     },
   );
@@ -67,6 +70,7 @@ class ArticleContentRouteArgs {
     this.key,
     required this.language,
     required this.id,
+    this.useDefaultAnimation,
   });
 
   final _i7.Key? key;
@@ -75,9 +79,11 @@ class ArticleContentRouteArgs {
 
   final int id;
 
+  final bool? useDefaultAnimation;
+
   @override
   String toString() {
-    return 'ArticleContentRouteArgs{key: $key, language: $language, id: $id}';
+    return 'ArticleContentRouteArgs{key: $key, language: $language, id: $id, useDefaultAnimation: $useDefaultAnimation}';
   }
 }
 
