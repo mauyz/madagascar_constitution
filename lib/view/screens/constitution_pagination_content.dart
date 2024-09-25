@@ -10,6 +10,7 @@ import 'package:madagascar_constitution/model/preamble.dart';
 import 'package:madagascar_constitution/view/screens/headline_content.dart';
 import 'package:madagascar_constitution/view/screens/preamble_content.dart';
 import 'package:madagascar_constitution/view/widgets/back_to_home_button.dart';
+import 'package:madagascar_constitution/view/widgets/horizontal_swipe_container.dart';
 import 'package:madagascar_constitution/view/widgets/language_menu.dart';
 import 'package:madagascar_constitution/view/widgets/pagination_buttons.dart';
 import 'package:madagascar_constitution/view/widgets/type_view_button.dart';
@@ -30,8 +31,6 @@ class ConstitutionPaginationContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Offset? startPosition;
-    Offset? updatePosition;
     final currentContent = initialPage == 0
         ? constitution.preamble
         : constitution.headlines[initialPage - 1];
@@ -83,15 +82,9 @@ class ConstitutionPaginationContent extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Expanded(
-              child: GestureDetector(
-                onPanStart: (details) => startPosition = details.globalPosition,
-                onPanUpdate: (details) =>
-                    updatePosition = details.globalPosition,
-                onPanEnd: (_) => _executeSwipe(
-                  context,
-                  startPosition,
-                  updatePosition,
-                ),
+              child: HorizontalSwipeContainer(
+                onSwipeLeft: _navigateToPreviousPage(context),
+                onSwipeRight: _navigateToNextPage(context),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: currentContent is Preamble
@@ -104,45 +97,35 @@ class ConstitutionPaginationContent extends StatelessWidget {
               ),
             ),
             PaginationButtons(
-              initialPage: initialPage,
-              language: language.name,
-            )
+              onPreviousTap: _navigateToPreviousPage(context),
+              onNextTap: _navigateToNextPage(context),
+            ),
           ],
         ),
       ),
     );
   }
 
-  void _executeSwipe(
-    BuildContext context,
-    Offset? startPosition,
-    Offset? updatePosition,
-  ) {
-    if (startPosition == null || updatePosition == null) {
-      return;
-    }
-    final offset = updatePosition - startPosition;
-    if (offset.dx.abs() > offset.dy.abs()) {
-      if (offset.dx > 0) {
-        if (initialPage != 0) {
-          context.router.popAndPush(
-            ConstitutionPaginationRoute(
-              language: language.name,
-              title: initialPage - 1,
-              useDefaultAnimation: false,
-            ),
-          );
-        }
-      } else {
-        if (initialPage != 7) {
-          context.router.popAndPush(
-            ConstitutionPaginationRoute(
-              language: language.name,
-              title: initialPage + 1,
-            ),
-          );
-        }
-      }
-    }
+  Function()? _navigateToPreviousPage(BuildContext context) {
+    return initialPage == 0
+        ? null
+        : () => context.router.popAndPush(
+              ConstitutionPaginationRoute(
+                language: language.name,
+                title: initialPage - 1,
+                useDefaultAnimation: false,
+              ),
+            );
+  }
+
+  Function()? _navigateToNextPage(BuildContext context) {
+    return initialPage == 7
+        ? null
+        : () => context.router.popAndPush(
+              ConstitutionPaginationRoute(
+                language: language.name,
+                title: initialPage + 1,
+              ),
+            );
   }
 }
