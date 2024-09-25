@@ -1,3 +1,0 @@
-- Amélioration des visuels
-- Possibilité de changer le thème
-- Possibilité de sélectionner et copier le contenu des articles
