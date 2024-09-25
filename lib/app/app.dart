@@ -15,7 +15,6 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final appRouter = AppRouter();
     return MultiProvider(
       providers: [
         Provider.value(
@@ -67,6 +66,8 @@ class App extends StatelessWidget {
     );
   }
 }
+
+final appRouter = AppRouter();
 
 class AppScrollBehavior extends MaterialScrollBehavior {
   @override
