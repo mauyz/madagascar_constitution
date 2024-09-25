@@ -1,14 +1,12 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:madagascar_constitution/app/app_router.gr.dart';
 
 class PaginationButtons extends StatelessWidget {
-  final int initialPage;
-  final String language;
+  final Function()? onPreviousTap;
+  final Function()? onNextTap;
   const PaginationButtons({
     super.key,
-    required this.initialPage,
-    required this.language,
+    this.onPreviousTap,
+    this.onNextTap,
   });
 
   @override
@@ -30,15 +28,7 @@ class PaginationButtons extends StatelessWidget {
                   ),
                 ),
               ),
-              onPressed: initialPage == 0
-                  ? null
-                  : () => context.router.popAndPush(
-                        ConstitutionPaginationRoute(
-                          language: language,
-                          title: initialPage - 1,
-                          useDefaultAnimation: false,
-                        ),
-                      ),
+              onPressed: onPreviousTap,
               child: const Text('<'),
             ),
           ),
@@ -56,14 +46,7 @@ class PaginationButtons extends StatelessWidget {
                   ),
                 ),
               ),
-              onPressed: initialPage == 7
-                  ? null
-                  : () => context.router.popAndPush(
-                        ConstitutionPaginationRoute(
-                          language: language,
-                          title: initialPage + 1,
-                        ),
-                      ),
+              onPressed: onNextTap,
               child: const Text('>'),
             ),
           ),
