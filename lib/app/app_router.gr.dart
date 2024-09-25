@@ -89,6 +89,7 @@ class ConstitutionPaginationRoute
     _i8.Key? key,
     required String language,
     int? title,
+    bool? useDefaultAnimation,
     List<_i6.PageRouteInfo>? children,
   }) : super(
           ConstitutionPaginationRoute.name,
@@ -96,6 +97,7 @@ class ConstitutionPaginationRoute
             key: key,
             language: language,
             title: title,
+            useDefaultAnimation: useDefaultAnimation,
           ),
           rawPathParams: {'language': language},
           rawQueryParams: {'title': title},
@@ -118,6 +120,7 @@ class ConstitutionPaginationRoute
         key: args.key,
         language: args.language,
         title: args.title,
+        useDefaultAnimation: args.useDefaultAnimation,
       );
     },
   );
@@ -128,6 +131,7 @@ class ConstitutionPaginationRouteArgs {
     this.key,
     required this.language,
     this.title,
+    this.useDefaultAnimation,
   });
 
   final _i8.Key? key;
@@ -136,9 +140,11 @@ class ConstitutionPaginationRouteArgs {
 
   final int? title;
 
+  final bool? useDefaultAnimation;
+
   @override
   String toString() {
-    return 'ConstitutionPaginationRouteArgs{key: $key, language: $language, title: $title}';
+    return 'ConstitutionPaginationRouteArgs{key: $key, language: $language, title: $title, useDefaultAnimation: $useDefaultAnimation}';
   }
 }
 

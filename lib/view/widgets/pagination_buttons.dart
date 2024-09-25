@@ -1,18 +1,18 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:madagascar_constitution/viewmodel/pagination_view_model.dart';
+import 'package:madagascar_constitution/app/app_router.gr.dart';
 
 class PaginationButtons extends StatelessWidget {
-  final PageController pageController;
-  final PaginationViewModel paginationViewModel;
+  final int initialPage;
+  final String language;
   const PaginationButtons({
     super.key,
-    required this.pageController,
-    required this.paginationViewModel,
+    required this.initialPage,
+    required this.language,
   });
 
   @override
   Widget build(BuildContext context) {
-    final currentPage = paginationViewModel.page;
     return Padding(
       padding: const EdgeInsets.only(bottom: 2.0),
       child: Row(
@@ -30,11 +30,14 @@ class PaginationButtons extends StatelessWidget {
                   ),
                 ),
               ),
-              onPressed: currentPage == 0
+              onPressed: initialPage == 0
                   ? null
-                  : () => pageController.previousPage(
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.ease,
+                  : () => context.router.popAndPush(
+                        ConstitutionPaginationRoute(
+                          language: language,
+                          title: initialPage - 1,
+                          useDefaultAnimation: false,
+                        ),
                       ),
               child: const Text('<'),
             ),
@@ -53,11 +56,13 @@ class PaginationButtons extends StatelessWidget {
                   ),
                 ),
               ),
-              onPressed: currentPage == 7
+              onPressed: initialPage == 7
                   ? null
-                  : () => pageController.nextPage(
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.ease,
+                  : () => context.router.popAndPush(
+                        ConstitutionPaginationRoute(
+                          language: language,
+                          title: initialPage + 1,
+                        ),
                       ),
               child: const Text('>'),
             ),

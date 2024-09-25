@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
 import 'package:madagascar_constitution/app/app_router.gr.dart';
 
 @AutoRouterConfig()
@@ -17,7 +18,26 @@ class AppRouter extends RootStackRouter {
             CustomRoute(
               path: "articles/:language",
               page: ConstitutionPaginationRoute.page,
-              transitionsBuilder: TransitionsBuilders.slideLeft,
+              transitionsBuilder: (context, animation, __, child) {
+                final args = context.router.current.args;
+                if (args is ConstitutionPaginationRouteArgs &&
+                    args.useDefaultAnimation == false) {
+                  return SlideTransition(
+                    position: Tween<Offset>(
+                      begin: const Offset(-1.0, 0.0),
+                      end: Offset.zero,
+                    ).animate(animation),
+                    child: child,
+                  );
+                }
+                return SlideTransition(
+                  position: Tween<Offset>(
+                    begin: const Offset(1.0, 0.0),
+                    end: Offset.zero,
+                  ).animate(animation),
+                  child: child,
+                );
+              },
               durationInMilliseconds: 400,
             ),
           ],
@@ -25,7 +45,7 @@ class AppRouter extends RootStackRouter {
         CustomRoute(
           path: "/articles/:language/:id",
           page: ArticleContentRoute.page,
-          transitionsBuilder: TransitionsBuilders.slideLeft,
+          transitionsBuilder: TransitionsBuilders.slideTop,
           durationInMilliseconds: 400,
         ),
         AutoRoute(
