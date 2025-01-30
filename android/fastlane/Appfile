@@ -1,2 +1,2 @@
-json_key_file("/media/mauyz/Personnal/Project/Flutter/Important/keys/constitution-malagasy-270112f6f178.json") # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one
+json_key_file("/media/mauyz/Personnal/Project/Flutter/Important/keys/fastlane-449408-ac17855d6422.json") # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one
 package_name("com.eightgroup.mauyz.constitution") # e.g. com.krausefx.app
