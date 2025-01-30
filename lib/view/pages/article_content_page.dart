@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:madagascar_constitution/app/app_router.gr.dart';
@@ -11,12 +12,14 @@ import 'package:madagascar_constitution/view/widgets/horizontal_swipe_container.
 import 'package:madagascar_constitution/view/widgets/language_menu.dart';
 import 'package:madagascar_constitution/view/widgets/pagination_buttons.dart';
 import 'package:provider/provider.dart';
+import 'package:share_plus/share_plus.dart';
 
 @RoutePage()
 class ArticleContentPage extends StatelessWidget {
   final String language;
   final int id;
   final bool? useDefaultAnimation;
+
   const ArticleContentPage({
     super.key,
     @pathParam required this.language,
@@ -61,7 +64,10 @@ class ArticleContentPage extends StatelessWidget {
                           Icons.arrow_back,
                         ),
                       ),
-                title: Text(article.title),
+                title: AutoSizeText(
+                  article.title,
+                  maxLines: 2,
+                ),
                 actions: [
                   LanguageMenu(
                     language: languageEnum,
@@ -75,7 +81,24 @@ class ArticleContentPage extends StatelessWidget {
                         );
                       }
                     },
-                  )
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 5.0,
+                    ),
+                    child: IconButton(
+                      onPressed: () {
+                        Share.share(
+                          "${article.title} \n${article.content}",
+                          subject: article.title,
+                        );
+                      },
+                      icon: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Icon(Icons.share),
+                      ),
+                    ),
+                  ),
                 ],
               ),
               body: Column(
