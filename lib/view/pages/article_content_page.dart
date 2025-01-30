@@ -89,7 +89,7 @@ class ArticleContentPage extends StatelessWidget {
                     child: IconButton(
                       onPressed: () {
                         Share.share(
-                          "${article.title} \n${article.content}",
+                          "${article.title}\n\n${article.content}",
                           subject: article.title,
                         );
                       },
