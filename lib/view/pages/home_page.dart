@@ -141,7 +141,7 @@ class HomePage extends StatelessWidget {
                               Container(
                                 color: Theme.of(context)
                                     .primaryColor
-                                    .withOpacity(0.5),
+                                    .withValues(alpha: 0.5),
                                 alignment: Alignment.center,
                                 child: const Padding(
                                   padding: EdgeInsets.all(8.0),

@@ -4,6 +4,7 @@ class DrawerItem extends StatelessWidget {
   final IconData? icon;
   final String title;
   final Function() onTap;
+
   const DrawerItem({
     super.key,
     this.icon,
@@ -30,8 +31,9 @@ class DrawerItem extends StatelessWidget {
         : Padding(
             padding: const EdgeInsets.only(bottom: 2.0),
             child: ListTile(
-              tileColor: Colors.green.withOpacity(
-                Theme.of(context).brightness == Brightness.dark ? 0.1 : 0.2,
+              tileColor: Colors.green.withValues(
+                alpha:
+                    Theme.of(context).brightness == Brightness.dark ? 0.1 : 0.2,
               ),
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.horizontal(

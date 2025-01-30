@@ -21,6 +21,7 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
+
   @override
   void initState() {
     super.initState();
@@ -54,8 +55,8 @@ class _BottomNavBarState extends State<BottomNavBar>
     final deviceWidth = MediaQuery.sizeOf(context).width;
     return Container(
       decoration: BoxDecoration(
-        color: Colors.green.withOpacity(
-          Theme.of(context).brightness == Brightness.dark ? 0.3 : 0.8,
+        color: Colors.green.withValues(
+          alpha: Theme.of(context).brightness == Brightness.dark ? 0.3 : 0.8,
         ),
         borderRadius: const BorderRadius.all(
           Radius.circular(
@@ -72,8 +73,8 @@ class _BottomNavBarState extends State<BottomNavBar>
             final child = TextButton(
               style: TextButton.styleFrom(
                 backgroundColor: (selected && widget.items.length > 1)
-                    ? Colors.red.withOpacity(
-                        Theme.of(context).brightness == Brightness.dark
+                    ? Colors.red.withValues(
+                        alpha: Theme.of(context).brightness == Brightness.dark
                             ? 0.3
                             : 0.7,
                       )
