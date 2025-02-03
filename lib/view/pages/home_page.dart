@@ -370,11 +370,11 @@ class HomePage extends StatelessWidget {
   }
 
   void _sendReport() async {
-    final email = Email(recipients: [
-      AppConstants.mauyzEmail,
-    ], cc: [
-      AppConstants.baroovEmail,
-    ]);
+    final email = Email(
+      recipients: [
+        AppConstants.mauyzEmail,
+      ],
+    );
     try {
       await FlutterEmailSender.send(email);
     } catch (_) {
@@ -433,7 +433,8 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      applicationLegalese: "${AppConstants.aboutApp} \n\n${AppConstants.appClause}"
+      applicationLegalese:
+          "${AppConstants.aboutApp} \n\n${AppConstants.appClause}"
           "\n\nContact du développeur : ${AppConstants.mauyzEmail}",
       copyright: AppConstants.copyright,
     );
