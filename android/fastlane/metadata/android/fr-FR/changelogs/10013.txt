@@ -1,0 +1,3 @@
+- Corrections de bugs et améliorations des performances
+- Interface intuitive
+- Partager un article
