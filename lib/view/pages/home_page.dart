@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:auto_route/auto_route.dart';
@@ -5,6 +6,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:madagascar_constitution/app/app_router.gr.dart';
 import 'package:madagascar_constitution/core/app_constants.dart';
 import 'package:madagascar_constitution/core/constitution_language.dart';
@@ -25,8 +27,28 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 @RoutePage()
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  InterstitialAd? _interstitialAd;
+  Timer? _timer;
+  bool _isFirstTime = true;
+
+  @override
+  void initState() {
+    if (!kIsWeb) {
+      _loadInterstitialAd();
+      _timer = Timer.periodic(Duration(minutes: 5), (_) {
+        _showInterstitialAd();
+      });
+    }
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -277,6 +299,54 @@ class HomePage extends StatelessWidget {
         );
       },
     );
+  }
+
+  @override
+  void dispose() {
+    _interstitialAd?.dispose();
+    _timer?.cancel();
+    super.dispose();
+  }
+
+  void _loadInterstitialAd() {
+    InterstitialAd.load(
+      adUnitId: kDebugMode
+          ? 'ca-app-pub-3940256099942544/1033173712'
+          : 'ca-app-pub-4557811309342801/7281905864',
+      request: AdRequest(),
+      adLoadCallback: InterstitialAdLoadCallback(
+        onAdLoaded: (ad) {
+          _interstitialAd = ad;
+          if (_isFirstTime) {
+            _interstitialAd?.show();
+            _isFirstTime = false;
+          }
+        },
+        onAdFailedToLoad: (_) {},
+      ),
+    );
+  }
+
+  void _showInterstitialAd() {
+    if (_interstitialAd != null) {
+      _interstitialAd?.fullScreenContentCallback = FullScreenContentCallback(
+        onAdDismissedFullScreenContent: (ad) {
+          ad.dispose();
+          _interstitialAd?.dispose();
+          _interstitialAd = null;
+          _loadInterstitialAd();
+        },
+        onAdFailedToShowFullScreenContent: (ad, __) {
+          ad.dispose();
+          _interstitialAd?.dispose();
+          _interstitialAd = null;
+          _loadInterstitialAd();
+        },
+      );
+      _interstitialAd?.show();
+    } else {
+      _loadInterstitialAd();
+    }
   }
 
   void _changeTheme(BuildContext context) {
