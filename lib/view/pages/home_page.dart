@@ -318,8 +318,10 @@ class _HomePageState extends State<HomePage> {
         onAdLoaded: (ad) {
           _interstitialAd = ad;
           if (_isFirstTime) {
-            _interstitialAd?.show();
-            _isFirstTime = false;
+            Timer(Duration(seconds: 5), () {
+              _interstitialAd?.show();
+              _isFirstTime = false;
+            });
           }
         },
         onAdFailedToLoad: (_) {},
