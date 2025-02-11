@@ -7,10 +7,12 @@ import 'package:madagascar_constitution/core/constitution_language.dart';
 import 'package:madagascar_constitution/model/article.dart';
 import 'package:madagascar_constitution/source/repository.dart';
 import 'package:madagascar_constitution/view/pages/not_found_page.dart';
+import 'package:madagascar_constitution/view/widgets/ad_banner_widget.dart';
 import 'package:madagascar_constitution/view/widgets/back_to_home_button.dart';
 import 'package:madagascar_constitution/view/widgets/horizontal_swipe_container.dart';
 import 'package:madagascar_constitution/view/widgets/language_menu.dart';
 import 'package:madagascar_constitution/view/widgets/pagination_buttons.dart';
+import 'package:madagascar_constitution/viewmodel/ad_banner_view_model.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -123,8 +125,7 @@ class ArticleContentPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  SafeArea(
                     child: Center(
                       child: PaginationButtons(
                         onPreviousTap: _navigateToPreviousPage(context),
@@ -132,6 +133,11 @@ class ArticleContentPage extends StatelessWidget {
                       ),
                     ),
                   ),
+                  if (!kIsWeb)
+                    ListenableProvider(
+                      create: (context) => AdBannerViewModel(),
+                      child: AdBannerWidget(),
+                    ),
                 ],
               ),
             );

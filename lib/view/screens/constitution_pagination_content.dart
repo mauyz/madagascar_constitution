@@ -9,11 +9,13 @@ import 'package:madagascar_constitution/model/headline.dart';
 import 'package:madagascar_constitution/model/preamble.dart';
 import 'package:madagascar_constitution/view/screens/headline_content.dart';
 import 'package:madagascar_constitution/view/screens/preamble_content.dart';
+import 'package:madagascar_constitution/view/widgets/ad_banner_widget.dart';
 import 'package:madagascar_constitution/view/widgets/back_to_home_button.dart';
 import 'package:madagascar_constitution/view/widgets/horizontal_swipe_container.dart';
 import 'package:madagascar_constitution/view/widgets/language_menu.dart';
 import 'package:madagascar_constitution/view/widgets/pagination_buttons.dart';
 import 'package:madagascar_constitution/view/widgets/type_view_button.dart';
+import 'package:madagascar_constitution/viewmodel/ad_banner_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/article_list_type_view_model.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -22,6 +24,7 @@ class ConstitutionPaginationContent extends StatelessWidget {
   final Constitution constitution;
   final ConstitutionLanguage language;
   final int initialPage;
+
   const ConstitutionPaginationContent({
     super.key,
     required this.language,
@@ -96,10 +99,17 @@ class ConstitutionPaginationContent extends StatelessWidget {
                 ),
               ),
             ),
-            PaginationButtons(
-              onPreviousTap: _navigateToPreviousPage(context),
-              onNextTap: _navigateToNextPage(context),
+            SafeArea(
+              child: PaginationButtons(
+                onPreviousTap: _navigateToPreviousPage(context),
+                onNextTap: _navigateToNextPage(context),
+              ),
             ),
+            if (!kIsWeb)
+              ListenableProvider(
+                create: (context) => AdBannerViewModel(),
+                child: AdBannerWidget(),
+              ),
           ],
         ),
       ),

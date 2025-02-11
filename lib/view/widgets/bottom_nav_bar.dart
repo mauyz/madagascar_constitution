@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:madagascar_constitution/viewmodel/opacity_view_model.dart';
 import 'package:provider/provider.dart';
@@ -89,7 +90,7 @@ class _BottomNavBarState extends State<BottomNavBar>
               },
               child: Padding(
                 padding: EdgeInsets.symmetric(
-                  vertical: deviceWidth > 600 ? 10.0 : 2.0,
+                  vertical: kIsWeb ? 10.0 : 2.0,
                   horizontal: 12.0,
                 ),
                 child: DefaultTextStyle.merge(
