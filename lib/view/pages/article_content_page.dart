@@ -125,8 +125,7 @@ class ArticleContentPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  SafeArea(
                     child: Center(
                       child: PaginationButtons(
                         onPreviousTap: _navigateToPreviousPage(context),
