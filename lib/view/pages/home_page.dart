@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     if (!kIsWeb) {
       _loadInterstitialAd();
-      _timer = Timer.periodic(Duration(minutes: 5), (_) {
+      _timer = Timer.periodic(Duration(minutes: 2), (_) {
         _showInterstitialAd();
       });
     }
