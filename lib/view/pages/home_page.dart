@@ -11,12 +11,14 @@ import 'package:madagascar_constitution/app/app_router.gr.dart';
 import 'package:madagascar_constitution/core/app_constants.dart';
 import 'package:madagascar_constitution/core/constitution_language.dart';
 import 'package:madagascar_constitution/view/screens/tab_content.dart';
+import 'package:madagascar_constitution/view/widgets/ad_banner_widget.dart';
 import 'package:madagascar_constitution/view/widgets/app_title.dart';
 import 'package:madagascar_constitution/view/widgets/bottom_nav_bar.dart';
 import 'package:madagascar_constitution/view/widgets/bottom_nav_bar_item.dart';
 import 'package:madagascar_constitution/view/widgets/custom_about.dart';
 import 'package:madagascar_constitution/view/widgets/drawer_item.dart';
 import 'package:madagascar_constitution/view/widgets/theme_radio.dart';
+import 'package:madagascar_constitution/viewmodel/ad_banner_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/opacity_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/tab_navigation_view_model.dart';
 import 'package:madagascar_constitution/viewmodel/theme_notifier.dart';
@@ -233,22 +235,34 @@ class _HomePageState extends State<HomePage> {
                     ),
                   )
                 : null,
-            body: PageView(
-              controller: pageController,
-              physics: const AlwaysScrollableScrollPhysics(),
-              onPageChanged: context.read<TabNavigationViewModel>().goTo,
-              children: const [
-                TabContent(
-                  key: PageStorageKey<String>('mg'),
-                  language: ConstitutionLanguage.mg,
-                ),
-                TabContent(
-                  key: PageStorageKey<String>('fr'),
-                  language: ConstitutionLanguage.fr,
-                ),
-                TabContent(
-                  key: PageStorageKey<String>('en'),
-                  language: ConstitutionLanguage.en,
+            body: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                if (!kIsWeb)
+                  ListenableProvider(
+                    create: (context) => AdBannerViewModel(),
+                    child: AdBannerWidget(),
+                  ),
+                Expanded(
+                  child: PageView(
+                    controller: pageController,
+                    physics: const AlwaysScrollableScrollPhysics(),
+                    onPageChanged: context.read<TabNavigationViewModel>().goTo,
+                    children: const [
+                      TabContent(
+                        key: PageStorageKey<String>('mg'),
+                        language: ConstitutionLanguage.mg,
+                      ),
+                      TabContent(
+                        key: PageStorageKey<String>('fr'),
+                        language: ConstitutionLanguage.fr,
+                      ),
+                      TabContent(
+                        key: PageStorageKey<String>('en'),
+                        language: ConstitutionLanguage.en,
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -318,7 +332,7 @@ class _HomePageState extends State<HomePage> {
         onAdLoaded: (ad) {
           _interstitialAd = ad;
           if (_isFirstTime) {
-            Timer(Duration(seconds: 5), () {
+            Timer(Duration(seconds: 2), () {
               _interstitialAd?.show();
               _isFirstTime = false;
             });
