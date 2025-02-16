@@ -7,7 +7,7 @@ class AppConstants {
   static const mauyzEmail = "tsiorymauyz@gmail.com";
 
   static const appTitle = "Constitution de Madagascar";
-  static const appVersion = "v1.0.13";
+  static const appVersion = "v1.0.14";
 
   static const aboutApp = "Constitution de la 4e République de Madagascar"
       " APRES LE REFERENDUM DU 17 NOVEMBRE 2010,\narrêtés"
