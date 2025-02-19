@@ -38,19 +38,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   InterstitialAd? _interstitialAd;
-  Timer? _timer;
-  bool _isFirstTime = true;
-
-  @override
-  void initState() {
-    if (!kIsWeb) {
-      _loadInterstitialAd();
-      _timer = Timer.periodic(Duration(minutes: 5), (_) {
-        _showInterstitialAd();
-      });
-    }
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -318,7 +305,6 @@ class _HomePageState extends State<HomePage> {
   @override
   void dispose() {
     _interstitialAd?.dispose();
-    _timer?.cancel();
     super.dispose();
   }
 
@@ -331,38 +317,13 @@ class _HomePageState extends State<HomePage> {
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (ad) {
           _interstitialAd = ad;
-          if (_isFirstTime) {
-            Timer(Duration(seconds: 2), () {
-              _interstitialAd?.show();
-              _isFirstTime = false;
-            });
-          }
+          Timer(Duration(seconds: 2), () {
+            _interstitialAd?.show();
+          });
         },
         onAdFailedToLoad: (_) {},
       ),
     );
-  }
-
-  void _showInterstitialAd() {
-    if (_interstitialAd != null) {
-      _interstitialAd?.fullScreenContentCallback = FullScreenContentCallback(
-        onAdDismissedFullScreenContent: (ad) {
-          ad.dispose();
-          _interstitialAd?.dispose();
-          _interstitialAd = null;
-          _loadInterstitialAd();
-        },
-        onAdFailedToShowFullScreenContent: (ad, __) {
-          ad.dispose();
-          _interstitialAd?.dispose();
-          _interstitialAd = null;
-          _loadInterstitialAd();
-        },
-      );
-      _interstitialAd?.show();
-    } else {
-      _loadInterstitialAd();
-    }
   }
 
   void _changeTheme(BuildContext context) {
@@ -381,6 +342,7 @@ class _HomePageState extends State<HomePage> {
 
     showDialog(
       context: context,
+      barrierDismissible: kIsWeb,
       builder: (context) {
         final groupValue = sharedPreferences.getInt("theme") ?? 0;
 
@@ -421,7 +383,12 @@ class _HomePageState extends State<HomePage> {
                 Padding(
                   padding: const EdgeInsets.only(top: 20.0),
                   child: TextButton(
-                    onPressed: () => Navigator.of(context).pop(),
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                      if (!kIsWeb) {
+                        _loadInterstitialAd();
+                      }
+                    },
                     child: const Text(
                       'Fermer',
                     ),
