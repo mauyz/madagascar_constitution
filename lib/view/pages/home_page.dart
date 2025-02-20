@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'dart:io';
 
 import 'package:auto_route/auto_route.dart';
@@ -38,6 +37,14 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   InterstitialAd? _interstitialAd;
+
+  @override
+  void initState() {
+    _interstitialAd?.dispose();
+    _interstitialAd = null;
+    _showInterstitialAdIfAvailable();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -226,9 +233,11 @@ class _HomePageState extends State<HomePage> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 if (!kIsWeb)
-                  ListenableProvider(
-                    create: (context) => AdBannerViewModel(),
-                    child: AdBannerWidget(),
+                  ChangeNotifierProvider(
+                    key: ValueKey("home"),
+                    lazy: true,
+                    create: (_) => AdBannerViewModel(),
+                    child: const AdBannerWidget(),
                   ),
                 Expanded(
                   child: PageView(
@@ -308,21 +317,40 @@ class _HomePageState extends State<HomePage> {
     super.dispose();
   }
 
-  void _loadInterstitialAd() {
-    InterstitialAd.load(
-      adUnitId: kDebugMode
-          ? 'ca-app-pub-3940256099942544/1033173712'
-          : 'ca-app-pub-4557811309342801/7281905864',
-      request: AdRequest(),
-      adLoadCallback: InterstitialAdLoadCallback(
-        onAdLoaded: (ad) {
-          _interstitialAd = ad;
-          Timer(Duration(seconds: 2), () {
-            _interstitialAd?.show();
-          });
-        },
-        onAdFailedToLoad: (_) {},
-      ),
+  void _showInterstitialAdIfAvailable() {
+    if (_interstitialAd == null) {
+      InterstitialAd.load(
+        adUnitId: kDebugMode
+            ? 'ca-app-pub-3940256099942544/1033173712'
+            : 'ca-app-pub-4557811309342801/7281905864',
+        request: AdRequest(),
+        adLoadCallback: InterstitialAdLoadCallback(
+          onAdLoaded: (ad) {
+            _interstitialAd = ad;
+            _setAdCallbacks();
+          },
+          onAdFailedToLoad: (_) {
+            _showInterstitialAdIfAvailable();
+          },
+        ),
+      );
+    } else {
+      _interstitialAd?.show();
+    }
+  }
+
+  void _setAdCallbacks() {
+    _interstitialAd?.fullScreenContentCallback = FullScreenContentCallback(
+      onAdDismissedFullScreenContent: (ad) {
+        ad.dispose();
+        _interstitialAd = null;
+        _showInterstitialAdIfAvailable();
+      },
+      onAdFailedToShowFullScreenContent: (ad, _) {
+        ad.dispose();
+        _interstitialAd = null;
+        _showInterstitialAdIfAvailable();
+      },
     );
   }
 
@@ -386,7 +414,7 @@ class _HomePageState extends State<HomePage> {
                     onPressed: () {
                       Navigator.of(context).pop();
                       if (!kIsWeb) {
-                        _loadInterstitialAd();
+                        _showInterstitialAdIfAvailable();
                       }
                     },
                     child: const Text(
@@ -473,23 +501,33 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _showAbout(BuildContext context) {
-    showCustomAboutDialog(
+    showDialog<void>(
       context: context,
-      applicationName: AppConstants.appTitle,
-      applicationVersion: AppConstants.appVersion,
-      applicationIcon: CircleAvatar(
-        child: Padding(
-          padding: const EdgeInsets.all(2.0),
-          child: SvgPicture.asset(
-            'assets/mg.svg',
-            height: 20,
+      builder: (BuildContext context) {
+        return CustomAboutDialog(
+          applicationName: AppConstants.appTitle,
+          applicationVersion: AppConstants.appVersion,
+          applicationIcon: CircleAvatar(
+            child: Padding(
+              padding: const EdgeInsets.all(2.0),
+              child: SvgPicture.asset(
+                'assets/mg.svg',
+                height: 20,
+              ),
+            ),
           ),
-        ),
-      ),
-      applicationLegalese:
-          "${AppConstants.aboutApp} \n\n${AppConstants.appClause}"
-          "\n\nContact du développeur : ${AppConstants.mauyzEmail}",
-      copyright: AppConstants.copyright,
+          applicationLegalese:
+              "${AppConstants.aboutApp} \n\n${AppConstants.appClause}"
+              "\n\nContact du développeur : ${AppConstants.mauyzEmail}",
+          copyright: AppConstants.copyright,
+        );
+      },
+    ).whenComplete(
+      () {
+        if (!kIsWeb) {
+          _showInterstitialAdIfAvailable();
+        }
+      },
     );
   }
 }

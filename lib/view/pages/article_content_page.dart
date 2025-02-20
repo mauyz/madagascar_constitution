@@ -125,18 +125,20 @@ class ArticleContentPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SafeArea(
-                    child: Center(
-                      child: PaginationButtons(
-                        onPreviousTap: _navigateToPreviousPage(context),
-                        onNextTap: _navigateToNextPage(context),
-                      ),
+                  Center(
+                    child: PaginationButtons(
+                      onPreviousTap: _navigateToPreviousPage(context),
+                      onNextTap: _navigateToNextPage(context),
                     ),
                   ),
                   if (!kIsWeb)
-                    ListenableProvider(
-                      create: (context) => AdBannerViewModel(),
-                      child: AdBannerWidget(),
+                    ChangeNotifierProvider(
+                      key: ValueKey("article"),
+                      lazy: true,
+                      create: (_) => AdBannerViewModel(),
+                      child: const SafeArea(
+                        child: AdBannerWidget(),
+                      ),
                     ),
                 ],
               ),

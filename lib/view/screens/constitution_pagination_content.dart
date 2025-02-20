@@ -99,16 +99,18 @@ class ConstitutionPaginationContent extends StatelessWidget {
                 ),
               ),
             ),
-            SafeArea(
-              child: PaginationButtons(
-                onPreviousTap: _navigateToPreviousPage(context),
-                onNextTap: _navigateToNextPage(context),
-              ),
+            PaginationButtons(
+              onPreviousTap: _navigateToPreviousPage(context),
+              onNextTap: _navigateToNextPage(context),
             ),
             if (!kIsWeb)
-              ListenableProvider(
-                create: (context) => AdBannerViewModel(),
-                child: AdBannerWidget(),
+              ChangeNotifierProvider(
+                key: ValueKey("pagination"),
+                lazy: true,
+                create: (_) => AdBannerViewModel(),
+                child: const SafeArea(
+                  child: AdBannerWidget(),
+                ),
               ),
           ],
         ),
