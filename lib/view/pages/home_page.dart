@@ -44,6 +44,9 @@ class _HomePageState extends State<HomePage> {
     _interstitialAd = null;
     _showInterstitialAdIfAvailable();
     super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _showAbout(context, false);
+    });
   }
 
   @override
@@ -114,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                   DrawerItem(
                     title: "A propos",
                     onTap: () {
-                      _showAbout(context);
+                      _showAbout(context, true);
                     },
                   ),
                   Padding(
@@ -219,7 +222,7 @@ class _HomePageState extends State<HomePage> {
                                 title: "A propos",
                                 onTap: () {
                                   Navigator.of(context).pop();
-                                  _showAbout(context);
+                                  _showAbout(context, true);
                                 },
                               ),
                             ],
@@ -500,13 +503,11 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
-  void _showAbout(BuildContext context) {
+  void _showAbout(BuildContext context, bool showAdMob) {
     showDialog<void>(
       context: context,
       builder: (BuildContext context) {
         return CustomAboutDialog(
-          applicationName: AppConstants.appTitle,
-          applicationVersion: AppConstants.appVersion,
           applicationIcon: CircleAvatar(
             child: Padding(
               padding: const EdgeInsets.all(2.0),
@@ -516,15 +517,11 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          applicationLegalese:
-              "${AppConstants.aboutApp} \n\n${AppConstants.appClause}"
-              "\n\nContact du développeur : ${AppConstants.mauyzEmail}",
-          copyright: AppConstants.copyright,
         );
       },
     ).whenComplete(
       () {
-        if (!kIsWeb) {
+        if (!kIsWeb && showAdMob) {
           _showInterstitialAdIfAvailable();
         }
       },
