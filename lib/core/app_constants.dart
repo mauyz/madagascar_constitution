@@ -11,10 +11,10 @@ class AppConstants {
 
   static const aboutApp = "Constitution de la 4e République de Madagascar"
       " APRES LE REFERENDUM DU 17 NOVEMBRE 2010,\narrêtés"
-      " par la Haute Cour Constitutionnelle le 6 décembre 2010.\n"
-      "Source : https://tenymalagasy.org/bins/lalampanorenana";
-  static const appClause =
-      "Clause de non-responsabilité :\nCette application n'est pas affiliée à "
+      " par la Haute Cour Constitutionnelle le 6 décembre 2010.";
+  static const source = "Source : https://tenymalagasy.org/bins/lalampanorenana";
+  static const warning = "AVERTISSEMENT IMPORTANT :";
+  static const appClause = "Cette application n'est pas affiliée à "
       "une entité gouvernementale et ne représente pas une autorité officielle.\n"
       "Elle vise à offrir un accès simplifié à la Constitution de Madagascar "
       "pour des fins informatives et éducatives uniquement.";

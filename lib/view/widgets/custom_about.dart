@@ -1,27 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
+import 'package:madagascar_constitution/core/app_constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void showCustomAboutDialog({
   required BuildContext context,
-  required String applicationName,
-  required String applicationVersion,
   required Widget applicationIcon,
-  required String applicationLegalese,
-  required String copyright,
   bool barrierDismissible = true,
 }) {
   showDialog<void>(
     context: context,
     barrierDismissible: barrierDismissible,
     builder: (BuildContext context) {
-      return CustomAboutDialog(
-        applicationName: applicationName,
-        applicationVersion: applicationVersion,
-        applicationIcon: applicationIcon,
-        applicationLegalese: applicationLegalese,
-        copyright: copyright,
-      );
+      return CustomAboutDialog(applicationIcon: applicationIcon);
     },
   );
 }
@@ -29,22 +20,10 @@ void showCustomAboutDialog({
 class CustomAboutDialog extends StatelessWidget {
   const CustomAboutDialog({
     super.key,
-    required this.applicationName,
-    required this.applicationVersion,
     required this.applicationIcon,
-    required this.applicationLegalese,
-    required this.copyright,
   });
 
-  final String applicationName;
-
-  final String applicationVersion;
-
   final Widget applicationIcon;
-
-  final String applicationLegalese;
-
-  final String copyright;
 
   @override
   Widget build(BuildContext context) {
@@ -76,11 +55,11 @@ class CustomAboutDialog extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        applicationName,
+                        AppConstants.appTitle,
                         style: themeData.textTheme.headlineSmall,
                       ),
                       Text(
-                        applicationVersion,
+                        AppConstants.appVersion,
                         style: themeData.textTheme.bodyMedium,
                       ),
                     ],
@@ -95,10 +74,55 @@ class CustomAboutDialog extends StatelessWidget {
               child: ListBody(
                 children: <Widget>[
                   const SizedBox(
+                    height: 10.0,
+                  ),
+                  Text(
+                    AppConstants.aboutApp,
+                    style: themeData.textTheme.bodySmall,
+                  ),
+                  const SizedBox(
                     height: 15.0,
                   ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    spacing: 5,
+                    children: [
+                      Icon(
+                        Icons.warning,
+                        size: 14,
+                        color: Colors.red,
+                      ),
+                      Expanded(
+                        child: Text(
+                          AppConstants.warning,
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Text(
+                    AppConstants.appClause,
+                    style: themeData.textTheme.bodySmall?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10.0,
+                  ),
                   SelectableLinkify(
-                    text: applicationLegalese,
+                    text: AppConstants.source,
+                    style: themeData.textTheme.bodySmall,
+                    onOpen: (link) async {
+                      if (await canLaunchUrl(Uri.parse(link.url))) {
+                        launchUrl(Uri.parse(link.url));
+                      }
+                    },
+                  ),
+                  const SizedBox(
+                    height: 5.0,
+                  ),
+                  SelectableLinkify(
+                    text: "Contact du développeur : ${AppConstants.mauyzEmail}",
                     style: themeData.textTheme.bodySmall,
                     onOpen: (link) async {
                       if (await canLaunchUrl(Uri.parse(link.url))) {
@@ -110,7 +134,7 @@ class CustomAboutDialog extends StatelessWidget {
                     height: 20.0,
                   ),
                   Text(
-                    copyright,
+                    AppConstants.copyright,
                     style: const TextStyle(
                       fontSize: 12.0,
                       fontWeight: FontWeight.bold,
@@ -128,10 +152,12 @@ class CustomAboutDialog extends StatelessWidget {
           onPressed: () {
             showLicensePage(
               context: context,
-              applicationName: applicationName,
-              applicationVersion: applicationVersion,
+              applicationName: AppConstants.appTitle,
+              applicationVersion: AppConstants.appVersion,
               applicationIcon: applicationIcon,
-              applicationLegalese: "$applicationLegalese\n\n$copyright",
+              applicationLegalese:
+                  "${AppConstants.warning}\n\n${AppConstants.appClause}"
+                  "\n\n${AppConstants.copyright}",
             );
           },
         ),
