@@ -1,2 +1,0 @@
-/media/mauyz/Personnal/Project/Flutter/madagascar_constitution/android/app/.cxx/Debug/274e1wg2/x86/CMakeFiles/edit_cache.dir
-/media/mauyz/Personnal/Project/Flutter/madagascar_constitution/android/app/.cxx/Debug/274e1wg2/x86/CMakeFiles/rebuild_cache.dir
